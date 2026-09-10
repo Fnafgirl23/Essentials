@@ -1,6 +1,6 @@
 //Maya ASCII 2027 scene
 //Name: Table & Chairs.ma
-//Last modified: Wed, Sep 09, 2026 11:08:25 PM
+//Last modified: Wed, Sep 09, 2026 11:11:36 PM
 //Codeset: 1252
 file -rdi 1 -ns "Cup" -rfn "CupRN" -op "v=0;" -typ "mayaAscii" "C:/GitHub/Essentials/DAGV1100and1200/Maya//scenes/Cup.ma";
 file -r -ns "Cup" -dr 1 -rfn "CupRN" -op "v=0;" -typ "mayaAscii" "C:/GitHub/Essentials/DAGV1100and1200/Maya//scenes/Cup.ma";
@@ -14,19 +14,19 @@ fileInfo "product" "Maya 2027";
 fileInfo "version" "2027";
 fileInfo "cutIdentifier" "202607171511-52c21617ee";
 fileInfo "osv" "Windows 11 Home v2009 (Build: 26200)";
-fileInfo "UUID" "FC7C8C11-4896-3388-8F72-B884567CD340";
+fileInfo "UUID" "27C9540F-4A34-17C5-A4A0-45B68A10378D";
 fileInfo "license" "education";
 createNode transform -s -n "persp";
 	rename -uid "5A15F64E-47EC-BA4D-5F9E-34A3193251EB";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 12.870384357859331 11.301081282563876 11.190257355226192 ;
-	setAttr ".r" -type "double3" -31.800000000001496 -308.40000000000742 5.120447633311871e-15 ;
+	setAttr ".t" -type "double3" 34.753344519515728 21.278554821268113 34.680475072740649 ;
+	setAttr ".r" -type "double3" -19.200000000001644 -316.00000000000642 0 ;
 	setAttr ".rpt" -type "double3" -2.8138844895849792e-16 -1.0491388803555888e-16 5.8020615516461073e-16 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "44357412-4EC3-CC86-D993-79B19A562D66";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999979;
-	setAttr ".coi" 10.348492629704644;
+	setAttr ".coi" 43.620750566291051;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
