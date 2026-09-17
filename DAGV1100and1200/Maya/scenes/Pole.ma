@@ -1,0 +1,90 @@
+//Maya ASCII 2027 scene
+//Name: Pole.ma
+//Last modified: Thu, Sep 17, 2026 09:53:50 AM
+//Codeset: 1252
+requires maya "2027";
+requires "mtoa" "5.6.2";
+currentUnit -l centimeter -a degree -t film;
+fileInfo "application" "maya";
+fileInfo "product" "Maya 2027";
+fileInfo "version" "2027";
+fileInfo "cutIdentifier" "202607171511-52c21617ee";
+fileInfo "osv" "Windows 11 Home v2009 (Build: 26200)";
+fileInfo "UUID" "EC146E6A-472A-B32B-D9D0-B299FA755C4A";
+createNode transform -n "Pole";
+	rename -uid "B0263F93-4EF9-16F5-50B6-63B351E5518D";
+createNode mesh -n "PoleShape" -p "Pole";
+	rename -uid "B601AAB9-4B13-4AFF-FE4D-86A8FC3A82D1";
+	setAttr -k off ".v";
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+createNode transformGeometry -n "transformGeometry1";
+	rename -uid "331DF51C-4AC6-6094-90AA-E1B3D7AA9E37";
+	setAttr ".txf" -type "matrix" 0.12859955979647542 0 0 0 0 10.494453564895949 0 0
+		 0 0 0.12859955979647542 0 0 10.494453564895949 0 1;
+createNode polyCylinder -n "polyCylinder1";
+	rename -uid "399D6FEB-496E-C34B-FA53-8DB31689E746";
+	setAttr ".sc" 1;
+	setAttr ".cuv" 3;
+select -ne :time1;
+	setAttr ".o" 1;
+	setAttr ".unw" 1;
+select -ne :hardwareRenderingGlobals;
+	setAttr ".otfna" -type "stringArray" 22 "NURBS Curves" "NURBS Surfaces" "Polygons" "Subdiv Surface" "Particles" "Particle Instance" "Fluids" "Strokes" "Image Planes" "UI" "Lights" "Cameras" "Locators" "Joints" "IK Handles" "Deformers" "Motion Trails" "Components" "Hair Systems" "Follicles" "Misc. UI" "Ornaments"  ;
+	setAttr ".otfva" -type "Int32Array" 22 0 1 1 1 1 1
+		 1 1 1 0 0 0 0 0 0 0 0 0
+		 0 0 0 0 ;
+	setAttr ".fprt" yes;
+	setAttr ".rtfm" 1;
+select -ne :renderPartition;
+	setAttr -s 2 ".st";
+select -ne :renderGlobalsList1;
+select -ne :defaultShaderList1;
+	setAttr -s 6 ".s";
+select -ne :postProcessList1;
+	setAttr -s 2 ".p";
+select -ne :defaultRenderUtilityList1;
+select -ne :defaultRenderingList1;
+	setAttr -s 2 ".r";
+select -ne :defaultTextureList1;
+select -ne :standardSurface1;
+	setAttr ".sr" 0.5;
+select -ne :openPBR_shader1;
+	setAttr ".bc" -type "float3" 0.77380955 0.77380955 0.77380955 ;
+	setAttr ".sr" 0.5;
+select -ne :initialShadingGroup;
+	setAttr -s 10 ".dsm";
+	setAttr ".ro" yes;
+	setAttr -s 5 ".gn";
+select -ne :initialParticleSE;
+	setAttr ".ro" yes;
+select -ne :initialMaterialInfo;
+select -ne :defaultRenderGlobals;
+	addAttr -ci true -h true -sn "dss" -ln "defaultSurfaceShader" -dt "string";
+	setAttr ".ren" -type "string" "arnold";
+	setAttr ".dss" -type "string" "openPBR_shader1";
+select -ne :defaultResolution;
+	setAttr ".pa" 1;
+select -ne :defaultColorMgtGlobals;
+	setAttr ".cfe" yes;
+	setAttr ".cfp" -type "string" "<MAYA_RESOURCES>/OCIO-configs/Maya2022-default/config.ocio";
+	setAttr ".vtn" -type "string" "ACES 1.0 SDR-video (sRGB)";
+	setAttr ".vn" -type "string" "ACES 1.0 SDR-video";
+	setAttr ".dn" -type "string" "sRGB";
+	setAttr ".wsn" -type "string" "ACEScg";
+	setAttr ".otn" -type "string" "ACES 1.0 SDR-video (sRGB)";
+	setAttr ".potn" -type "string" "ACES 1.0 SDR-video (sRGB)";
+select -ne :hardwareRenderGlobals;
+	setAttr ".ctrs" 256;
+	setAttr ".btrs" 512;
+select -ne :ikSystem;
+	setAttr -s 4 ".sol";
+connectAttr "transformGeometry1.og" "PoleShape.i";
+connectAttr "polyCylinder1.out" "transformGeometry1.ig";
+connectAttr "PoleShape.iog" ":initialShadingGroup.dsm" -na;
+// End of Pole.ma
