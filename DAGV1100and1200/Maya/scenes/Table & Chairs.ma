@@ -1,6 +1,6 @@
 //Maya ASCII 2027 scene
 //Name: Table & Chairs.ma
-//Last modified: Fri, Sep 18, 2026 12:07:16 AM
+//Last modified: Wed, Sep 23, 2026 02:07:19 PM
 //Codeset: 1252
 file -rdi 1 -ns "Cup" -dr 1 -rfn "CupRN" -op "v=0;" -typ "mayaAscii" "C:/GitHub/Essentials/DAGV1100and1200/Maya//scenes/Cup.ma";
 file -rdi 1 -ns "Cup1" -dr 1 -rfn "CupRN1" -op "v=0;" -typ "mayaAscii" "C:/GitHub/Essentials/DAGV1100and1200/Maya//scenes/Cup.ma";
@@ -23,31 +23,30 @@ file -r -ns "Pole" -dr 1 -rfn "PoleRN" -op "v=0;" -typ "mayaAscii" "C:/GitHub/Es
 file -r -ns "Cup2" -dr 1 -rfn "CupRN2" -op "v=0;" -typ "mayaAscii" "C:/GitHub/Essentials/DAGV1100and1200/Maya//scenes/Cup.ma";
 requires maya "2027";
 requires -nodeType "aiOptions" -nodeType "aiAOVDriver" -nodeType "aiAOVFilter" -nodeType "aiImagerDenoiserOidn"
-		 "mtoa" "5.6.2";
-requires -nodeType "UsdDefaultSettings" -dataType "pxrUsdStageData" "mayaUsdPlugin" "0.37.0";
+		 "mtoa" "5.6.1.1";
 currentUnit -l centimeter -a degree -t film;
 fileInfo "application" "maya";
 fileInfo "product" "Maya 2027";
 fileInfo "version" "2027";
-fileInfo "cutIdentifier" "202607171511-52c21617ee";
-fileInfo "osv" "Windows 11 Home v2009 (Build: 26200)";
-fileInfo "UUID" "37AD4ECF-4C21-9814-AE77-FF931CFF1A81";
+fileInfo "cutIdentifier" "202604221258-70da84b25e";
+fileInfo "osv" "Windows 11 Enterprise v2009 (Build: 26200)";
+fileInfo "UUID" "B2879808-4C14-C94D-15BC-13AD45B9893E";
 fileInfo "license" "education";
 createNode transform -s -n "persp";
 	rename -uid "5A15F64E-47EC-BA4D-5F9E-34A3193251EB";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 15.571235378280743 17.653539548659126 38.413296226781725 ;
-	setAttr ".r" -type "double3" -16.200000000002895 -341.99999999997669 -1.6721165498417528e-15 ;
+	setAttr ".t" -type "double3" 20.256941908097119 26.741273783035734 20.278298852192364 ;
+	setAttr ".r" -type "double3" -40.800000000001518 -316.39999999995172 2.195994383952399e-15 ;
 	setAttr ".rpt" -type "double3" -2.8138844895849792e-16 -1.0491388803555888e-16 5.8020615516461073e-16 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "44357412-4EC3-CC86-D993-79B19A562D66";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999979;
-	setAttr ".coi" 38.751349288248051;
+	setAttr ".coi" 40.59301229726745;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
-	setAttr ".tp" -type "double3" 2.5757690668106079 9.1916341781616211 -11.666981220245361 ;
+	setAttr ".tp" -type "double3" 3.312616229057312 8.5898172855377197 -8.200037956237793 ;
 	setAttr ".hc" -type "string" "viewSet -p %camera";
 createNode transform -s -n "top";
 	rename -uid "415F8539-43BF-B6BB-BB8C-AB97E5C7015C";
@@ -479,7 +478,7 @@ createNode mesh -n "polySurfaceShape6" -p "polySurface3";
 	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
 createNode lightLinker -s -n "lightLinker1";
-	rename -uid "BED0F266-4642-7683-FCA8-C1ABC96DDFE1";
+	rename -uid "508C1D09-4DEC-A4DA-8DFB-15BF38319609";
 	setAttr -s 2 ".lnk";
 	setAttr -s 2 ".slnk";
 createNode UsdDefaultSettings -n "UsdDefaultRenderSettings";
@@ -489,11 +488,11 @@ createNode UsdDefaultSettings -n "UsdDefaultRenderSettings";
 	setAttr ".asp" -type "string" "UsdDefaultRenderSettings,/Render/SceneRenderSettings";
 lockNode -l 1 ;
 createNode shapeEditorManager -n "shapeEditorManager";
-	rename -uid "2F887B79-4BA7-6517-07A6-7794B5279B16";
+	rename -uid "9127F585-4926-D088-8C0D-149E156ACE2A";
 createNode poseInterpolatorManager -n "poseInterpolatorManager";
-	rename -uid "ADDA96CE-466C-A482-92C5-F9A7CEB113C4";
+	rename -uid "D8344FFA-4978-1BA0-E52A-C3A3280688B6";
 createNode displayLayerManager -n "layerManager";
-	rename -uid "82171576-464F-45A2-9BB9-F69198922C73";
+	rename -uid "0D0C7793-4A2B-5E75-EA7B-1A898218D3A0";
 	setAttr ".cdl" 5;
 	setAttr -s 6 ".dli[1:5]"  1 2 3 4 5;
 	setAttr -s 3 ".dli";
@@ -501,7 +500,7 @@ createNode displayLayer -n "defaultLayer";
 	rename -uid "BCB4CBC1-47E0-A18A-9248-C9BCF8FC13D1";
 	setAttr ".ufem" -type "stringArray" 0  ;
 createNode renderLayerManager -n "renderLayerManager";
-	rename -uid "39534AAA-4D44-3396-EC1F-6784E1C8A1BF";
+	rename -uid "F3D229E9-4108-81DC-D5F0-1AB333851222";
 createNode renderLayer -n "defaultRenderLayer";
 	rename -uid "9895527A-432E-5819-C4F5-D8938C12B5FF";
 	setAttr ".g" yes;
@@ -531,17 +530,17 @@ createNode script -n "uiConfigurationScriptNode";
 		"// Maya Mel UI Configuration File.\n//\n//  This script is machine generated.  Edit at your own risk.\n//\n//\n\nglobal string $gMainPane;\nif (`paneLayout -exists $gMainPane`) {\n\n\tglobal int $gUseScenePanelConfig;\n\tint    $useSceneConfig = $gUseScenePanelConfig;\n\tint    $nodeEditorPanelVisible = stringArrayContains(\"nodeEditorPanel1\", `getPanel -vis`);\n\tint    $nodeEditorWorkspaceControlOpen = (`workspaceControl -exists nodeEditorPanel1Window` && `workspaceControl -q -visible nodeEditorPanel1Window`);\n\tint    $menusOkayInPanels = `optionVar -q allowMenusInPanels`;\n\tint    $nVisPanes = `paneLayout -q -nvp $gMainPane`;\n\tint    $nPanes = 0;\n\tstring $editorName;\n\tstring $panelName;\n\tstring $itemFilterName;\n\tstring $panelConfig;\n\n\t//\n\t//  get current state of the UI\n\t//\n\tsceneUIReplacement -update $gMainPane;\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Top View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Top View\")) -mbv $menusOkayInPanels  $panelName;\n"
 		+ "\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"|front\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 32768\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n"
 		+ "            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n"
-		+ "            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -excludeObjectPreset \"All\" \n            -shadows 0\n            -captureSequenceNumber -1\n            -width 655\n            -height 354\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            -pluginObjects \"mayaUsdProxyShapeBaseDisplayFilter\" 1 \n"
+		+ "            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -excludeObjectPreset \"All\" \n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1\n            -height 1\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            -pluginObjects \"mayaUsdProxyShapeBaseDisplayFilter\" 1 \n"
 		+ "            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Side View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Side View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"|side\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"wireframe\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n"
 		+ "            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 32768\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n"
 		+ "            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n"
-		+ "            -excludeObjectPreset \"All\" \n            -shadows 0\n            -captureSequenceNumber -1\n            -width 655\n            -height 353\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            -pluginObjects \"mayaUsdProxyShapeBaseDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Front View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Front View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"|front\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"wireframe\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n"
+		+ "            -excludeObjectPreset \"All\" \n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1\n            -height 1\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            -pluginObjects \"mayaUsdProxyShapeBaseDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Front View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Front View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"|front\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"wireframe\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n"
 		+ "            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 32768\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n"
 		+ "            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n"
-		+ "            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -excludeObjectPreset \"All\" \n            -shadows 0\n            -captureSequenceNumber -1\n            -width 655\n            -height 353\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            -pluginObjects \"mayaUsdProxyShapeBaseDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Persp View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n"
+		+ "            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -excludeObjectPreset \"All\" \n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1\n            -height 1\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            -pluginObjects \"mayaUsdProxyShapeBaseDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Persp View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n"
 		+ "\t\tmodelPanel -edit -l (localizedPanelLabel(\"Persp View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"|persp\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 1\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 32768\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n"
 		+ "            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n"
-		+ "            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -excludeObjectPreset \"All\" \n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1117\n            -height 754\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n"
+		+ "            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -excludeObjectPreset \"All\" \n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1117\n            -height 706\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n"
 		+ "        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            -pluginObjects \"mayaUsdProxyShapeBaseDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"outlinerPanel\" (localizedPanelLabel(\"ToggledOutliner\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\toutlinerPanel -edit -l (localizedPanelLabel(\"ToggledOutliner\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        outlinerEditor -e \n            -showShapes 0\n            -showAssignedMaterials 0\n            -showTimeEditor 1\n            -showReferenceNodes 1\n            -showReferenceMembers 1\n            -showAttributes 0\n            -showConnected 0\n            -showAnimCurvesOnly 0\n            -showMuteInfo 0\n            -organizeByLayer 1\n            -organizeByClip 1\n            -showAnimLayerWeight 1\n            -autoExpandLayers 1\n            -autoExpand 0\n            -showDagOnly 1\n"
 		+ "            -showAssets 1\n            -showContainedOnly 1\n            -showPublishedAsConnected 0\n            -showParentContainers 0\n            -showContainerContents 1\n            -ignoreDagHierarchy 0\n            -expandConnections 0\n            -showUpstreamCurves 1\n            -showUnitlessCurves 1\n            -showCompounds 1\n            -showLeafs 1\n            -showNumericAttrsOnly 0\n            -highlightActive 1\n            -autoSelectNewObjects 0\n            -doNotSelectNewObjects 0\n            -dropIsParent 1\n            -transmitFilters 0\n            -setFilter \"defaultSetFilter\" \n            -showSetMembers 1\n            -allowMultiSelection 1\n            -alwaysToggleSelect 0\n            -directSelect 0\n            -isSet 0\n            -isSetMember 0\n            -showUfeItems 1\n            -displayMode \"DAG\" \n            -expandObjects 0\n            -setsIgnoreFilters 1\n            -containersIgnoreFilters 0\n            -editAttrName 0\n            -showAttrValues 0\n            -highlightSecondary 0\n"
 		+ "            -showUVAttrsOnly 0\n            -showTextureNodesOnly 0\n            -attrAlphaOrder \"default\" \n            -animLayerFilterOptions \"allAffecting\" \n            -sortOrder \"none\" \n            -longNames 0\n            -niceNames 1\n            -showNamespace 1\n            -showPinIcons 0\n            -mapMotionTrails 0\n            -ignoreHiddenAttribute 0\n            -ignoreOutlinerColor 0\n            -renderFilterVisible 0\n            -renderFilterIndex 0\n            -selectionOrder \"chronological\" \n            -expandAttribute 0\n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"outlinerPanel\" (localizedPanelLabel(\"Outliner\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\toutlinerPanel -edit -l (localizedPanelLabel(\"Outliner\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        outlinerEditor -e \n            -showShapes 0\n            -showAssignedMaterials 0\n            -showTimeEditor 1\n"
@@ -549,11 +548,11 @@ createNode script -n "uiConfigurationScriptNode";
 		+ "            -alwaysToggleSelect 0\n            -directSelect 0\n            -showUfeItems 1\n            -displayMode \"DAG\" \n            -expandObjects 0\n            -setsIgnoreFilters 1\n            -containersIgnoreFilters 0\n            -editAttrName 0\n            -showAttrValues 0\n            -highlightSecondary 0\n            -showUVAttrsOnly 0\n            -showTextureNodesOnly 0\n            -attrAlphaOrder \"default\" \n            -animLayerFilterOptions \"allAffecting\" \n            -sortOrder \"none\" \n            -longNames 0\n            -niceNames 1\n            -showNamespace 1\n            -showPinIcons 0\n            -mapMotionTrails 0\n            -ignoreHiddenAttribute 0\n            -ignoreOutlinerColor 0\n            -renderFilterVisible 0\n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"graphEditor\" (localizedPanelLabel(\"Graph Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Graph Editor\")) -mbv $menusOkayInPanels  $panelName;\n"
 		+ "\n\t\t\t$editorName = ($panelName+\"OutlineEd\");\n            outlinerEditor -e \n                -showShapes 1\n                -showAssignedMaterials 0\n                -showTimeEditor 1\n                -showReferenceNodes 0\n                -showReferenceMembers 0\n                -showAttributes 1\n                -showConnected 1\n                -showAnimCurvesOnly 1\n                -showMuteInfo 0\n                -organizeByLayer 1\n                -organizeByClip 1\n                -showAnimLayerWeight 1\n                -autoExpandLayers 1\n                -autoExpand 1\n                -showDagOnly 0\n                -showAssets 1\n                -showContainedOnly 0\n                -showPublishedAsConnected 0\n                -showParentContainers 0\n                -showContainerContents 0\n                -ignoreDagHierarchy 0\n                -expandConnections 1\n                -showUpstreamCurves 1\n                -showUnitlessCurves 1\n                -showCompounds 0\n                -showLeafs 1\n                -showNumericAttrsOnly 1\n"
 		+ "                -highlightActive 0\n                -autoSelectNewObjects 1\n                -doNotSelectNewObjects 0\n                -dropIsParent 1\n                -transmitFilters 1\n                -setFilter \"0\" \n                -showSetMembers 0\n                -allowMultiSelection 1\n                -alwaysToggleSelect 0\n                -directSelect 0\n                -showUfeItems 1\n                -displayMode \"DAG\" \n                -expandObjects 0\n                -setsIgnoreFilters 1\n                -containersIgnoreFilters 0\n                -editAttrName 0\n                -showAttrValues 0\n                -highlightSecondary 0\n                -showUVAttrsOnly 0\n                -showTextureNodesOnly 0\n                -attrAlphaOrder \"default\" \n                -animLayerFilterOptions \"allAffecting\" \n                -sortOrder \"none\" \n                -longNames 0\n                -niceNames 1\n                -showNamespace 1\n                -showPinIcons 1\n                -mapMotionTrails 1\n                -ignoreHiddenAttribute 0\n"
-		+ "                -ignoreOutlinerColor 0\n                -renderFilterVisible 0\n                $editorName;\n\n\t\t\t$editorName = ($panelName+\"GraphEd\");\n            animCurveEditor -e \n                -displayValues 0\n                -snapTime \"integer\" \n                -snapValue \"none\" \n                -showPlayRangeShades \"on\" \n                -lockPlayRangeShades \"off\" \n                -smoothness \"fine\" \n                -resultSamples 1\n                -resultScreenSamples 0\n                -resultUpdate \"delayed\" \n                -showUpstreamCurves 1\n                -showRowButtons 1\n                -tangentScale 1\n                -tangentLineThickness 1\n                -keyMinScale 1\n                -stackedCurvesMin -1\n                -stackedCurvesMax 1\n                -stackedCurvesSpace 0.2\n                -preSelectionHighlight 0\n                -limitToSelectedCurves 0\n                -constrainDrag 0\n                -valueLinesToggle 0\n                -outliner \"graphEditor1OutlineEd\" \n                -highlightAffectedCurves 0\n"
-		+ "                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"dopeSheetPanel\" (localizedPanelLabel(\"Dope Sheet\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Dope Sheet\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"OutlineEd\");\n            outlinerEditor -e \n                -showShapes 1\n                -showAssignedMaterials 0\n                -showTimeEditor 1\n                -showReferenceNodes 0\n                -showReferenceMembers 0\n                -showAttributes 1\n                -showConnected 1\n                -showAnimCurvesOnly 1\n                -showMuteInfo 0\n                -organizeByLayer 1\n                -organizeByClip 1\n                -showAnimLayerWeight 1\n                -autoExpandLayers 1\n                -autoExpand 0\n                -showDagOnly 0\n                -showAssets 1\n                -showContainedOnly 0\n"
-		+ "                -showPublishedAsConnected 0\n                -showParentContainers 0\n                -showContainerContents 0\n                -ignoreDagHierarchy 0\n                -expandConnections 1\n                -showUpstreamCurves 1\n                -showUnitlessCurves 0\n                -showCompounds 0\n                -showLeafs 1\n                -showNumericAttrsOnly 1\n                -highlightActive 0\n                -autoSelectNewObjects 0\n                -doNotSelectNewObjects 1\n                -dropIsParent 1\n                -transmitFilters 0\n                -setFilter \"0\" \n                -showSetMembers 1\n                -allowMultiSelection 1\n                -alwaysToggleSelect 0\n                -directSelect 0\n                -showUfeItems 1\n                -displayMode \"DAG\" \n                -expandObjects 0\n                -setsIgnoreFilters 1\n                -containersIgnoreFilters 0\n                -editAttrName 0\n                -showAttrValues 0\n                -highlightSecondary 0\n                -showUVAttrsOnly 0\n"
-		+ "                -showTextureNodesOnly 0\n                -attrAlphaOrder \"default\" \n                -animLayerFilterOptions \"allAffecting\" \n                -sortOrder \"none\" \n                -longNames 0\n                -niceNames 1\n                -showNamespace 1\n                -showPinIcons 0\n                -mapMotionTrails 1\n                -ignoreHiddenAttribute 0\n                -ignoreOutlinerColor 0\n                -renderFilterVisible 0\n                $editorName;\n\n\t\t\t$editorName = ($panelName+\"DopeSheetEd\");\n            dopeSheetEditor -e \n                -displayValues 0\n                -snapTime \"none\" \n                -snapValue \"none\" \n                -outliner \"dopeSheetPanel1OutlineEd\" \n                -hierarchyBelow 0\n                -selectionWindow 0 0 0 0 \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"timeEditorPanel\" (localizedPanelLabel(\"Time Editor\")) `;\n\tif (\"\" != $panelName) {\n"
-		+ "\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Time Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"clipEditorPanel\" (localizedPanelLabel(\"Trax Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Trax Editor\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = clipEditorNameFromPanel($panelName);\n            clipEditor -e \n                -displayValues 0\n                -snapTime \"none\" \n                -snapValue \"none\" \n                -initialized 0\n                -manageSequencer 0 \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"sequenceEditorPanel\" (localizedPanelLabel(\"Sequencer\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Sequencer\")) -mbv $menusOkayInPanels  $panelName;\n"
+		+ "                -ignoreOutlinerColor 0\n                -renderFilterVisible 0\n                $editorName;\n\n\t\t\t$editorName = ($panelName+\"GraphEd\");\n            animCurveEditor -e \n                -displayValues 0\n                -snapTime \"integer\" \n                -snapValue \"none\" \n                -showPlayRangeShades \"on\" \n                -lockPlayRangeShades \"off\" \n                -smoothness \"fine\" \n                -resultSamples 1\n                -resultScreenSamples 0\n                -resultUpdate \"delayed\" \n                -showUpstreamCurves 1\n                -tangentScale 1\n                -tangentLineThickness 1\n                -keyMinScale 1\n                -stackedCurvesMin -1\n                -stackedCurvesMax 1\n                -stackedCurvesSpace 0.2\n                -preSelectionHighlight 0\n                -limitToSelectedCurves 0\n                -constrainDrag 0\n                -valueLinesToggle 0\n                -outliner \"graphEditor1OutlineEd\" \n                -highlightAffectedCurves 0\n                $editorName;\n"
+		+ "\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"dopeSheetPanel\" (localizedPanelLabel(\"Dope Sheet\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Dope Sheet\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"OutlineEd\");\n            outlinerEditor -e \n                -showShapes 1\n                -showAssignedMaterials 0\n                -showTimeEditor 1\n                -showReferenceNodes 0\n                -showReferenceMembers 0\n                -showAttributes 1\n                -showConnected 1\n                -showAnimCurvesOnly 1\n                -showMuteInfo 0\n                -organizeByLayer 1\n                -organizeByClip 1\n                -showAnimLayerWeight 1\n                -autoExpandLayers 1\n                -autoExpand 1\n                -showDagOnly 0\n                -showAssets 1\n                -showContainedOnly 0\n                -showPublishedAsConnected 0\n"
+		+ "                -showParentContainers 0\n                -showContainerContents 0\n                -ignoreDagHierarchy 0\n                -expandConnections 1\n                -showUpstreamCurves 1\n                -showUnitlessCurves 0\n                -showCompounds 0\n                -showLeafs 1\n                -showNumericAttrsOnly 1\n                -highlightActive 0\n                -autoSelectNewObjects 0\n                -doNotSelectNewObjects 1\n                -dropIsParent 1\n                -transmitFilters 0\n                -setFilter \"0\" \n                -showSetMembers 1\n                -allowMultiSelection 1\n                -alwaysToggleSelect 0\n                -directSelect 0\n                -showUfeItems 1\n                -displayMode \"DAG\" \n                -expandObjects 0\n                -setsIgnoreFilters 1\n                -containersIgnoreFilters 0\n                -editAttrName 0\n                -showAttrValues 0\n                -highlightSecondary 0\n                -showUVAttrsOnly 0\n                -showTextureNodesOnly 0\n"
+		+ "                -attrAlphaOrder \"default\" \n                -animLayerFilterOptions \"allAffecting\" \n                -sortOrder \"none\" \n                -longNames 0\n                -niceNames 1\n                -showNamespace 1\n                -showPinIcons 0\n                -mapMotionTrails 1\n                -ignoreHiddenAttribute 0\n                -ignoreOutlinerColor 0\n                -renderFilterVisible 0\n                $editorName;\n\n\t\t\t$editorName = ($panelName+\"DopeSheetEd\");\n            dopeSheetEditor -e \n                -displayValues 0\n                -snapTime \"none\" \n                -snapValue \"none\" \n                -outliner \"dopeSheetPanel1OutlineEd\" \n                -hierarchyBelow 0\n                -selectionWindow 0 0 0 0 \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"timeEditorPanel\" (localizedPanelLabel(\"Time Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n"
+		+ "\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Time Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"clipEditorPanel\" (localizedPanelLabel(\"Trax Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Trax Editor\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = clipEditorNameFromPanel($panelName);\n            clipEditor -e \n                -displayValues 0\n                -snapTime \"none\" \n                -snapValue \"none\" \n                -initialized 0\n                -manageSequencer 0 \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"sequenceEditorPanel\" (localizedPanelLabel(\"Sequencer\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Sequencer\")) -mbv $menusOkayInPanels  $panelName;\n"
 		+ "\n\t\t\t$editorName = sequenceEditorNameFromPanel($panelName);\n            cameraSequencer -e \n                -displayValues 0\n                -snapTime \"none\" \n                -snapValue \"none\" \n                -initialized 0\n                -showThumbnail 1\n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"hyperGraphPanel\" (localizedPanelLabel(\"Hypergraph Hierarchy\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Hypergraph Hierarchy\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"HyperGraphEd\");\n            hyperGraph -e \n                -graphLayoutStyle \"hierarchicalLayout\" \n                -orientation \"horiz\" \n                -mergeConnections 0\n                -zoom 1\n                -animateTransition 0\n                -showRelationships 1\n                -showShapes 0\n                -showDeformers 0\n                -showExpressions 0\n"
 		+ "                -showConstraints 0\n                -showConnectionFromSelected 0\n                -showConnectionToSelected 0\n                -showConstraintLabels 0\n                -showUnderworld 0\n                -showInvisible 0\n                -showNamespace 1\n                -transitionFrames 1\n                -opaqueContainers 0\n                -freeform 0\n                -imagePosition 0 0 \n                -imageScale 1\n                -imageEnabled 0\n                -graphType \"DAG\" \n                -heatMapDisplay 0\n                -updateSelection 1\n                -updateNodeAdded 1\n                -useDrawOverrideColor 0\n                -limitGraphTraversal -1\n                -range 0 0 \n                -iconSize \"smallIcons\" \n                -showCachedConnections 0\n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"hyperShadePanel\" (localizedPanelLabel(\"Hypershade\")) `;\n\tif (\"\" != $panelName) {\n"
 		+ "\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Hypershade\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"visorPanel\" (localizedPanelLabel(\"Visor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Visor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"nodeEditorPanel\" (localizedPanelLabel(\"Node Editor\")) `;\n\tif ($nodeEditorPanelVisible || $nodeEditorWorkspaceControlOpen) {\n\t\tif (\"\" == $panelName) {\n\t\t\tif ($useSceneConfig) {\n\t\t\t\t$panelName = `scriptedPanel -unParent  -type \"nodeEditorPanel\" -l (localizedPanelLabel(\"Node Editor\")) -mbv $menusOkayInPanels `;\n\n\t\t\t$editorName = ($panelName+\"NodeEditorEd\");\n            nodeEditor -e \n                -allAttributes 0\n                -allNodes 0\n"
@@ -565,8 +564,8 @@ createNode script -n "uiConfigurationScriptNode";
 		+ "\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Reference Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"dynPaintScriptedPanelType\" (localizedPanelLabel(\"Paint Effects\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Paint Effects\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"scriptEditorPanel\" (localizedPanelLabel(\"Script Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Script Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"profilerPanel\" (localizedPanelLabel(\"Profiler Tool\")) `;\n"
 		+ "\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Profiler Tool\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"motionMakerEditorPanel\" (localizedPanelLabel(\"MotionMaker Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"MotionMaker Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"contentBrowserPanel\" (localizedPanelLabel(\"Content Browser\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Content Browser\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\tif ($useSceneConfig) {\n        string $configName = `getPanel -cwl (localizedPanelLabel(\"Current Layout\"))`;\n"
 		+ "        if (\"\" != $configName) {\n\t\t\tpanelConfiguration -edit -label (localizedPanelLabel(\"Current Layout\")) \n\t\t\t\t-userCreated false\n\t\t\t\t-defaultImage \"\"\n\t\t\t\t-image \"\"\n\t\t\t\t-sc false\n\t\t\t\t-configString \"global string $gMainPane; paneLayout -e -cn \\\"single\\\" -ps 1 100 100 $gMainPane;\"\n\t\t\t\t-removeAllPanels\n\t\t\t\t-ap false\n\t\t\t\t\t(localizedPanelLabel(\"Persp View\")) \n\t\t\t\t\t\"modelPanel\"\n"
-		+ "\t\t\t\t\t\"$panelName = `modelPanel -unParent -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels `;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 1\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 0\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 32768\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -bluePencil 1\\n    -greasePencils 0\\n    -excludeObjectPreset \\\"All\\\" \\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 1117\\n    -height 754\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    -pluginObjects \\\"mayaUsdProxyShapeBaseDisplayFilter\\\" 1 \\n    $editorName\"\n"
-		+ "\t\t\t\t\t\"modelPanel -edit -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels  $panelName;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 1\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 0\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 32768\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -bluePencil 1\\n    -greasePencils 0\\n    -excludeObjectPreset \\\"All\\\" \\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 1117\\n    -height 754\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    -pluginObjects \\\"mayaUsdProxyShapeBaseDisplayFilter\\\" 1 \\n    $editorName\"\n"
+		+ "\t\t\t\t\t\"$panelName = `modelPanel -unParent -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels `;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 1\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 0\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 32768\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -bluePencil 1\\n    -greasePencils 0\\n    -excludeObjectPreset \\\"All\\\" \\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 1117\\n    -height 706\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    -pluginObjects \\\"mayaUsdProxyShapeBaseDisplayFilter\\\" 1 \\n    $editorName\"\n"
+		+ "\t\t\t\t\t\"modelPanel -edit -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels  $panelName;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 1\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 0\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 32768\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -bluePencil 1\\n    -greasePencils 0\\n    -excludeObjectPreset \\\"All\\\" \\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 1117\\n    -height 706\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    -pluginObjects \\\"mayaUsdProxyShapeBaseDisplayFilter\\\" 1 \\n    $editorName\"\n"
 		+ "\t\t\t\t$configName;\n\n            setNamedPanelLayout (localizedPanelLabel(\"Current Layout\"));\n        }\n\n        panelHistory -e -clear mainPanelHistory;\n        sceneUIReplacement -clear;\n\t}\n\n\ngrid -spacing 5 -size 12 -divisions 5 -displayAxes yes -displayGridLines yes -displayDivisionLines yes -displayPerspectiveLabels no -displayOrthographicLabels no -displayAxesBold yes -perspectiveLabelPosition axis -orthographicLabelPosition edge;\nviewManip -drawCompass 0 -compassAngle 0 -frontParameters \"\" -homeParameters \"\" -selectionLockParameters \"\";\n}\n");
 	setAttr ".st" 3;
 createNode script -n "sceneConfigurationScriptNode";
@@ -575,7 +574,7 @@ createNode script -n "sceneConfigurationScriptNode";
 	setAttr ".st" 6;
 createNode file -n "BookShelf:file1";
 	rename -uid "B3B35880-441C-AD2E-ABB2-58B83898158B";
-	setAttr ".ftn" -type "string" "C:/GitHub/Essentials/DAGV1100and1200/Maya//sourceimages/Colors.png";
+	setAttr ".ftn" -type "string" "C:/GitHub/Essentials/DAGV1100and1200/Maya/sourceimages/Colors.png";
 	setAttr ".cs" -type "string" "sRGB";
 createNode place2dTexture -n "BookShelf:place2dTexture1";
 	rename -uid "D145EFE4-4264-A1B3-CCA4-A9ADD8FE8555";
@@ -1170,7 +1169,6 @@ createNode animCurveTU -n "ChairMesh_visibility";
 	setAttr ".kot[0]"  5;
 	setAttr ".kox[0]"  0;
 	setAttr ".koy[0]"  0;
-	setAttr ".ots[0]"  9;
 createNode animCurveTA -n "ChairMesh_rotateX";
 	rename -uid "57890700-4CF2-97EC-89A9-B9A8DF9AC11A";
 	setAttr ".tan" 18;
@@ -1203,15 +1201,31 @@ createNode animCurveTU -n "ChairMesh_scaleZ";
 	setAttr ".ktv[0]"  1 1;
 createNode reference -n "BookShelfRN";
 	rename -uid "E768D95B-472F-DA80-07B8-7FAEF61D19A2";
+	setAttr -s 2 ".phl";
+	setAttr ".phl[1]" 0;
+	setAttr ".phl[2]" 0;
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"BookShelfRN"
-		"BookShelfRN" 0
 		"BookShelfRN" 4
 		2 "|BookShelf2:BookShelf2" "translate" " -type \"double3\" -0.99382830667115485 0 0.29872859622669701"
 		
 		2 "|BookShelf2:BookShelf2" "translateX" " -av"
 		2 "|BookShelf2:BookShelf2" "translateZ" " -av"
-		2 "|BookShelf2:BookShelf2" "translateY" " -av";
+		2 "|BookShelf2:BookShelf2" "translateY" " -av"
+		"BookShelfRN" 7
+		2 "|BookShelf2:BookShelf" "translate" " -type \"double3\" 0 0 0"
+		2 "|BookShelf2:BookShelf" "rotatePivot" " -type \"double3\" 7 0 -9.75861632414201807"
+		
+		2 "|BookShelf2:BookShelf" "scalePivot" " -type \"double3\" 7 0 -9.75861632414201807"
+		
+		2 "|BookShelf2:BookShelf|BookShelf2:BookShelfShape" "uvSet[0].uvSetName" 
+		" -type \"string\" \"map1\""
+		3 "BookShelf2:polyTweakUV1.output" "|BookShelf2:BookShelf|BookShelf2:BookShelfShape.inMesh" 
+		""
+		5 4 "BookShelfRN" "|BookShelf2:BookShelf|BookShelf2:BookShelfShape.inMesh" 
+		"BookShelfRN.placeHolderList[1]" ""
+		5 3 "BookShelfRN" "BookShelf2:polyTweakUV1.output" "BookShelfRN.placeHolderList[2]" 
+		"BookShelf2:BookShelfShape.i";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
 createNode reference -n "BooksRN";
@@ -1219,8 +1233,806 @@ createNode reference -n "BooksRN";
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"BooksRN"
 		"BooksRN" 0
-		"BooksRN" 1
-		2 "|Books:BookGRP" "translate" " -type \"double3\" 4.17160991057571451 8.62384986877441406 -9.55836914270077287";
+		"BooksRN" 408
+		2 "|Books:BookGRP" "translate" " -type \"double3\" 0 0 0"
+		2 "|Books:BookGRP" "rotatePivot" " -type \"double3\" 5.36872259756744263 7.72079658508300781 -8.99224464325888029"
+		
+		2 "|Books:BookGRP" "scalePivot" " -type \"double3\" 5.36872259756744263 7.72079658508300781 -8.99224464325888029"
+		
+		2 "|Books:BookGRP|Books:Book7" "rotatePivot" " -type \"double3\" 5.53213532503479577 7.72079658508300781 -8.35074319552347788"
+		
+		2 "|Books:BookGRP|Books:Book7" "scalePivot" " -type \"double3\" 5.53213532503479577 7.72079658508300781 -8.35074319552347788"
+		
+		2 "|Books:BookGRP|Books:Book7|Books:Book7Shape" "pnts" " -s 24"
+		2 "|Books:BookGRP|Books:Book7|Books:Book7Shape" "pnts[0]" " -type \"float3\" 6.26776930000000032 8.22079749999999976 -10.012948"
+		
+		2 "|Books:BookGRP|Books:Book7|Books:Book7Shape" "pnts[1]" " -type \"float3\" 5.032135 8.22079749999999976 -10.012948"
+		
+		2 "|Books:BookGRP|Books:Book7|Books:Book7Shape" "pnts[2]" " -type \"float3\" 6.26776930000000032 8.76045129999999972 -10.012948"
+		
+		2 "|Books:BookGRP|Books:Book7|Books:Book7Shape" "pnts[3]" " -type \"float3\" 5.032135 8.76045129999999972 -10.012948"
+		
+		2 "|Books:BookGRP|Books:Book7|Books:Book7Shape" "pnts[4]" " -type \"float3\" 6.26776930000000032 8.76045129999999972 -7.85074330000000042"
+		
+		2 "|Books:BookGRP|Books:Book7|Books:Book7Shape" "pnts[5]" " -type \"float3\" 5.032135 8.76045129999999972 -7.85074330000000042"
+		
+		2 "|Books:BookGRP|Books:Book7|Books:Book7Shape" "pnts[6]" " -type \"float3\" 6.26776930000000032 8.22079749999999976 -7.85074330000000042"
+		
+		2 "|Books:BookGRP|Books:Book7|Books:Book7Shape" "pnts[7]" " -type \"float3\" 5.032135 8.22079749999999976 -7.85074330000000042"
+		
+		2 "|Books:BookGRP|Books:Book7|Books:Book7Shape" "pnts[8]" " -type \"float3\" 6.00326819999999994 8.22079749999999976 -10.012948"
+		
+		2 "|Books:BookGRP|Books:Book7|Books:Book7Shape" "pnts[9]" " -type \"float3\" 5.29663560000000011 8.22079749999999976 -10.012948"
+		
+		2 "|Books:BookGRP|Books:Book7|Books:Book7Shape" "pnts[10]" " -type \"float3\" 5.29663560000000011 8.76045129999999972 -10.012948"
+		
+		2 "|Books:BookGRP|Books:Book7|Books:Book7Shape" "pnts[11]" " -type \"float3\" 6.00326819999999994 8.76045129999999972 -10.012948"
+		
+		2 "|Books:BookGRP|Books:Book7|Books:Book7Shape" "pnts[12]" " -type \"float3\" 5.29663560000000011 8.76045129999999972 -7.95232869999999981"
+		
+		2 "|Books:BookGRP|Books:Book7|Books:Book7Shape" "pnts[13]" " -type \"float3\" 6.00326819999999994 8.76045129999999972 -7.95232869999999981"
+		
+		2 "|Books:BookGRP|Books:Book7|Books:Book7Shape" "pnts[14]" " -type \"float3\" 6.00326819999999994 8.22079749999999976 -7.95232869999999981"
+		
+		2 "|Books:BookGRP|Books:Book7|Books:Book7Shape" "pnts[15]" " -type \"float3\" 5.29663560000000011 8.22079749999999976 -7.95232869999999981"
+		
+		2 "|Books:BookGRP|Books:Book7|Books:Book7Shape" "pnts[16]" " -type \"float3\" 6.00326819999999994 8.225399 -9.96626189999999923"
+		
+		2 "|Books:BookGRP|Books:Book7|Books:Book7Shape" "pnts[17]" " -type \"float3\" 5.29663560000000011 8.225399 -9.96626189999999923"
+		
+		2 "|Books:BookGRP|Books:Book7|Books:Book7Shape" "pnts[18]" " -type \"float3\" 5.29663560000000011 8.75585079999999927 -9.96626189999999923"
+		
+		2 "|Books:BookGRP|Books:Book7|Books:Book7Shape" "pnts[19]" " -type \"float3\" 6.00326819999999994 8.75585079999999927 -9.96626189999999923"
+		
+		2 "|Books:BookGRP|Books:Book7|Books:Book7Shape" "pnts[20]" " -type \"float3\" 5.29663560000000011 8.75125120000000045 -7.95232869999999981"
+		
+		2 "|Books:BookGRP|Books:Book7|Books:Book7Shape" "pnts[21]" " -type \"float3\" 6.00326819999999994 8.75125120000000045 -7.95232869999999981"
+		
+		2 "|Books:BookGRP|Books:Book7|Books:Book7Shape" "pnts[22]" " -type \"float3\" 6.00326819999999994 8.22999949999999991 -7.95232869999999981"
+		
+		2 "|Books:BookGRP|Books:Book7|Books:Book7Shape" "pnts[23]" " -type \"float3\" 5.29663560000000011 8.22999949999999991 -7.95232869999999981"
+		
+		2 "|Books:BookGRP|Books:Book12" "rotatePivot" " -type \"double3\" 6.88948020721622267 7.72079658508300781 -8.35074319552347788"
+		
+		2 "|Books:BookGRP|Books:Book12" "scalePivot" " -type \"double3\" 6.88948020721622267 7.72079658508300781 -8.35074319552347788"
+		
+		2 "|Books:BookGRP|Books:Book12|Books:Book12Shape" "pnts" " -s 24"
+		2 "|Books:BookGRP|Books:Book12|Books:Book12Shape" "pnts[0]" " -type \"float3\" 7.62511440000000018 8.22079749999999976 -10.012948"
+		
+		2 "|Books:BookGRP|Books:Book12|Books:Book12Shape" "pnts[1]" " -type \"float3\" 6.38948010000000011 8.22079749999999976 -10.012948"
+		
+		2 "|Books:BookGRP|Books:Book12|Books:Book12Shape" "pnts[2]" " -type \"float3\" 7.62511440000000018 8.76045129999999972 -10.012948"
+		
+		2 "|Books:BookGRP|Books:Book12|Books:Book12Shape" "pnts[3]" " -type \"float3\" 6.38948010000000011 8.76045129999999972 -10.012948"
+		
+		2 "|Books:BookGRP|Books:Book12|Books:Book12Shape" "pnts[4]" " -type \"float3\" 7.62511440000000018 8.76045129999999972 -7.85074330000000042"
+		
+		2 "|Books:BookGRP|Books:Book12|Books:Book12Shape" "pnts[5]" " -type \"float3\" 6.38948010000000011 8.76045129999999972 -7.85074330000000042"
+		
+		2 "|Books:BookGRP|Books:Book12|Books:Book12Shape" "pnts[6]" " -type \"float3\" 7.62511440000000018 8.22079749999999976 -7.85074330000000042"
+		
+		2 "|Books:BookGRP|Books:Book12|Books:Book12Shape" "pnts[7]" " -type \"float3\" 6.38948010000000011 8.22079749999999976 -7.85074330000000042"
+		
+		2 "|Books:BookGRP|Books:Book12|Books:Book12Shape" "pnts[8]" " -type \"float3\" 7.3606132999999998 8.22079749999999976 -10.012948"
+		
+		2 "|Books:BookGRP|Books:Book12|Books:Book12Shape" "pnts[9]" " -type \"float3\" 6.65398069999999997 8.22079749999999976 -10.012948"
+		
+		2 "|Books:BookGRP|Books:Book12|Books:Book12Shape" "pnts[10]" " -type \"float3\" 6.65398069999999997 8.76045129999999972 -10.012948"
+		
+		2 "|Books:BookGRP|Books:Book12|Books:Book12Shape" "pnts[11]" " -type \"float3\" 7.3606132999999998 8.76045129999999972 -10.012948"
+		
+		2 "|Books:BookGRP|Books:Book12|Books:Book12Shape" "pnts[12]" " -type \"float3\" 6.65398069999999997 8.76045129999999972 -7.95232869999999981"
+		
+		2 "|Books:BookGRP|Books:Book12|Books:Book12Shape" "pnts[13]" " -type \"float3\" 7.3606132999999998 8.76045129999999972 -7.95232869999999981"
+		
+		2 "|Books:BookGRP|Books:Book12|Books:Book12Shape" "pnts[14]" " -type \"float3\" 7.3606132999999998 8.22079749999999976 -7.95232869999999981"
+		
+		2 "|Books:BookGRP|Books:Book12|Books:Book12Shape" "pnts[15]" " -type \"float3\" 6.65398069999999997 8.22079749999999976 -7.95232869999999981"
+		
+		2 "|Books:BookGRP|Books:Book12|Books:Book12Shape" "pnts[16]" " -type \"float3\" 7.3606132999999998 8.225399 -9.96626189999999923"
+		
+		2 "|Books:BookGRP|Books:Book12|Books:Book12Shape" "pnts[17]" " -type \"float3\" 6.65398069999999997 8.225399 -9.96626189999999923"
+		
+		2 "|Books:BookGRP|Books:Book12|Books:Book12Shape" "pnts[18]" " -type \"float3\" 6.65398069999999997 8.75585079999999927 -9.96626189999999923"
+		
+		2 "|Books:BookGRP|Books:Book12|Books:Book12Shape" "pnts[19]" " -type \"float3\" 7.3606132999999998 8.75585079999999927 -9.96626189999999923"
+		
+		2 "|Books:BookGRP|Books:Book12|Books:Book12Shape" "pnts[20]" " -type \"float3\" 6.65398069999999997 8.75125120000000045 -7.95232869999999981"
+		
+		2 "|Books:BookGRP|Books:Book12|Books:Book12Shape" "pnts[21]" " -type \"float3\" 7.3606132999999998 8.75125120000000045 -7.95232869999999981"
+		
+		2 "|Books:BookGRP|Books:Book12|Books:Book12Shape" "pnts[22]" " -type \"float3\" 7.3606132999999998 8.22999949999999991 -7.95232869999999981"
+		
+		2 "|Books:BookGRP|Books:Book12|Books:Book12Shape" "pnts[23]" " -type \"float3\" 6.65398069999999997 8.22999949999999991 -7.95232869999999981"
+		
+		2 "|Books:BookGRP|Books:Book13" "rotatePivot" " -type \"double3\" 6.07225822018901251 7.72079658508300515 -8.32567676525508915"
+		
+		2 "|Books:BookGRP|Books:Book13" "scalePivot" " -type \"double3\" 6.07225822018901251 7.72079658508300515 -8.32567676525508915"
+		
+		2 "|Books:BookGRP|Books:Book13|Books:Book13Shape" "pnts" " -s 24"
+		2 "|Books:BookGRP|Books:Book13|Books:Book13Shape" "pnts[0]" " -type \"float3\" 6.81133080000000035 8.22079749999999976 -10.00484"
+		
+		2 "|Books:BookGRP|Books:Book13|Books:Book13Shape" "pnts[1]" " -type \"float3\" 5.572258 8.22079749999999976 -10.00484"
+		
+		2 "|Books:BookGRP|Books:Book13|Books:Book13Shape" "pnts[2]" " -type \"float3\" 6.81133080000000035 8.782917 -10.00484"
+		
+		2 "|Books:BookGRP|Books:Book13|Books:Book13Shape" "pnts[3]" " -type \"float3\" 5.572258 8.782917 -10.00484"
+		
+		2 "|Books:BookGRP|Books:Book13|Books:Book13Shape" "pnts[4]" " -type \"float3\" 6.81133080000000035 8.782917 -7.82567690000000038"
+		
+		2 "|Books:BookGRP|Books:Book13|Books:Book13Shape" "pnts[5]" " -type \"float3\" 5.572258 8.782917 -7.82567690000000038"
+		
+		2 "|Books:BookGRP|Books:Book13|Books:Book13Shape" "pnts[6]" " -type \"float3\" 6.81133080000000035 8.22079749999999976 -7.82567690000000038"
+		
+		2 "|Books:BookGRP|Books:Book13|Books:Book13Shape" "pnts[7]" " -type \"float3\" 5.572258 8.22079749999999976 -7.82567690000000038"
+		
+		2 "|Books:BookGRP|Books:Book13|Books:Book13Shape" "pnts[8]" " -type \"float3\" 6.54641249999999975 8.22079749999999976 -10.00484"
+		
+		2 "|Books:BookGRP|Books:Book13|Books:Book13Shape" "pnts[9]" " -type \"float3\" 5.8371757999999998 8.22079749999999976 -10.00484"
+		
+		2 "|Books:BookGRP|Books:Book13|Books:Book13Shape" "pnts[10]" " -type \"float3\" 5.8371757999999998 8.782917 -10.00484"
+		
+		2 "|Books:BookGRP|Books:Book13|Books:Book13Shape" "pnts[11]" " -type \"float3\" 6.54641249999999975 8.782917 -10.00484"
+		
+		2 "|Books:BookGRP|Books:Book13|Books:Book13Shape" "pnts[12]" " -type \"float3\" 5.8371757999999998 8.782917 -7.92790890000000026"
+		
+		2 "|Books:BookGRP|Books:Book13|Books:Book13Shape" "pnts[13]" " -type \"float3\" 6.54641249999999975 8.782917 -7.92790890000000026"
+		
+		2 "|Books:BookGRP|Books:Book13|Books:Book13Shape" "pnts[14]" " -type \"float3\" 6.54641249999999975 8.22079749999999976 -7.92790890000000026"
+		
+		2 "|Books:BookGRP|Books:Book13|Books:Book13Shape" "pnts[15]" " -type \"float3\" 5.8371757999999998 8.22079749999999976 -7.92790890000000026"
+		
+		2 "|Books:BookGRP|Books:Book13|Books:Book13Shape" "pnts[16]" " -type \"float3\" 6.54641249999999975 8.22558979999999984 -9.95763679999999951"
+		
+		2 "|Books:BookGRP|Books:Book13|Books:Book13Shape" "pnts[17]" " -type \"float3\" 5.8371757999999998 8.22558979999999984 -9.95763679999999951"
+		
+		2 "|Books:BookGRP|Books:Book13|Books:Book13Shape" "pnts[18]" " -type \"float3\" 5.8371757999999998 8.77812390000000065 -9.95763679999999951"
+		
+		2 "|Books:BookGRP|Books:Book13|Books:Book13Shape" "pnts[19]" " -type \"float3\" 6.54641249999999975 8.77812390000000065 -9.95763679999999951"
+		
+		2 "|Books:BookGRP|Books:Book13|Books:Book13Shape" "pnts[20]" " -type \"float3\" 5.8371757999999998 8.77333259999999981 -7.92790890000000026"
+		
+		2 "|Books:BookGRP|Books:Book13|Books:Book13Shape" "pnts[21]" " -type \"float3\" 6.54641249999999975 8.77333259999999981 -7.92790890000000026"
+		
+		2 "|Books:BookGRP|Books:Book13|Books:Book13Shape" "pnts[22]" " -type \"float3\" 6.54641249999999975 8.23038290000000039 -7.92790890000000026"
+		
+		2 "|Books:BookGRP|Books:Book13|Books:Book13Shape" "pnts[23]" " -type \"float3\" 5.8371757999999998 8.23038290000000039 -7.92790890000000026"
+		
+		2 "|Books:BookGRP|Books:Book11" "rotatePivot" " -type \"double3\" 6.60495903819589003 7.72079658508300781 -8.35074319552347966"
+		
+		2 "|Books:BookGRP|Books:Book11" "scalePivot" " -type \"double3\" 6.60495903819589003 7.72079658508300781 -8.35074319552347966"
+		
+		2 "|Books:BookGRP|Books:Book11|Books:Book11Shape" "pnts" " -s 24"
+		2 "|Books:BookGRP|Books:Book11|Books:Book11Shape" "pnts[0]" " -type \"float3\" 7.35990620000000018 8.22079749999999976 -10.108204"
+		
+		2 "|Books:BookGRP|Books:Book11|Books:Book11Shape" "pnts[1]" " -type \"float3\" 6.104959 8.22079749999999976 -10.108204"
+		
+		2 "|Books:BookGRP|Books:Book11|Books:Book11Shape" "pnts[2]" " -type \"float3\" 7.35990620000000018 8.95883850000000059 -10.108204"
+		
+		2 "|Books:BookGRP|Books:Book11|Books:Book11Shape" "pnts[3]" " -type \"float3\" 6.104959 8.95883850000000059 -10.108204"
+		
+		2 "|Books:BookGRP|Books:Book11|Books:Book11Shape" "pnts[4]" " -type \"float3\" 7.35990620000000018 8.95883850000000059 -7.85074330000000042"
+		
+		2 "|Books:BookGRP|Books:Book11|Books:Book11Shape" "pnts[5]" " -type \"float3\" 6.104959 8.95883850000000059 -7.85074330000000042"
+		
+		2 "|Books:BookGRP|Books:Book11|Books:Book11Shape" "pnts[6]" " -type \"float3\" 7.35990620000000018 8.22079749999999976 -7.85074330000000042"
+		
+		2 "|Books:BookGRP|Books:Book11|Books:Book11Shape" "pnts[7]" " -type \"float3\" 6.104959 8.22079749999999976 -7.85074330000000042"
+		
+		2 "|Books:BookGRP|Books:Book11|Books:Book11Shape" "pnts[8]" " -type \"float3\" 7.09306139999999985 8.22079749999999976 -10.108204"
+		
+		2 "|Books:BookGRP|Books:Book11|Books:Book11Shape" "pnts[9]" " -type \"float3\" 6.37180329999999984 8.22079749999999976 -10.108204"
+		
+		2 "|Books:BookGRP|Books:Book11|Books:Book11Shape" "pnts[10]" " -type \"float3\" 6.37180329999999984 8.95883850000000059 -10.108204"
+		
+		2 "|Books:BookGRP|Books:Book11|Books:Book11Shape" "pnts[11]" " -type \"float3\" 7.09306139999999985 8.95883850000000059 -10.108204"
+		
+		2 "|Books:BookGRP|Books:Book11|Books:Book11Shape" "pnts[12]" " -type \"float3\" 6.37180329999999984 8.95883850000000059 -7.9559603000000001"
+		
+		2 "|Books:BookGRP|Books:Book11|Books:Book11Shape" "pnts[13]" " -type \"float3\" 7.09306139999999985 8.95883850000000059 -7.9559603000000001"
+		
+		2 "|Books:BookGRP|Books:Book11|Books:Book11Shape" "pnts[14]" " -type \"float3\" 7.09306139999999985 8.22079749999999976 -7.9559603000000001"
+		
+		2 "|Books:BookGRP|Books:Book11|Books:Book11Shape" "pnts[15]" " -type \"float3\" 6.37180329999999984 8.22079749999999976 -7.9559603000000001"
+		
+		2 "|Books:BookGRP|Books:Book11|Books:Book11Shape" "pnts[16]" " -type \"float3\" 7.09306139999999985 8.22708989999999929 -10.058617"
+		
+		2 "|Books:BookGRP|Books:Book11|Books:Book11Shape" "pnts[17]" " -type \"float3\" 6.37180329999999984 8.22708989999999929 -10.058617"
+		
+		2 "|Books:BookGRP|Books:Book11|Books:Book11Shape" "pnts[18]" " -type \"float3\" 6.37180329999999984 8.95254609999999929 -10.058617"
+		
+		2 "|Books:BookGRP|Books:Book11|Books:Book11Shape" "pnts[19]" " -type \"float3\" 7.09306139999999985 8.95254609999999929 -10.058617"
+		
+		2 "|Books:BookGRP|Books:Book11|Books:Book11Shape" "pnts[20]" " -type \"float3\" 6.37180329999999984 8.94625470000000078 -7.9559603000000001"
+		
+		2 "|Books:BookGRP|Books:Book11|Books:Book11Shape" "pnts[21]" " -type \"float3\" 7.09306139999999985 8.94625470000000078 -7.9559603000000001"
+		
+		2 "|Books:BookGRP|Books:Book11|Books:Book11Shape" "pnts[22]" " -type \"float3\" 7.09306139999999985 8.23338129999999957 -7.9559603000000001"
+		
+		2 "|Books:BookGRP|Books:Book11|Books:Book11Shape" "pnts[23]" " -type \"float3\" 6.37180329999999984 8.23338129999999957 -7.9559603000000001"
+		
+		2 "|Books:BookGRP|Books:Book14" "rotatePivot" " -type \"double3\" 6.325250408059226 7.72079658508300781 -8.41101483004332096"
+		
+		2 "|Books:BookGRP|Books:Book14" "scalePivot" " -type \"double3\" 6.325250408059226 7.72079658508300781 -8.41101483004332096"
+		
+		2 "|Books:BookGRP|Books:Book14|Books:Book14Shape" "pnts" " -s 24"
+		2 "|Books:BookGRP|Books:Book14|Books:Book14Shape" "pnts[0]" " -type \"float3\" 7.07823850000000032 8.22079749999999976 -10.158813"
+		
+		2 "|Books:BookGRP|Books:Book14|Books:Book14Shape" "pnts[1]" " -type \"float3\" 5.82525060000000039 8.22079749999999976 -10.158813"
+		
+		2 "|Books:BookGRP|Books:Book14|Books:Book14Shape" "pnts[2]" " -type \"float3\" 7.07823850000000032 8.87384220000000035 -10.158813"
+		
+		2 "|Books:BookGRP|Books:Book14|Books:Book14Shape" "pnts[3]" " -type \"float3\" 5.82525060000000039 8.87384220000000035 -10.158813"
+		
+		2 "|Books:BookGRP|Books:Book14|Books:Book14Shape" "pnts[4]" " -type \"float3\" 7.07823850000000032 8.87384220000000035 -7.91101459999999967"
+		
+		2 "|Books:BookGRP|Books:Book14|Books:Book14Shape" "pnts[5]" " -type \"float3\" 5.82525060000000039 8.87384220000000035 -7.91101459999999967"
+		
+		2 "|Books:BookGRP|Books:Book14|Books:Book14Shape" "pnts[6]" " -type \"float3\" 7.07823850000000032 8.22079749999999976 -7.91101459999999967"
+		
+		2 "|Books:BookGRP|Books:Book14|Books:Book14Shape" "pnts[7]" " -type \"float3\" 5.82525060000000039 8.22079749999999976 -7.91101459999999967"
+		
+		2 "|Books:BookGRP|Books:Book14|Books:Book14Shape" "pnts[8]" " -type \"float3\" 6.81163220000000003 8.22079749999999976 -10.158813"
+		
+		2 "|Books:BookGRP|Books:Book14|Books:Book14Shape" "pnts[9]" " -type \"float3\" 6.091857 8.22079749999999976 -10.158813"
+		
+		2 "|Books:BookGRP|Books:Book14|Books:Book14Shape" "pnts[10]" " -type \"float3\" 6.091857 8.87384220000000035 -10.158813"
+		
+		2 "|Books:BookGRP|Books:Book14|Books:Book14Shape" "pnts[11]" " -type \"float3\" 6.81163220000000003 8.87384220000000035 -10.158813"
+		
+		2 "|Books:BookGRP|Books:Book14|Books:Book14Shape" "pnts[12]" " -type \"float3\" 6.091857 8.87384220000000035 -8.01586340000000064"
+		
+		2 "|Books:BookGRP|Books:Book14|Books:Book14Shape" "pnts[13]" " -type \"float3\" 6.81163220000000003 8.87384220000000035 -8.01586340000000064"
+		
+		2 "|Books:BookGRP|Books:Book14|Books:Book14Shape" "pnts[14]" " -type \"float3\" 6.81163220000000003 8.22079749999999976 -8.01586340000000064"
+		
+		2 "|Books:BookGRP|Books:Book14|Books:Book14Shape" "pnts[15]" " -type \"float3\" 6.091857 8.22079749999999976 -8.01586340000000064"
+		
+		2 "|Books:BookGRP|Books:Book14|Books:Book14Shape" "pnts[16]" " -type \"float3\" 6.81163220000000003 8.22636510000000065 -10.10952"
+		
+		2 "|Books:BookGRP|Books:Book14|Books:Book14Shape" "pnts[17]" " -type \"float3\" 6.091857 8.22636510000000065 -10.10952"
+		
+		2 "|Books:BookGRP|Books:Book14|Books:Book14Shape" "pnts[18]" " -type \"float3\" 6.091857 8.86827470000000062 -10.10952"
+		
+		2 "|Books:BookGRP|Books:Book14|Books:Book14Shape" "pnts[19]" " -type \"float3\" 6.81163220000000003 8.86827470000000062 -10.10952"
+		
+		2 "|Books:BookGRP|Books:Book14|Books:Book14Shape" "pnts[20]" " -type \"float3\" 6.091857 8.86270810000000075 -8.01586340000000064"
+		
+		2 "|Books:BookGRP|Books:Book14|Books:Book14Shape" "pnts[21]" " -type \"float3\" 6.81163220000000003 8.86270810000000075 -8.01586340000000064"
+		
+		2 "|Books:BookGRP|Books:Book14|Books:Book14Shape" "pnts[22]" " -type \"float3\" 6.81163220000000003 8.23193260000000038 -8.01586340000000064"
+		
+		2 "|Books:BookGRP|Books:Book14|Books:Book14Shape" "pnts[23]" " -type \"float3\" 6.091857 8.23193260000000038 -8.01586340000000064"
+		
+		2 "|Books:BookGRP|Books:Book8" "rotatePivot" " -type \"double3\" 4.71491333800758561 7.72079658508300515 -8.32567676525508915"
+		
+		2 "|Books:BookGRP|Books:Book8" "scalePivot" " -type \"double3\" 4.71491333800758561 7.72079658508300515 -8.32567676525508915"
+		
+		2 "|Books:BookGRP|Books:Book8|Books:Book8Shape" "pnts" " -s 24"
+		2 "|Books:BookGRP|Books:Book8|Books:Book8Shape" "pnts[0]" " -type \"float3\" 5.46790169999999964 8.22079749999999976 -10.073475"
+		
+		2 "|Books:BookGRP|Books:Book8|Books:Book8Shape" "pnts[1]" " -type \"float3\" 4.21491340000000037 8.22079749999999976 -10.073475"
+		
+		2 "|Books:BookGRP|Books:Book8|Books:Book8Shape" "pnts[2]" " -type \"float3\" 5.46790169999999964 8.87384220000000035 -10.073475"
+		
+		2 "|Books:BookGRP|Books:Book8|Books:Book8Shape" "pnts[3]" " -type \"float3\" 4.21491340000000037 8.87384220000000035 -10.073475"
+		
+		2 "|Books:BookGRP|Books:Book8|Books:Book8Shape" "pnts[4]" " -type \"float3\" 5.46790169999999964 8.87384220000000035 -7.82567690000000038"
+		
+		2 "|Books:BookGRP|Books:Book8|Books:Book8Shape" "pnts[5]" " -type \"float3\" 4.21491340000000037 8.87384220000000035 -7.82567690000000038"
+		
+		2 "|Books:BookGRP|Books:Book8|Books:Book8Shape" "pnts[6]" " -type \"float3\" 5.46790169999999964 8.22079749999999976 -7.82567690000000038"
+		
+		2 "|Books:BookGRP|Books:Book8|Books:Book8Shape" "pnts[7]" " -type \"float3\" 4.21491340000000037 8.22079749999999976 -7.82567690000000038"
+		
+		2 "|Books:BookGRP|Books:Book8|Books:Book8Shape" "pnts[8]" " -type \"float3\" 5.20129489999999972 8.22079749999999976 -10.073475"
+		
+		2 "|Books:BookGRP|Books:Book8|Books:Book8Shape" "pnts[9]" " -type \"float3\" 4.48151969999999977 8.22079749999999976 -10.073475"
+		
+		2 "|Books:BookGRP|Books:Book8|Books:Book8Shape" "pnts[10]" " -type \"float3\" 4.48151969999999977 8.87384220000000035 -10.073475"
+		
+		2 "|Books:BookGRP|Books:Book8|Books:Book8Shape" "pnts[11]" " -type \"float3\" 5.20129489999999972 8.87384220000000035 -10.073475"
+		
+		2 "|Books:BookGRP|Books:Book8|Books:Book8Shape" "pnts[12]" " -type \"float3\" 4.48151969999999977 8.87384220000000035 -7.93052579999999985"
+		
+		2 "|Books:BookGRP|Books:Book8|Books:Book8Shape" "pnts[13]" " -type \"float3\" 5.20129489999999972 8.87384220000000035 -7.93052579999999985"
+		
+		2 "|Books:BookGRP|Books:Book8|Books:Book8Shape" "pnts[14]" " -type \"float3\" 5.20129489999999972 8.22079749999999976 -7.93052579999999985"
+		
+		2 "|Books:BookGRP|Books:Book8|Books:Book8Shape" "pnts[15]" " -type \"float3\" 4.48151969999999977 8.22079749999999976 -7.93052579999999985"
+		
+		2 "|Books:BookGRP|Books:Book8|Books:Book8Shape" "pnts[16]" " -type \"float3\" 5.20129489999999972 8.22636510000000065 -10.024182"
+		
+		2 "|Books:BookGRP|Books:Book8|Books:Book8Shape" "pnts[17]" " -type \"float3\" 4.48151969999999977 8.22636510000000065 -10.024182"
+		
+		2 "|Books:BookGRP|Books:Book8|Books:Book8Shape" "pnts[18]" " -type \"float3\" 4.48151969999999977 8.86827470000000062 -10.024182"
+		
+		2 "|Books:BookGRP|Books:Book8|Books:Book8Shape" "pnts[19]" " -type \"float3\" 5.20129489999999972 8.86827470000000062 -10.024182"
+		
+		2 "|Books:BookGRP|Books:Book8|Books:Book8Shape" "pnts[20]" " -type \"float3\" 4.48151969999999977 8.86270810000000075 -7.93052579999999985"
+		
+		2 "|Books:BookGRP|Books:Book8|Books:Book8Shape" "pnts[21]" " -type \"float3\" 5.20129489999999972 8.86270810000000075 -7.93052579999999985"
+		
+		2 "|Books:BookGRP|Books:Book8|Books:Book8Shape" "pnts[22]" " -type \"float3\" 5.20129489999999972 8.23193260000000038 -7.93052579999999985"
+		
+		2 "|Books:BookGRP|Books:Book8|Books:Book8Shape" "pnts[23]" " -type \"float3\" 4.48151969999999977 8.23193260000000038 -7.93052579999999985"
+		
+		2 "|Books:BookGRP|Books:Book10" "rotatePivot" " -type \"double3\" 7.1541637360790773 7.72079658508300781 -8.35074319552347788"
+		
+		2 "|Books:BookGRP|Books:Book10" "scalePivot" " -type \"double3\" 7.1541637360790773 7.72079658508300781 -8.35074319552347788"
+		
+		2 "|Books:BookGRP|Books:Book10|Books:Book10Shape" "pnts" " -s 24"
+		2 "|Books:BookGRP|Books:Book10|Books:Book10Shape" "pnts[0]" " -type \"float3\" 7.88979820000000043 8.22079749999999976 -10.012948"
+		
+		2 "|Books:BookGRP|Books:Book10|Books:Book10Shape" "pnts[1]" " -type \"float3\" 6.65416339999999984 8.22079749999999976 -10.012948"
+		
+		2 "|Books:BookGRP|Books:Book10|Books:Book10Shape" "pnts[2]" " -type \"float3\" 7.88979820000000043 8.76045129999999972 -10.012948"
+		
+		2 "|Books:BookGRP|Books:Book10|Books:Book10Shape" "pnts[3]" " -type \"float3\" 6.65416339999999984 8.76045129999999972 -10.012948"
+		
+		2 "|Books:BookGRP|Books:Book10|Books:Book10Shape" "pnts[4]" " -type \"float3\" 7.88979820000000043 8.76045129999999972 -7.85074330000000042"
+		
+		2 "|Books:BookGRP|Books:Book10|Books:Book10Shape" "pnts[5]" " -type \"float3\" 6.65416339999999984 8.76045129999999972 -7.85074330000000042"
+		
+		2 "|Books:BookGRP|Books:Book10|Books:Book10Shape" "pnts[6]" " -type \"float3\" 7.88979820000000043 8.22079749999999976 -7.85074330000000042"
+		
+		2 "|Books:BookGRP|Books:Book10|Books:Book10Shape" "pnts[7]" " -type \"float3\" 6.65416339999999984 8.22079749999999976 -7.85074330000000042"
+		
+		2 "|Books:BookGRP|Books:Book10|Books:Book10Shape" "pnts[8]" " -type \"float3\" 7.62529660000000042 8.22079749999999976 -10.012948"
+		
+		2 "|Books:BookGRP|Books:Book10|Books:Book10Shape" "pnts[9]" " -type \"float3\" 6.918664 8.22079749999999976 -10.012948"
+		
+		2 "|Books:BookGRP|Books:Book10|Books:Book10Shape" "pnts[10]" " -type \"float3\" 6.918664 8.76045129999999972 -10.012948"
+		
+		2 "|Books:BookGRP|Books:Book10|Books:Book10Shape" "pnts[11]" " -type \"float3\" 7.62529660000000042 8.76045129999999972 -10.012948"
+		
+		2 "|Books:BookGRP|Books:Book10|Books:Book10Shape" "pnts[12]" " -type \"float3\" 6.918664 8.76045129999999972 -7.95232869999999981"
+		
+		2 "|Books:BookGRP|Books:Book10|Books:Book10Shape" "pnts[13]" " -type \"float3\" 7.62529660000000042 8.76045129999999972 -7.95232869999999981"
+		
+		2 "|Books:BookGRP|Books:Book10|Books:Book10Shape" "pnts[14]" " -type \"float3\" 7.62529660000000042 8.22079749999999976 -7.95232869999999981"
+		
+		2 "|Books:BookGRP|Books:Book10|Books:Book10Shape" "pnts[15]" " -type \"float3\" 6.918664 8.22079749999999976 -7.95232869999999981"
+		
+		2 "|Books:BookGRP|Books:Book10|Books:Book10Shape" "pnts[16]" " -type \"float3\" 7.62529660000000042 8.225399 -9.96626189999999923"
+		
+		2 "|Books:BookGRP|Books:Book10|Books:Book10Shape" "pnts[17]" " -type \"float3\" 6.918664 8.225399 -9.96626189999999923"
+		
+		2 "|Books:BookGRP|Books:Book10|Books:Book10Shape" "pnts[18]" " -type \"float3\" 6.918664 8.75585079999999927 -9.96626189999999923"
+		
+		2 "|Books:BookGRP|Books:Book10|Books:Book10Shape" "pnts[19]" " -type \"float3\" 7.62529660000000042 8.75585079999999927 -9.96626189999999923"
+		
+		2 "|Books:BookGRP|Books:Book10|Books:Book10Shape" "pnts[20]" " -type \"float3\" 6.918664 8.75125120000000045 -7.95232869999999981"
+		
+		2 "|Books:BookGRP|Books:Book10|Books:Book10Shape" "pnts[21]" " -type \"float3\" 7.62529660000000042 8.75125120000000045 -7.95232869999999981"
+		
+		2 "|Books:BookGRP|Books:Book10|Books:Book10Shape" "pnts[22]" " -type \"float3\" 7.62529660000000042 8.22999949999999991 -7.95232869999999981"
+		
+		2 "|Books:BookGRP|Books:Book10|Books:Book10Shape" "pnts[23]" " -type \"float3\" 6.918664 8.22999949999999991 -7.95232869999999981"
+		
+		2 "|Books:BookGRP|Books:Book5" "rotatePivot" " -type \"double3\" 5.7968188538976495 7.72079658508300781 -8.35074319552347788"
+		
+		2 "|Books:BookGRP|Books:Book5" "scalePivot" " -type \"double3\" 5.7968188538976495 7.72079658508300781 -8.35074319552347788"
+		
+		2 "|Books:BookGRP|Books:Book5|Books:Book5Shape" "pnts" " -s 24"
+		2 "|Books:BookGRP|Books:Book5|Books:Book5Shape" "pnts[0]" " -type \"float3\" 6.53245309999999968 8.22079749999999976 -10.012948"
+		
+		2 "|Books:BookGRP|Books:Book5|Books:Book5Shape" "pnts[1]" " -type \"float3\" 5.29681870000000021 8.22079749999999976 -10.012948"
+		
+		2 "|Books:BookGRP|Books:Book5|Books:Book5Shape" "pnts[2]" " -type \"float3\" 6.53245309999999968 8.76045129999999972 -10.012948"
+		
+		2 "|Books:BookGRP|Books:Book5|Books:Book5Shape" "pnts[3]" " -type \"float3\" 5.29681870000000021 8.76045129999999972 -10.012948"
+		
+		2 "|Books:BookGRP|Books:Book5|Books:Book5Shape" "pnts[4]" " -type \"float3\" 6.53245309999999968 8.76045129999999972 -7.85074330000000042"
+		
+		2 "|Books:BookGRP|Books:Book5|Books:Book5Shape" "pnts[5]" " -type \"float3\" 5.29681870000000021 8.76045129999999972 -7.85074330000000042"
+		
+		2 "|Books:BookGRP|Books:Book5|Books:Book5Shape" "pnts[6]" " -type \"float3\" 6.53245309999999968 8.22079749999999976 -7.85074330000000042"
+		
+		2 "|Books:BookGRP|Books:Book5|Books:Book5Shape" "pnts[7]" " -type \"float3\" 5.29681870000000021 8.22079749999999976 -7.85074330000000042"
+		
+		2 "|Books:BookGRP|Books:Book5|Books:Book5Shape" "pnts[8]" " -type \"float3\" 6.267952 8.22079749999999976 -10.012948"
+		
+		2 "|Books:BookGRP|Books:Book5|Books:Book5Shape" "pnts[9]" " -type \"float3\" 5.56131940000000036 8.22079749999999976 -10.012948"
+		
+		2 "|Books:BookGRP|Books:Book5|Books:Book5Shape" "pnts[10]" " -type \"float3\" 5.56131940000000036 8.76045129999999972 -10.012948"
+		
+		2 "|Books:BookGRP|Books:Book5|Books:Book5Shape" "pnts[11]" " -type \"float3\" 6.267952 8.76045129999999972 -10.012948"
+		
+		2 "|Books:BookGRP|Books:Book5|Books:Book5Shape" "pnts[12]" " -type \"float3\" 5.56131940000000036 8.76045129999999972 -7.95232869999999981"
+		
+		2 "|Books:BookGRP|Books:Book5|Books:Book5Shape" "pnts[13]" " -type \"float3\" 6.267952 8.76045129999999972 -7.95232869999999981"
+		
+		2 "|Books:BookGRP|Books:Book5|Books:Book5Shape" "pnts[14]" " -type \"float3\" 6.267952 8.22079749999999976 -7.95232869999999981"
+		
+		2 "|Books:BookGRP|Books:Book5|Books:Book5Shape" "pnts[15]" " -type \"float3\" 5.56131940000000036 8.22079749999999976 -7.95232869999999981"
+		
+		2 "|Books:BookGRP|Books:Book5|Books:Book5Shape" "pnts[16]" " -type \"float3\" 6.267952 8.225399 -9.96626189999999923"
+		
+		2 "|Books:BookGRP|Books:Book5|Books:Book5Shape" "pnts[17]" " -type \"float3\" 5.56131940000000036 8.225399 -9.96626189999999923"
+		
+		2 "|Books:BookGRP|Books:Book5|Books:Book5Shape" "pnts[18]" " -type \"float3\" 5.56131940000000036 8.75585079999999927 -9.96626189999999923"
+		
+		2 "|Books:BookGRP|Books:Book5|Books:Book5Shape" "pnts[19]" " -type \"float3\" 6.267952 8.75585079999999927 -9.96626189999999923"
+		
+		2 "|Books:BookGRP|Books:Book5|Books:Book5Shape" "pnts[20]" " -type \"float3\" 5.56131940000000036 8.75125120000000045 -7.95232869999999981"
+		
+		2 "|Books:BookGRP|Books:Book5|Books:Book5Shape" "pnts[21]" " -type \"float3\" 6.267952 8.75125120000000045 -7.95232869999999981"
+		
+		2 "|Books:BookGRP|Books:Book5|Books:Book5Shape" "pnts[22]" " -type \"float3\" 6.267952 8.22999949999999991 -7.95232869999999981"
+		
+		2 "|Books:BookGRP|Books:Book5|Books:Book5Shape" "pnts[23]" " -type \"float3\" 5.56131940000000036 8.22999949999999991 -7.95232869999999981"
+		
+		2 "|Books:BookGRP|Books:Book6" "rotatePivot" " -type \"double3\" 5.24761415601446313 7.72079658508300781 -8.35074319552347966"
+		
+		2 "|Books:BookGRP|Books:Book6" "scalePivot" " -type \"double3\" 5.24761415601446313 7.72079658508300781 -8.35074319552347966"
+		
+		2 "|Books:BookGRP|Books:Book6|Books:Book6Shape" "pnts" " -s 24"
+		2 "|Books:BookGRP|Books:Book6|Books:Book6Shape" "pnts[0]" " -type \"float3\" 6.00060220000000033 8.22079749999999976 -10.098541"
+		
+		2 "|Books:BookGRP|Books:Book6|Books:Book6Shape" "pnts[1]" " -type \"float3\" 4.74761390000000016 8.22079749999999976 -10.098541"
+		
+		2 "|Books:BookGRP|Books:Book6|Books:Book6Shape" "pnts[2]" " -type \"float3\" 6.00060220000000033 8.87384220000000035 -10.098541"
+		
+		2 "|Books:BookGRP|Books:Book6|Books:Book6Shape" "pnts[3]" " -type \"float3\" 4.74761390000000016 8.87384220000000035 -10.098541"
+		
+		2 "|Books:BookGRP|Books:Book6|Books:Book6Shape" "pnts[4]" " -type \"float3\" 6.00060220000000033 8.87384220000000035 -7.85074330000000042"
+		
+		2 "|Books:BookGRP|Books:Book6|Books:Book6Shape" "pnts[5]" " -type \"float3\" 4.74761390000000016 8.87384220000000035 -7.85074330000000042"
+		
+		2 "|Books:BookGRP|Books:Book6|Books:Book6Shape" "pnts[6]" " -type \"float3\" 6.00060220000000033 8.22079749999999976 -7.85074330000000042"
+		
+		2 "|Books:BookGRP|Books:Book6|Books:Book6Shape" "pnts[7]" " -type \"float3\" 4.74761390000000016 8.22079749999999976 -7.85074330000000042"
+		
+		2 "|Books:BookGRP|Books:Book6|Books:Book6Shape" "pnts[8]" " -type \"float3\" 5.73399540000000041 8.22079749999999976 -10.098541"
+		
+		2 "|Books:BookGRP|Books:Book6|Books:Book6Shape" "pnts[9]" " -type \"float3\" 5.01422019999999957 8.22079749999999976 -10.098541"
+		
+		2 "|Books:BookGRP|Books:Book6|Books:Book6Shape" "pnts[10]" " -type \"float3\" 5.01422019999999957 8.87384220000000035 -10.098541"
+		
+		2 "|Books:BookGRP|Books:Book6|Books:Book6Shape" "pnts[11]" " -type \"float3\" 5.73399540000000041 8.87384220000000035 -10.098541"
+		
+		2 "|Books:BookGRP|Books:Book6|Books:Book6Shape" "pnts[12]" " -type \"float3\" 5.01422019999999957 8.87384220000000035 -7.95559219999999989"
+		
+		2 "|Books:BookGRP|Books:Book6|Books:Book6Shape" "pnts[13]" " -type \"float3\" 5.73399540000000041 8.87384220000000035 -7.95559219999999989"
+		
+		2 "|Books:BookGRP|Books:Book6|Books:Book6Shape" "pnts[14]" " -type \"float3\" 5.73399540000000041 8.22079749999999976 -7.95559219999999989"
+		
+		2 "|Books:BookGRP|Books:Book6|Books:Book6Shape" "pnts[15]" " -type \"float3\" 5.01422019999999957 8.22079749999999976 -7.95559219999999989"
+		
+		2 "|Books:BookGRP|Books:Book6|Books:Book6Shape" "pnts[16]" " -type \"float3\" 5.73399540000000041 8.22636510000000065 -10.049249"
+		
+		2 "|Books:BookGRP|Books:Book6|Books:Book6Shape" "pnts[17]" " -type \"float3\" 5.01422019999999957 8.22636510000000065 -10.049249"
+		
+		2 "|Books:BookGRP|Books:Book6|Books:Book6Shape" "pnts[18]" " -type \"float3\" 5.01422019999999957 8.86827470000000062 -10.049249"
+		
+		2 "|Books:BookGRP|Books:Book6|Books:Book6Shape" "pnts[19]" " -type \"float3\" 5.73399540000000041 8.86827470000000062 -10.049249"
+		
+		2 "|Books:BookGRP|Books:Book6|Books:Book6Shape" "pnts[20]" " -type \"float3\" 5.01422019999999957 8.86270810000000075 -7.95559219999999989"
+		
+		2 "|Books:BookGRP|Books:Book6|Books:Book6Shape" "pnts[21]" " -type \"float3\" 5.73399540000000041 8.86270810000000075 -7.95559219999999989"
+		
+		2 "|Books:BookGRP|Books:Book6|Books:Book6Shape" "pnts[22]" " -type \"float3\" 5.73399540000000041 8.23193260000000038 -7.95559219999999989"
+		
+		2 "|Books:BookGRP|Books:Book6|Books:Book6Shape" "pnts[23]" " -type \"float3\" 5.01422019999999957 8.23193260000000038 -7.95559219999999989"
+		
+		2 "|Books:BookGRP|Books:Book1" "rotatePivot" " -type \"double3\" 3.60063543146257103 7.72079658508300781 -8.41101483004332096"
+		
+		2 "|Books:BookGRP|Books:Book1" "scalePivot" " -type \"double3\" 3.60063543146257103 7.72079658508300781 -8.41101483004332096"
+		
+		2 "|Books:BookGRP|Books:Book1|Books:Book1Shape" "pnts" " -s 24"
+		2 "|Books:BookGRP|Books:Book1|Books:Book1Shape" "pnts[0]" " -type \"float3\" 4.35362389999999966 8.22079749999999976 -10.158813"
+		
+		2 "|Books:BookGRP|Books:Book1|Books:Book1Shape" "pnts[1]" " -type \"float3\" 3.1006355000000001 8.22079749999999976 -10.158813"
+		
+		2 "|Books:BookGRP|Books:Book1|Books:Book1Shape" "pnts[2]" " -type \"float3\" 4.35362389999999966 8.87384220000000035 -10.158813"
+		
+		2 "|Books:BookGRP|Books:Book1|Books:Book1Shape" "pnts[3]" " -type \"float3\" 3.1006355000000001 8.87384220000000035 -10.158813"
+		
+		2 "|Books:BookGRP|Books:Book1|Books:Book1Shape" "pnts[4]" " -type \"float3\" 4.35362389999999966 8.87384220000000035 -7.91101459999999967"
+		
+		2 "|Books:BookGRP|Books:Book1|Books:Book1Shape" "pnts[5]" " -type \"float3\" 3.1006355000000001 8.87384220000000035 -7.91101459999999967"
+		
+		2 "|Books:BookGRP|Books:Book1|Books:Book1Shape" "pnts[6]" " -type \"float3\" 4.35362389999999966 8.22079749999999976 -7.91101459999999967"
+		
+		2 "|Books:BookGRP|Books:Book1|Books:Book1Shape" "pnts[7]" " -type \"float3\" 3.1006355000000001 8.22079749999999976 -7.91101459999999967"
+		
+		2 "|Books:BookGRP|Books:Book1|Books:Book1Shape" "pnts[8]" " -type \"float3\" 4.08701709999999974 8.22079749999999976 -10.158813"
+		
+		2 "|Books:BookGRP|Books:Book1|Books:Book1Shape" "pnts[9]" " -type \"float3\" 3.36724189999999979 8.22079749999999976 -10.158813"
+		
+		2 "|Books:BookGRP|Books:Book1|Books:Book1Shape" "pnts[10]" " -type \"float3\" 3.36724189999999979 8.87384220000000035 -10.158813"
+		
+		2 "|Books:BookGRP|Books:Book1|Books:Book1Shape" "pnts[11]" " -type \"float3\" 4.08701709999999974 8.87384220000000035 -10.158813"
+		
+		2 "|Books:BookGRP|Books:Book1|Books:Book1Shape" "pnts[12]" " -type \"float3\" 3.36724189999999979 8.87384220000000035 -8.01586340000000064"
+		
+		2 "|Books:BookGRP|Books:Book1|Books:Book1Shape" "pnts[13]" " -type \"float3\" 4.08701709999999974 8.87384220000000035 -8.01586340000000064"
+		
+		2 "|Books:BookGRP|Books:Book1|Books:Book1Shape" "pnts[14]" " -type \"float3\" 4.08701709999999974 8.22079749999999976 -8.01586340000000064"
+		
+		2 "|Books:BookGRP|Books:Book1|Books:Book1Shape" "pnts[15]" " -type \"float3\" 3.36724189999999979 8.22079749999999976 -8.01586340000000064"
+		
+		2 "|Books:BookGRP|Books:Book1|Books:Book1Shape" "pnts[16]" " -type \"float3\" 4.08701709999999974 8.22636510000000065 -10.10952"
+		
+		2 "|Books:BookGRP|Books:Book1|Books:Book1Shape" "pnts[17]" " -type \"float3\" 3.36724189999999979 8.22636510000000065 -10.10952"
+		
+		2 "|Books:BookGRP|Books:Book1|Books:Book1Shape" "pnts[18]" " -type \"float3\" 3.36724189999999979 8.86827470000000062 -10.10952"
+		
+		2 "|Books:BookGRP|Books:Book1|Books:Book1Shape" "pnts[19]" " -type \"float3\" 4.08701709999999974 8.86827470000000062 -10.10952"
+		
+		2 "|Books:BookGRP|Books:Book1|Books:Book1Shape" "pnts[20]" " -type \"float3\" 3.36724189999999979 8.86270810000000075 -8.01586340000000064"
+		
+		2 "|Books:BookGRP|Books:Book1|Books:Book1Shape" "pnts[21]" " -type \"float3\" 4.08701709999999974 8.86270810000000075 -8.01586340000000064"
+		
+		2 "|Books:BookGRP|Books:Book1|Books:Book1Shape" "pnts[22]" " -type \"float3\" 4.08701709999999974 8.23193260000000038 -8.01586340000000064"
+		
+		2 "|Books:BookGRP|Books:Book1|Books:Book1Shape" "pnts[23]" " -type \"float3\" 3.36724189999999979 8.23193260000000038 -8.01586340000000064"
+		
+		2 "|Books:BookGRP|Books:Book4" "rotatePivot" " -type \"double3\" 4.42954875948242144 7.72079658508300781 -8.35074319552347788"
+		
+		2 "|Books:BookGRP|Books:Book4" "scalePivot" " -type \"double3\" 4.42954875948242144 7.72079658508300781 -8.35074319552347788"
+		
+		2 "|Books:BookGRP|Books:Book4|Books:Book4Shape" "pnts" " -s 24"
+		2 "|Books:BookGRP|Books:Book4|Books:Book4Shape" "pnts[0]" " -type \"float3\" 5.16518310000000014 8.22079749999999976 -10.012948"
+		
+		2 "|Books:BookGRP|Books:Book4|Books:Book4Shape" "pnts[1]" " -type \"float3\" 3.92954869999999978 8.22079749999999976 -10.012948"
+		
+		2 "|Books:BookGRP|Books:Book4|Books:Book4Shape" "pnts[2]" " -type \"float3\" 5.16518310000000014 8.76045129999999972 -10.012948"
+		
+		2 "|Books:BookGRP|Books:Book4|Books:Book4Shape" "pnts[3]" " -type \"float3\" 3.92954869999999978 8.76045129999999972 -10.012948"
+		
+		2 "|Books:BookGRP|Books:Book4|Books:Book4Shape" "pnts[4]" " -type \"float3\" 5.16518310000000014 8.76045129999999972 -7.85074330000000042"
+		
+		2 "|Books:BookGRP|Books:Book4|Books:Book4Shape" "pnts[5]" " -type \"float3\" 3.92954869999999978 8.76045129999999972 -7.85074330000000042"
+		
+		2 "|Books:BookGRP|Books:Book4|Books:Book4Shape" "pnts[6]" " -type \"float3\" 5.16518310000000014 8.22079749999999976 -7.85074330000000042"
+		
+		2 "|Books:BookGRP|Books:Book4|Books:Book4Shape" "pnts[7]" " -type \"float3\" 3.92954869999999978 8.22079749999999976 -7.85074330000000042"
+		
+		2 "|Books:BookGRP|Books:Book4|Books:Book4Shape" "pnts[8]" " -type \"float3\" 4.900682 8.22079749999999976 -10.012948"
+		
+		2 "|Books:BookGRP|Books:Book4|Books:Book4Shape" "pnts[9]" " -type \"float3\" 4.19404939999999993 8.22079749999999976 -10.012948"
+		
+		2 "|Books:BookGRP|Books:Book4|Books:Book4Shape" "pnts[10]" " -type \"float3\" 4.19404939999999993 8.76045129999999972 -10.012948"
+		
+		2 "|Books:BookGRP|Books:Book4|Books:Book4Shape" "pnts[11]" " -type \"float3\" 4.900682 8.76045129999999972 -10.012948"
+		
+		2 "|Books:BookGRP|Books:Book4|Books:Book4Shape" "pnts[12]" " -type \"float3\" 4.19404939999999993 8.76045129999999972 -7.95232869999999981"
+		
+		2 "|Books:BookGRP|Books:Book4|Books:Book4Shape" "pnts[13]" " -type \"float3\" 4.900682 8.76045129999999972 -7.95232869999999981"
+		
+		2 "|Books:BookGRP|Books:Book4|Books:Book4Shape" "pnts[14]" " -type \"float3\" 4.900682 8.22079749999999976 -7.95232869999999981"
+		
+		2 "|Books:BookGRP|Books:Book4|Books:Book4Shape" "pnts[15]" " -type \"float3\" 4.19404939999999993 8.22079749999999976 -7.95232869999999981"
+		
+		2 "|Books:BookGRP|Books:Book4|Books:Book4Shape" "pnts[16]" " -type \"float3\" 4.900682 8.225399 -9.96626189999999923"
+		
+		2 "|Books:BookGRP|Books:Book4|Books:Book4Shape" "pnts[17]" " -type \"float3\" 4.19404939999999993 8.225399 -9.96626189999999923"
+		
+		2 "|Books:BookGRP|Books:Book4|Books:Book4Shape" "pnts[18]" " -type \"float3\" 4.19404939999999993 8.75585079999999927 -9.96626189999999923"
+		
+		2 "|Books:BookGRP|Books:Book4|Books:Book4Shape" "pnts[19]" " -type \"float3\" 4.900682 8.75585079999999927 -9.96626189999999923"
+		
+		2 "|Books:BookGRP|Books:Book4|Books:Book4Shape" "pnts[20]" " -type \"float3\" 4.19404939999999993 8.75125120000000045 -7.95232869999999981"
+		
+		2 "|Books:BookGRP|Books:Book4|Books:Book4Shape" "pnts[21]" " -type \"float3\" 4.900682 8.75125120000000045 -7.95232869999999981"
+		
+		2 "|Books:BookGRP|Books:Book4|Books:Book4Shape" "pnts[22]" " -type \"float3\" 4.900682 8.22999949999999991 -7.95232869999999981"
+		
+		2 "|Books:BookGRP|Books:Book4|Books:Book4Shape" "pnts[23]" " -type \"float3\" 4.19404939999999993 8.22999949999999991 -7.95232869999999981"
+		
+		2 "|Books:BookGRP|Books:Book" "rotatePivot" " -type \"double3\" 3.34764324359235754 7.72079658508300515 -8.32567676525508915"
+		
+		2 "|Books:BookGRP|Books:Book" "scalePivot" " -type \"double3\" 3.34764324359235754 7.72079658508300515 -8.32567676525508915"
+		
+		2 "|Books:BookGRP|Books:Book|Books:BookShape" "pnts" " -s 24"
+		2 "|Books:BookGRP|Books:Book|Books:BookShape" "pnts[0]" " -type \"float3\" 4.10063119999999959 8.22079749999999976 -10.073475"
+		
+		2 "|Books:BookGRP|Books:Book|Books:BookShape" "pnts[1]" " -type \"float3\" 2.84764289999999987 8.22079749999999976 -10.073475"
+		
+		2 "|Books:BookGRP|Books:Book|Books:BookShape" "pnts[2]" " -type \"float3\" 4.10063119999999959 8.87384220000000035 -10.073475"
+		
+		2 "|Books:BookGRP|Books:Book|Books:BookShape" "pnts[3]" " -type \"float3\" 2.84764289999999987 8.87384220000000035 -10.073475"
+		
+		2 "|Books:BookGRP|Books:Book|Books:BookShape" "pnts[4]" " -type \"float3\" 4.10063119999999959 8.87384220000000035 -7.82567690000000038"
+		
+		2 "|Books:BookGRP|Books:Book|Books:BookShape" "pnts[5]" " -type \"float3\" 2.84764289999999987 8.87384220000000035 -7.82567690000000038"
+		
+		2 "|Books:BookGRP|Books:Book|Books:BookShape" "pnts[6]" " -type \"float3\" 4.10063119999999959 8.22079749999999976 -7.82567690000000038"
+		
+		2 "|Books:BookGRP|Books:Book|Books:BookShape" "pnts[7]" " -type \"float3\" 2.84764289999999987 8.22079749999999976 -7.82567690000000038"
+		
+		2 "|Books:BookGRP|Books:Book|Books:BookShape" "pnts[8]" " -type \"float3\" 3.83402440000000011 8.22079749999999976 -10.073475"
+		
+		2 "|Books:BookGRP|Books:Book|Books:BookShape" "pnts[9]" " -type \"float3\" 3.11424920000000016 8.22079749999999976 -10.073475"
+		
+		2 "|Books:BookGRP|Books:Book|Books:BookShape" "pnts[10]" " -type \"float3\" 3.11424920000000016 8.87384220000000035 -10.073475"
+		
+		2 "|Books:BookGRP|Books:Book|Books:BookShape" "pnts[11]" " -type \"float3\" 3.83402440000000011 8.87384220000000035 -10.073475"
+		
+		2 "|Books:BookGRP|Books:Book|Books:BookShape" "pnts[12]" " -type \"float3\" 3.11424920000000016 8.87384220000000035 -7.93052579999999985"
+		
+		2 "|Books:BookGRP|Books:Book|Books:BookShape" "pnts[13]" " -type \"float3\" 3.83402440000000011 8.87384220000000035 -7.93052579999999985"
+		
+		2 "|Books:BookGRP|Books:Book|Books:BookShape" "pnts[14]" " -type \"float3\" 3.83402440000000011 8.22079749999999976 -7.93052579999999985"
+		
+		2 "|Books:BookGRP|Books:Book|Books:BookShape" "pnts[15]" " -type \"float3\" 3.11424920000000016 8.22079749999999976 -7.93052579999999985"
+		
+		2 "|Books:BookGRP|Books:Book|Books:BookShape" "pnts[16]" " -type \"float3\" 3.83402440000000011 8.22636510000000065 -10.024182"
+		
+		2 "|Books:BookGRP|Books:Book|Books:BookShape" "pnts[17]" " -type \"float3\" 3.11424920000000016 8.22636510000000065 -10.024182"
+		
+		2 "|Books:BookGRP|Books:Book|Books:BookShape" "pnts[18]" " -type \"float3\" 3.11424920000000016 8.86827470000000062 -10.024182"
+		
+		2 "|Books:BookGRP|Books:Book|Books:BookShape" "pnts[19]" " -type \"float3\" 3.83402440000000011 8.86827470000000062 -10.024182"
+		
+		2 "|Books:BookGRP|Books:Book|Books:BookShape" "pnts[20]" " -type \"float3\" 3.11424920000000016 8.86270810000000075 -7.93052579999999985"
+		
+		2 "|Books:BookGRP|Books:Book|Books:BookShape" "pnts[21]" " -type \"float3\" 3.83402440000000011 8.86270810000000075 -7.93052579999999985"
+		
+		2 "|Books:BookGRP|Books:Book|Books:BookShape" "pnts[22]" " -type \"float3\" 3.83402440000000011 8.23193260000000038 -7.93052579999999985"
+		
+		2 "|Books:BookGRP|Books:Book|Books:BookShape" "pnts[23]" " -type \"float3\" 3.11424920000000016 8.23193260000000038 -7.93052579999999985"
+		
+		2 "|Books:BookGRP|Books:Book2" "rotatePivot" " -type \"double3\" 3.88034406159923506 7.72079658508300781 -8.35074319552347966"
+		
+		2 "|Books:BookGRP|Books:Book2" "scalePivot" " -type \"double3\" 3.88034406159923506 7.72079658508300781 -8.35074319552347966"
+		
+		2 "|Books:BookGRP|Books:Book2|Books:Book2Shape" "pnts" " -s 24"
+		2 "|Books:BookGRP|Books:Book2|Books:Book2Shape" "pnts[0]" " -type \"float3\" 4.63333230000000018 8.22079749999999976 -10.098541"
+		
+		2 "|Books:BookGRP|Books:Book2|Books:Book2Shape" "pnts[1]" " -type \"float3\" 3.38034390000000018 8.22079749999999976 -10.098541"
+		
+		2 "|Books:BookGRP|Books:Book2|Books:Book2Shape" "pnts[2]" " -type \"float3\" 4.63333230000000018 8.87384220000000035 -10.098541"
+		
+		2 "|Books:BookGRP|Books:Book2|Books:Book2Shape" "pnts[3]" " -type \"float3\" 3.38034390000000018 8.87384220000000035 -10.098541"
+		
+		2 "|Books:BookGRP|Books:Book2|Books:Book2Shape" "pnts[4]" " -type \"float3\" 4.63333230000000018 8.87384220000000035 -7.85074330000000042"
+		
+		2 "|Books:BookGRP|Books:Book2|Books:Book2Shape" "pnts[5]" " -type \"float3\" 3.38034390000000018 8.87384220000000035 -7.85074330000000042"
+		
+		2 "|Books:BookGRP|Books:Book2|Books:Book2Shape" "pnts[6]" " -type \"float3\" 4.63333230000000018 8.22079749999999976 -7.85074330000000042"
+		
+		2 "|Books:BookGRP|Books:Book2|Books:Book2Shape" "pnts[7]" " -type \"float3\" 3.38034390000000018 8.22079749999999976 -7.85074330000000042"
+		
+		2 "|Books:BookGRP|Books:Book2|Books:Book2Shape" "pnts[8]" " -type \"float3\" 4.36672539999999998 8.22079749999999976 -10.098541"
+		
+		2 "|Books:BookGRP|Books:Book2|Books:Book2Shape" "pnts[9]" " -type \"float3\" 3.64695020000000003 8.22079749999999976 -10.098541"
+		
+		2 "|Books:BookGRP|Books:Book2|Books:Book2Shape" "pnts[10]" " -type \"float3\" 3.64695020000000003 8.87384220000000035 -10.098541"
+		
+		2 "|Books:BookGRP|Books:Book2|Books:Book2Shape" "pnts[11]" " -type \"float3\" 4.36672539999999998 8.87384220000000035 -10.098541"
+		
+		2 "|Books:BookGRP|Books:Book2|Books:Book2Shape" "pnts[12]" " -type \"float3\" 3.64695020000000003 8.87384220000000035 -7.95559219999999989"
+		
+		2 "|Books:BookGRP|Books:Book2|Books:Book2Shape" "pnts[13]" " -type \"float3\" 4.36672539999999998 8.87384220000000035 -7.95559219999999989"
+		
+		2 "|Books:BookGRP|Books:Book2|Books:Book2Shape" "pnts[14]" " -type \"float3\" 4.36672539999999998 8.22079749999999976 -7.95559219999999989"
+		
+		2 "|Books:BookGRP|Books:Book2|Books:Book2Shape" "pnts[15]" " -type \"float3\" 3.64695020000000003 8.22079749999999976 -7.95559219999999989"
+		
+		2 "|Books:BookGRP|Books:Book2|Books:Book2Shape" "pnts[16]" " -type \"float3\" 4.36672539999999998 8.22636510000000065 -10.049249"
+		
+		2 "|Books:BookGRP|Books:Book2|Books:Book2Shape" "pnts[17]" " -type \"float3\" 3.64695020000000003 8.22636510000000065 -10.049249"
+		
+		2 "|Books:BookGRP|Books:Book2|Books:Book2Shape" "pnts[18]" " -type \"float3\" 3.64695020000000003 8.86827470000000062 -10.049249"
+		
+		2 "|Books:BookGRP|Books:Book2|Books:Book2Shape" "pnts[19]" " -type \"float3\" 4.36672539999999998 8.86827470000000062 -10.049249"
+		
+		2 "|Books:BookGRP|Books:Book2|Books:Book2Shape" "pnts[20]" " -type \"float3\" 3.64695020000000003 8.86270810000000075 -7.95559219999999989"
+		
+		2 "|Books:BookGRP|Books:Book2|Books:Book2Shape" "pnts[21]" " -type \"float3\" 4.36672539999999998 8.86270810000000075 -7.95559219999999989"
+		
+		2 "|Books:BookGRP|Books:Book2|Books:Book2Shape" "pnts[22]" " -type \"float3\" 4.36672539999999998 8.23193260000000038 -7.95559219999999989"
+		
+		2 "|Books:BookGRP|Books:Book2|Books:Book2Shape" "pnts[23]" " -type \"float3\" 3.64695020000000003 8.23193260000000038 -7.95559219999999989"
+		
+		2 "|Books:BookGRP|Books:Book3" "rotatePivot" " -type \"double3\" 4.1648652306195677 7.72079658508300781 -8.35074319552347788"
+		
+		2 "|Books:BookGRP|Books:Book3" "scalePivot" " -type \"double3\" 4.1648652306195677 7.72079658508300781 -8.35074319552347788"
+		
+		2 "|Books:BookGRP|Books:Book3|Books:Book3Shape" "pnts" " -s 24"
+		2 "|Books:BookGRP|Books:Book3|Books:Book3Shape" "pnts[0]" " -type \"float3\" 4.90049929999999989 8.22079749999999976 -10.012948"
+		
+		2 "|Books:BookGRP|Books:Book3|Books:Book3Shape" "pnts[1]" " -type \"float3\" 3.664865 8.22079749999999976 -10.012948"
+		
+		2 "|Books:BookGRP|Books:Book3|Books:Book3Shape" "pnts[2]" " -type \"float3\" 4.90049929999999989 8.76045129999999972 -10.012948"
+		
+		2 "|Books:BookGRP|Books:Book3|Books:Book3Shape" "pnts[3]" " -type \"float3\" 3.664865 8.76045129999999972 -10.012948"
+		
+		2 "|Books:BookGRP|Books:Book3|Books:Book3Shape" "pnts[4]" " -type \"float3\" 4.90049929999999989 8.76045129999999972 -7.85074330000000042"
+		
+		2 "|Books:BookGRP|Books:Book3|Books:Book3Shape" "pnts[5]" " -type \"float3\" 3.664865 8.76045129999999972 -7.85074330000000042"
+		
+		2 "|Books:BookGRP|Books:Book3|Books:Book3Shape" "pnts[6]" " -type \"float3\" 4.90049929999999989 8.22079749999999976 -7.85074330000000042"
+		
+		2 "|Books:BookGRP|Books:Book3|Books:Book3Shape" "pnts[7]" " -type \"float3\" 3.664865 8.22079749999999976 -7.85074330000000042"
+		
+		2 "|Books:BookGRP|Books:Book3|Books:Book3Shape" "pnts[8]" " -type \"float3\" 4.6359982000000004 8.22079749999999976 -10.012948"
+		
+		2 "|Books:BookGRP|Books:Book3|Books:Book3Shape" "pnts[9]" " -type \"float3\" 3.92936560000000012 8.22079749999999976 -10.012948"
+		
+		2 "|Books:BookGRP|Books:Book3|Books:Book3Shape" "pnts[10]" " -type \"float3\" 3.92936560000000012 8.76045129999999972 -10.012948"
+		
+		2 "|Books:BookGRP|Books:Book3|Books:Book3Shape" "pnts[11]" " -type \"float3\" 4.6359982000000004 8.76045129999999972 -10.012948"
+		
+		2 "|Books:BookGRP|Books:Book3|Books:Book3Shape" "pnts[12]" " -type \"float3\" 3.92936560000000012 8.76045129999999972 -7.95232869999999981"
+		
+		2 "|Books:BookGRP|Books:Book3|Books:Book3Shape" "pnts[13]" " -type \"float3\" 4.6359982000000004 8.76045129999999972 -7.95232869999999981"
+		
+		2 "|Books:BookGRP|Books:Book3|Books:Book3Shape" "pnts[14]" " -type \"float3\" 4.6359982000000004 8.22079749999999976 -7.95232869999999981"
+		
+		2 "|Books:BookGRP|Books:Book3|Books:Book3Shape" "pnts[15]" " -type \"float3\" 3.92936560000000012 8.22079749999999976 -7.95232869999999981"
+		
+		2 "|Books:BookGRP|Books:Book3|Books:Book3Shape" "pnts[16]" " -type \"float3\" 4.6359982000000004 8.225399 -9.96626189999999923"
+		
+		2 "|Books:BookGRP|Books:Book3|Books:Book3Shape" "pnts[17]" " -type \"float3\" 3.92936560000000012 8.225399 -9.96626189999999923"
+		
+		2 "|Books:BookGRP|Books:Book3|Books:Book3Shape" "pnts[18]" " -type \"float3\" 3.92936560000000012 8.75585079999999927 -9.96626189999999923"
+		
+		2 "|Books:BookGRP|Books:Book3|Books:Book3Shape" "pnts[19]" " -type \"float3\" 4.6359982000000004 8.75585079999999927 -9.96626189999999923"
+		
+		2 "|Books:BookGRP|Books:Book3|Books:Book3Shape" "pnts[20]" " -type \"float3\" 3.92936560000000012 8.75125120000000045 -7.95232869999999981"
+		
+		2 "|Books:BookGRP|Books:Book3|Books:Book3Shape" "pnts[21]" " -type \"float3\" 4.6359982000000004 8.75125120000000045 -7.95232869999999981"
+		
+		2 "|Books:BookGRP|Books:Book3|Books:Book3Shape" "pnts[22]" " -type \"float3\" 4.6359982000000004 8.22999949999999991 -7.95232869999999981"
+		
+		2 "|Books:BookGRP|Books:Book3|Books:Book3Shape" "pnts[23]" " -type \"float3\" 3.92936560000000012 8.22999949999999991 -7.95232869999999981"
+		
+		2 "|Books:BookGRP|Books:Book9" "rotatePivot" " -type \"double3\" 4.9679055258777991 7.72079658508300781 -8.41101483004332096"
+		
+		2 "|Books:BookGRP|Books:Book9" "scalePivot" " -type \"double3\" 4.9679055258777991 7.72079658508300781 -8.41101483004332096"
+		
+		2 "|Books:BookGRP|Books:Book9|Books:Book9Shape" "pnts" " -s 24"
+		2 "|Books:BookGRP|Books:Book9|Books:Book9Shape" "pnts[0]" " -type \"float3\" 5.72089390000000009 8.22079749999999976 -10.158813"
+		
+		2 "|Books:BookGRP|Books:Book9|Books:Book9Shape" "pnts[1]" " -type \"float3\" 4.46790549999999964 8.22079749999999976 -10.158813"
+		
+		2 "|Books:BookGRP|Books:Book9|Books:Book9Shape" "pnts[2]" " -type \"float3\" 5.72089390000000009 8.87384220000000035 -10.158813"
+		
+		2 "|Books:BookGRP|Books:Book9|Books:Book9Shape" "pnts[3]" " -type \"float3\" 4.46790549999999964 8.87384220000000035 -10.158813"
+		
+		2 "|Books:BookGRP|Books:Book9|Books:Book9Shape" "pnts[4]" " -type \"float3\" 5.72089390000000009 8.87384220000000035 -7.91101459999999967"
+		
+		2 "|Books:BookGRP|Books:Book9|Books:Book9Shape" "pnts[5]" " -type \"float3\" 4.46790549999999964 8.87384220000000035 -7.91101459999999967"
+		
+		2 "|Books:BookGRP|Books:Book9|Books:Book9Shape" "pnts[6]" " -type \"float3\" 5.72089390000000009 8.22079749999999976 -7.91101459999999967"
+		
+		2 "|Books:BookGRP|Books:Book9|Books:Book9Shape" "pnts[7]" " -type \"float3\" 4.46790549999999964 8.22079749999999976 -7.91101459999999967"
+		
+		2 "|Books:BookGRP|Books:Book9|Books:Book9Shape" "pnts[8]" " -type \"float3\" 5.45428710000000017 8.22079749999999976 -10.158813"
+		
+		2 "|Books:BookGRP|Books:Book9|Books:Book9Shape" "pnts[9]" " -type \"float3\" 4.73451190000000022 8.22079749999999976 -10.158813"
+		
+		2 "|Books:BookGRP|Books:Book9|Books:Book9Shape" "pnts[10]" " -type \"float3\" 4.73451190000000022 8.87384220000000035 -10.158813"
+		
+		2 "|Books:BookGRP|Books:Book9|Books:Book9Shape" "pnts[11]" " -type \"float3\" 5.45428710000000017 8.87384220000000035 -10.158813"
+		
+		2 "|Books:BookGRP|Books:Book9|Books:Book9Shape" "pnts[12]" " -type \"float3\" 4.73451190000000022 8.87384220000000035 -8.01586340000000064"
+		
+		2 "|Books:BookGRP|Books:Book9|Books:Book9Shape" "pnts[13]" " -type \"float3\" 5.45428710000000017 8.87384220000000035 -8.01586340000000064"
+		
+		2 "|Books:BookGRP|Books:Book9|Books:Book9Shape" "pnts[14]" " -type \"float3\" 5.45428710000000017 8.22079749999999976 -8.01586340000000064"
+		
+		2 "|Books:BookGRP|Books:Book9|Books:Book9Shape" "pnts[15]" " -type \"float3\" 4.73451190000000022 8.22079749999999976 -8.01586340000000064"
+		
+		2 "|Books:BookGRP|Books:Book9|Books:Book9Shape" "pnts[16]" " -type \"float3\" 5.45428710000000017 8.22636510000000065 -10.10952"
+		
+		2 "|Books:BookGRP|Books:Book9|Books:Book9Shape" "pnts[17]" " -type \"float3\" 4.73451190000000022 8.22636510000000065 -10.10952"
+		
+		2 "|Books:BookGRP|Books:Book9|Books:Book9Shape" "pnts[18]" " -type \"float3\" 4.73451190000000022 8.86827470000000062 -10.10952"
+		
+		2 "|Books:BookGRP|Books:Book9|Books:Book9Shape" "pnts[19]" " -type \"float3\" 5.45428710000000017 8.86827470000000062 -10.10952"
+		
+		2 "|Books:BookGRP|Books:Book9|Books:Book9Shape" "pnts[20]" " -type \"float3\" 4.73451190000000022 8.86270810000000075 -8.01586340000000064"
+		
+		2 "|Books:BookGRP|Books:Book9|Books:Book9Shape" "pnts[21]" " -type \"float3\" 5.45428710000000017 8.86270810000000075 -8.01586340000000064"
+		
+		2 "|Books:BookGRP|Books:Book9|Books:Book9Shape" "pnts[22]" " -type \"float3\" 5.45428710000000017 8.23193260000000038 -8.01586340000000064"
+		
+		2 "|Books:BookGRP|Books:Book9|Books:Book9Shape" "pnts[23]" " -type \"float3\" 4.73451190000000022 8.23193260000000038 -8.01586340000000064";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
 createNode reference -n "PoleRN";
@@ -1241,6 +2053,9 @@ createNode reference -n "CupRN2";
 		2 "|Cup2:CupMesh" "translate" " -type \"double3\" 6.53552892472562341 6.16602429682862763 6.3535664314089173";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
+createNode transformGeometry -n "transformGeometry1";
+	rename -uid "F934370F-48DC-3EA1-25B2-E8937F762417";
+	setAttr ".txf" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 7 0 -9.7586163241420181 1;
 select -ne :time1;
 	setAttr ".o" 1;
 	setAttr ".unw" 1;
@@ -1259,9 +2074,11 @@ select -ne :defaultShaderList1;
 select -ne :postProcessList1;
 	setAttr -s 2 ".p";
 select -ne :defaultRenderUtilityList1;
+	setAttr -s 2 ".u";
 select -ne :defaultRenderingList1;
-	setAttr -s 2 ".r";
+	setAttr -s 3 ".r";
 select -ne :defaultTextureList1;
+	setAttr -s 2 ".tx";
 select -ne :standardSurface1;
 	setAttr ".sr" 0.5;
 select -ne :openPBR_shader1;
@@ -1274,6 +2091,7 @@ select -ne :initialShadingGroup;
 select -ne :initialParticleSE;
 	setAttr ".ro" yes;
 select -ne :initialMaterialInfo;
+	setAttr -s 2 ".t";
 select -ne :defaultRenderGlobals;
 	addAttr -ci true -h true -sn "dss" -ln "defaultSurfaceShader" -dt "string";
 	setAttr ".ren" -type "string" "arnold";
@@ -1292,6 +2110,8 @@ select -ne :defaultColorMgtGlobals;
 select -ne :hardwareRenderGlobals;
 	setAttr ".ctrs" 256;
 	setAttr ".btrs" 512;
+select -ne :ikSystem;
+	setAttr -s 4 ".sol";
 connectAttr "ChairMesh_translateX.o" "Chair1RN1.phl[1]";
 connectAttr "ChairMesh_translateY.o" "Chair1RN1.phl[2]";
 connectAttr "ChairMesh_translateZ.o" "Chair1RN1.phl[3]";
@@ -1302,6 +2122,8 @@ connectAttr "ChairMesh_visibility.o" "Chair1RN1.phl[7]";
 connectAttr "ChairMesh_scaleX.o" "Chair1RN1.phl[8]";
 connectAttr "ChairMesh_scaleY.o" "Chair1RN1.phl[9]";
 connectAttr "ChairMesh_scaleZ.o" "Chair1RN1.phl[10]";
+connectAttr "transformGeometry1.og" "BookShelfRN.phl[1]";
+connectAttr "BookShelfRN.phl[2]" "transformGeometry1.ig";
 connectAttr "FloorLyr.di" "FloorMesh.do";
 connectAttr "WallsLyr.di" "|Wall1.do";
 connectAttr "WallsLyr.di" "polySurface3.do";
