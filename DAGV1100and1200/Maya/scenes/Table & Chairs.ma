@@ -1,6 +1,6 @@
 //Maya ASCII 2027 scene
 //Name: Table & Chairs.ma
-//Last modified: Wed, Sep 23, 2026 02:07:19 PM
+//Last modified: Wed, Sep 23, 2026 02:13:21 PM
 //Codeset: 1252
 file -rdi 1 -ns "Cup" -dr 1 -rfn "CupRN" -op "v=0;" -typ "mayaAscii" "C:/GitHub/Essentials/DAGV1100and1200/Maya//scenes/Cup.ma";
 file -rdi 1 -ns "Cup1" -dr 1 -rfn "CupRN1" -op "v=0;" -typ "mayaAscii" "C:/GitHub/Essentials/DAGV1100and1200/Maya//scenes/Cup.ma";
@@ -12,6 +12,8 @@ file -rdi 1 -ns "BookShelf2" -rfn "BookShelfRN" -op "v=0;" -typ "mayaAscii"
 file -rdi 1 -ns "Books" -rfn "BooksRN" -op "v=0;" -typ "mayaAscii" "C:/GitHub/Essentials/DAGV1100and1200/Maya//scenes/Books.ma";
 file -rdi 1 -ns "Pole" -rfn "PoleRN" -op "v=0;" -typ "mayaAscii" "C:/GitHub/Essentials/DAGV1100and1200/Maya//scenes/Pole.ma";
 file -rdi 1 -ns "Cup2" -rfn "CupRN2" -op "v=0;" -typ "mayaAscii" "C:/GitHub/Essentials/DAGV1100and1200/Maya//scenes/Cup.ma";
+file -rdi 1 -ns "PotionBottle" -rfn "PotionBottleRN" -op "v=0;" -typ "mayaAscii"
+		 "C:/Users/10960148/Documents/GitHub/Essentials/DAGV1100and1200/Maya/scenes/PotionBottle.ma";
 file -r -ns "Cup" -dr 1 -rfn "CupRN" -op "v=0;" -typ "mayaAscii" "C:/GitHub/Essentials/DAGV1100and1200/Maya//scenes/Cup.ma";
 file -r -ns "Cup1" -dr 1 -rfn "CupRN1" -op "v=0;" -typ "mayaAscii" "C:/GitHub/Essentials/DAGV1100and1200/Maya//scenes/Cup.ma";
 file -r -ns "Table1" -dr 1 -rfn "Table1RN" -op "v=0;" -typ "mayaAscii" "C:/GitHub/Essentials/DAGV1100and1200/Maya//scenes/Table1.ma";
@@ -21,6 +23,8 @@ file -r -ns "BookShelf2" -dr 1 -rfn "BookShelfRN" -op "v=0;" -typ "mayaAscii" "C
 file -r -ns "Books" -dr 1 -rfn "BooksRN" -op "v=0;" -typ "mayaAscii" "C:/GitHub/Essentials/DAGV1100and1200/Maya//scenes/Books.ma";
 file -r -ns "Pole" -dr 1 -rfn "PoleRN" -op "v=0;" -typ "mayaAscii" "C:/GitHub/Essentials/DAGV1100and1200/Maya//scenes/Pole.ma";
 file -r -ns "Cup2" -dr 1 -rfn "CupRN2" -op "v=0;" -typ "mayaAscii" "C:/GitHub/Essentials/DAGV1100and1200/Maya//scenes/Cup.ma";
+file -r -ns "PotionBottle" -dr 1 -rfn "PotionBottleRN" -op "v=0;" -typ "mayaAscii"
+		 "C:/Users/10960148/Documents/GitHub/Essentials/DAGV1100and1200/Maya/scenes/PotionBottle.ma";
 requires maya "2027";
 requires -nodeType "aiOptions" -nodeType "aiAOVDriver" -nodeType "aiAOVFilter" -nodeType "aiImagerDenoiserOidn"
 		 "mtoa" "5.6.1.1";
@@ -30,19 +34,19 @@ fileInfo "product" "Maya 2027";
 fileInfo "version" "2027";
 fileInfo "cutIdentifier" "202604221258-70da84b25e";
 fileInfo "osv" "Windows 11 Enterprise v2009 (Build: 26200)";
-fileInfo "UUID" "B2879808-4C14-C94D-15BC-13AD45B9893E";
+fileInfo "UUID" "E0198A84-4672-8A4B-1F92-D4B479B943C2";
 fileInfo "license" "education";
 createNode transform -s -n "persp";
 	rename -uid "5A15F64E-47EC-BA4D-5F9E-34A3193251EB";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 20.256941908097119 26.741273783035734 20.278298852192364 ;
-	setAttr ".r" -type "double3" -40.800000000001518 -316.39999999995172 2.195994383952399e-15 ;
+	setAttr ".t" -type "double3" 20.525931025141286 15.346053708232152 20.510115620617746 ;
+	setAttr ".r" -type "double3" -21.000000000003268 -313.59999999994358 0 ;
 	setAttr ".rpt" -type "double3" -2.8138844895849792e-16 -1.0491388803555888e-16 5.8020615516461073e-16 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "44357412-4EC3-CC86-D993-79B19A562D66";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999979;
-	setAttr ".coi" 40.59301229726745;
+	setAttr ".coi" 32.744490058492076;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -2049,13 +2053,1457 @@ createNode reference -n "CupRN2";
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"CupRN2"
 		"CupRN2" 0
-		"CupRN2" 1
-		2 "|Cup2:CupMesh" "translate" " -type \"double3\" 6.53552892472562341 6.16602429682862763 6.3535664314089173";
+		"CupRN2" 234
+		2 "|Cup2:CupMesh" "translate" " -type \"double3\" 0 0 0"
+		2 "|Cup2:CupMesh" "rotatePivot" " -type \"double3\" 9.3002328211059222 6.17537829215180878 5.88151595974764785"
+		
+		2 "|Cup2:CupMesh" "scalePivot" " -type \"double3\" 9.3002328211059222 6.17537829215180878 5.88151595974764785"
+		
+		2 "|Cup2:CupMesh|Cup2:CupMeshShape" "pnts" " -s 230"
+		2 "|Cup2:CupMesh|Cup2:CupMeshShape" "pnts[0]" " -type \"float3\" 8.89718629999999955 7.17049409999999998 6.01247359999999986"
+		
+		2 "|Cup2:CupMesh|Cup2:CupMeshShape" "pnts[1]" " -type \"float3\" 8.95738120000000038 7.17049409999999998 6.13061189999999989"
+		
+		2 "|Cup2:CupMesh|Cup2:CupMeshShape" "pnts[2]" " -type \"float3\" 9.051137 7.17049409999999998 6.22436759999999989"
+		
+		2 "|Cup2:CupMesh|Cup2:CupMeshShape" "pnts[3]" " -type \"float3\" 9.16927530000000068 7.17049409999999998 6.2845620999999996"
+		
+		2 "|Cup2:CupMesh|Cup2:CupMeshShape" "pnts[4]" " -type \"float3\" 9.30023289999999925 7.17049409999999998 6.30530360000000023"
+		
+		2 "|Cup2:CupMesh|Cup2:CupMeshShape" "pnts[5]" " -type \"float3\" 9.43119049999999959 7.17049409999999998 6.2845620999999996"
+		
+		2 "|Cup2:CupMesh|Cup2:CupMeshShape" "pnts[6]" " -type \"float3\" 9.54932879999999962 7.17049409999999998 6.22436710000000026"
+		
+		2 "|Cup2:CupMesh|Cup2:CupMeshShape" "pnts[7]" " -type \"float3\" 9.6430845000000005 7.17049409999999998 6.13061189999999989"
+		
+		2 "|Cup2:CupMesh|Cup2:CupMeshShape" "pnts[8]" " -type \"float3\" 9.70327950000000072 7.17049409999999998 6.01247359999999986"
+		
+		2 "|Cup2:CupMesh|Cup2:CupMeshShape" "pnts[9]" " -type \"float3\" 9.72402 7.17049409999999998 5.881516"
+		
+		2 "|Cup2:CupMesh|Cup2:CupMeshShape" "pnts[10]" " -type \"float3\" 9.70327950000000072 7.17049409999999998 5.75055840000000007"
+		
+		2 "|Cup2:CupMesh|Cup2:CupMeshShape" "pnts[11]" " -type \"float3\" 9.6430845000000005 7.17049409999999998 5.63242010000000004"
+		
+		2 "|Cup2:CupMesh|Cup2:CupMeshShape" "pnts[12]" " -type \"float3\" 9.54932879999999962 7.17049409999999998 5.53866480000000028"
+		
+		2 "|Cup2:CupMesh|Cup2:CupMeshShape" "pnts[13]" " -type \"float3\" 9.43119049999999959 7.17049409999999998 5.47846980000000006"
+		
+		2 "|Cup2:CupMesh|Cup2:CupMeshShape" "pnts[14]" " -type \"float3\" 9.30023289999999925 7.17049409999999998 5.45772890000000022"
+		
+		2 "|Cup2:CupMesh|Cup2:CupMeshShape" "pnts[15]" " -type \"float3\" 9.16927530000000068 7.17049409999999998 5.47846980000000006"
+		
+		2 "|Cup2:CupMesh|Cup2:CupMeshShape" "pnts[16]" " -type \"float3\" 9.051137 7.17049409999999998 5.53866480000000028"
+		
+		2 "|Cup2:CupMesh|Cup2:CupMeshShape" "pnts[17]" " -type \"float3\" 8.95738120000000038 7.17049409999999998 5.63242010000000004"
+		
+		2 "|Cup2:CupMesh|Cup2:CupMeshShape" "pnts[18]" " -type \"float3\" 8.89718719999999941 7.17049409999999998 5.75055840000000007"
+		
+		2 "|Cup2:CupMesh|Cup2:CupMeshShape" "pnts[19]" " -type \"float3\" 8.87644580000000083 7.17049409999999998 5.881516"
+		
+		2 "|Cup2:CupMesh|Cup2:CupMeshShape" "pnts[20]" " -type \"float3\" 8.85768990000000045 6.21473310000000012 6.02530669999999979"
+		
+		2 "|Cup2:CupMesh|Cup2:CupMeshShape" "pnts[21]" " -type \"float3\" 8.9237833000000002 6.21473310000000012 6.15502259999999968"
+		
+		2 "|Cup2:CupMesh|Cup2:CupMeshShape" "pnts[22]" " -type \"float3\" 9.02672669999999933 6.21473310000000012 6.25796560000000035"
+		
+		2 "|Cup2:CupMesh|Cup2:CupMeshShape" "pnts[23]" " -type \"float3\" 9.15644170000000024 6.21473310000000012 6.324059"
+		
+		2 "|Cup2:CupMesh|Cup2:CupMeshShape" "pnts[24]" " -type \"float3\" 9.30023289999999925 6.21473310000000012 6.34683319999999984"
+		
+		2 "|Cup2:CupMesh|Cup2:CupMeshShape" "pnts[25]" " -type \"float3\" 9.44402410000000003 6.21473310000000012 6.324059"
+		
+		2 "|Cup2:CupMesh|Cup2:CupMeshShape" "pnts[26]" " -type \"float3\" 9.57373909999999917 6.21473310000000012 6.25796560000000035"
+		
+		2 "|Cup2:CupMesh|Cup2:CupMeshShape" "pnts[27]" " -type \"float3\" 9.67668250000000008 6.21473310000000012 6.15502259999999968"
+		
+		2 "|Cup2:CupMesh|Cup2:CupMeshShape" "pnts[28]" " -type \"float3\" 9.74277589999999982 6.21473310000000012 6.02530669999999979"
+		
+		2 "|Cup2:CupMesh|Cup2:CupMeshShape" "pnts[29]" " -type \"float3\" 9.76554969999999933 6.21473310000000012 5.881516"
+		
+		2 "|Cup2:CupMesh|Cup2:CupMeshShape" "pnts[30]" " -type \"float3\" 9.74277589999999982 6.21473310000000012 5.73772530000000014"
+		
+		2 "|Cup2:CupMesh|Cup2:CupMeshShape" "pnts[31]" " -type \"float3\" 9.67668250000000008 6.21473310000000012 5.60800929999999997"
+		
+		2 "|Cup2:CupMesh|Cup2:CupMeshShape" "pnts[32]" " -type \"float3\" 9.57373909999999917 6.21473310000000012 5.5050669000000001"
+		
+		2 "|Cup2:CupMesh|Cup2:CupMeshShape" "pnts[33]" " -type \"float3\" 9.44402410000000003 6.21473310000000012 5.43897340000000007"
+		
+		2 "|Cup2:CupMesh|Cup2:CupMeshShape" "pnts[34]" " -type \"float3\" 9.30023289999999925 6.21473310000000012 5.41619920000000032"
+		
+		2 "|Cup2:CupMesh|Cup2:CupMeshShape" "pnts[35]" " -type \"float3\" 9.15644170000000024 6.21473310000000012 5.43897340000000007"
+		
+		2 "|Cup2:CupMesh|Cup2:CupMeshShape" "pnts[36]" " -type \"float3\" 9.02672669999999933 6.21473310000000012 5.5050669000000001"
+		
+		2 "|Cup2:CupMesh|Cup2:CupMeshShape" "pnts[37]" " -type \"float3\" 8.9237833000000002 6.21473310000000012 5.6080097999999996"
+		
+		2 "|Cup2:CupMesh|Cup2:CupMeshShape" "pnts[38]" " -type \"float3\" 8.85768990000000045 6.21473310000000012 5.73772530000000014"
+		
+		2 "|Cup2:CupMesh|Cup2:CupMeshShape" "pnts[39]" " -type \"float3\" 8.83491609999999916 6.21473310000000012 5.881516"
+		
+		2 "|Cup2:CupMesh|Cup2:CupMeshShape" "pnts[40]" " -type \"float3\" 8.89420130000000064 6.21473310000000012 6.01344350000000016"
+		
+		2 "|Cup2:CupMesh|Cup2:CupMeshShape" "pnts[41]" " -type \"float3\" 8.95484159999999996 6.21473310000000012 6.13245729999999956"
+		
+		2 "|Cup2:CupMesh|Cup2:CupMeshShape" "pnts[42]" " -type \"float3\" 9.0492916000000001 6.21473310000000012 6.2269072999999997"
+		
+		2 "|Cup2:CupMesh|Cup2:CupMeshShape" "pnts[43]" " -type \"float3\" 9.16830539999999949 6.21473310000000012 6.28754710000000028"
+		
+		2 "|Cup2:CupMesh|Cup2:CupMeshShape" "pnts[44]" " -type \"float3\" 9.30023289999999925 6.21473310000000012 6.30844309999999986"
+		
+		2 "|Cup2:CupMesh|Cup2:CupMeshShape" "pnts[45]" " -type \"float3\" 9.43216040000000078 6.21473310000000012 6.28754710000000028"
+		
+		2 "|Cup2:CupMesh|Cup2:CupMeshShape" "pnts[46]" " -type \"float3\" 9.55117420000000017 6.21473310000000012 6.2269072999999997"
+		
+		2 "|Cup2:CupMesh|Cup2:CupMeshShape" "pnts[47]" " -type \"float3\" 9.64562420000000031 6.21473310000000012 6.13245729999999956"
+		
+		2 "|Cup2:CupMesh|Cup2:CupMeshShape" "pnts[48]" " -type \"float3\" 9.70626449999999963 6.21473310000000012 6.01344350000000016"
+		
+		2 "|Cup2:CupMesh|Cup2:CupMeshShape" "pnts[49]" " -type \"float3\" 9.72715950000000085 6.21473310000000012 5.881516"
+		
+		2 "|Cup2:CupMesh|Cup2:CupMeshShape" "pnts[50]" " -type \"float3\" 9.70626449999999963 6.21473310000000012 5.74958849999999977"
+		
+		2 "|Cup2:CupMesh|Cup2:CupMeshShape" "pnts[51]" " -type \"float3\" 9.64562420000000031 6.21473310000000012 5.63057470000000038"
+		
+		2 "|Cup2:CupMesh|Cup2:CupMeshShape" "pnts[52]" " -type \"float3\" 9.55117420000000017 6.21473310000000012 5.53612519999999986"
+		
+		2 "|Cup2:CupMesh|Cup2:CupMeshShape" "pnts[53]" " -type \"float3\" 9.43216040000000078 6.21473310000000012 5.47548480000000026"
+		
+		2 "|Cup2:CupMesh|Cup2:CupMeshShape" "pnts[54]" " -type \"float3\" 9.30023289999999925 6.21473310000000012 5.4545893999999997"
+		
+		2 "|Cup2:CupMesh|Cup2:CupMeshShape" "pnts[55]" " -type \"float3\" 9.16830539999999949 6.21473310000000012 5.47548480000000026"
+		
+		2 "|Cup2:CupMesh|Cup2:CupMeshShape" "pnts[56]" " -type \"float3\" 9.0492916000000001 6.21473310000000012 5.53612519999999986"
+		
+		2 "|Cup2:CupMesh|Cup2:CupMeshShape" "pnts[57]" " -type \"float3\" 8.95484159999999996 6.21473310000000012 5.63057470000000038"
+		
+		2 "|Cup2:CupMesh|Cup2:CupMeshShape" "pnts[58]" " -type \"float3\" 8.89420130000000064 6.21473310000000012 5.74958849999999977"
+		
+		2 "|Cup2:CupMesh|Cup2:CupMeshShape" "pnts[59]" " -type \"float3\" 8.87330629999999942 6.21473310000000012 5.881516"
+		
+		2 "|Cup2:CupMesh|Cup2:CupMeshShape" "pnts[60]" " -type \"float3\" 8.89420130000000064 7.08288570000000028 6.01344350000000016"
+		
+		2 "|Cup2:CupMesh|Cup2:CupMeshShape" "pnts[61]" " -type \"float3\" 8.95484159999999996 7.08288570000000028 6.13245729999999956"
+		
+		2 "|Cup2:CupMesh|Cup2:CupMeshShape" "pnts[62]" " -type \"float3\" 9.30023289999999925 7.08288570000000028 5.881516"
+		
+		2 "|Cup2:CupMesh|Cup2:CupMeshShape" "pnts[63]" " -type \"float3\" 9.0492916000000001 7.08288570000000028 6.2269072999999997"
+		
+		2 "|Cup2:CupMesh|Cup2:CupMeshShape" "pnts[64]" " -type \"float3\" 9.16830539999999949 7.08288570000000028 6.28754710000000028"
+		
+		2 "|Cup2:CupMesh|Cup2:CupMeshShape" "pnts[65]" " -type \"float3\" 9.30023289999999925 7.08288570000000028 6.30844309999999986"
+		
+		2 "|Cup2:CupMesh|Cup2:CupMeshShape" "pnts[66]" " -type \"float3\" 9.43216040000000078 7.08288570000000028 6.28754710000000028"
+		
+		2 "|Cup2:CupMesh|Cup2:CupMeshShape" "pnts[67]" " -type \"float3\" 9.55117420000000017 7.08288570000000028 6.2269072999999997"
+		
+		2 "|Cup2:CupMesh|Cup2:CupMeshShape" "pnts[68]" " -type \"float3\" 9.64562420000000031 7.08288570000000028 6.13245729999999956"
+		
+		2 "|Cup2:CupMesh|Cup2:CupMeshShape" "pnts[69]" " -type \"float3\" 9.70626449999999963 7.08288570000000028 6.01344350000000016"
+		
+		2 "|Cup2:CupMesh|Cup2:CupMeshShape" "pnts[70]" " -type \"float3\" 9.72715950000000085 7.08288570000000028 5.881516"
+		
+		2 "|Cup2:CupMesh|Cup2:CupMeshShape" "pnts[71]" " -type \"float3\" 9.70626449999999963 7.08288570000000028 5.74958849999999977"
+		
+		2 "|Cup2:CupMesh|Cup2:CupMeshShape" "pnts[72]" " -type \"float3\" 9.64562420000000031 7.08288570000000028 5.63057470000000038"
+		
+		2 "|Cup2:CupMesh|Cup2:CupMeshShape" "pnts[73]" " -type \"float3\" 9.55117420000000017 7.08288570000000028 5.53612519999999986"
+		
+		2 "|Cup2:CupMesh|Cup2:CupMeshShape" "pnts[74]" " -type \"float3\" 9.43216040000000078 7.08288570000000028 5.47548480000000026"
+		
+		2 "|Cup2:CupMesh|Cup2:CupMeshShape" "pnts[75]" " -type \"float3\" 9.30023289999999925 7.08288570000000028 5.45458890000000007"
+		
+		2 "|Cup2:CupMesh|Cup2:CupMeshShape" "pnts[76]" " -type \"float3\" 9.16830539999999949 7.08288570000000028 5.47548480000000026"
+		
+		2 "|Cup2:CupMesh|Cup2:CupMeshShape" "pnts[77]" " -type \"float3\" 9.0492916000000001 7.08288570000000028 5.53612519999999986"
+		
+		2 "|Cup2:CupMesh|Cup2:CupMeshShape" "pnts[78]" " -type \"float3\" 8.95484159999999996 7.08288570000000028 5.63057470000000038"
+		
+		2 "|Cup2:CupMesh|Cup2:CupMeshShape" "pnts[79]" " -type \"float3\" 8.89420130000000064 7.08288570000000028 5.74958849999999977"
+		
+		2 "|Cup2:CupMesh|Cup2:CupMeshShape" "pnts[80]" " -type \"float3\" 8.87330629999999942 7.08288570000000028 5.881516"
+		
+		2 "|Cup2:CupMesh|Cup2:CupMeshShape" "pnts[81]" " -type \"float3\" 8.913619 7.12837510000000041 5.600625"
+		
+		2 "|Cup2:CupMesh|Cup2:CupMeshShape" "pnts[82]" " -type \"float3\" 9.01934149999999946 7.12837510000000041 5.49490259999999964"
+		
+		2 "|Cup2:CupMesh|Cup2:CupMeshShape" "pnts[83]" " -type \"float3\" 9.15255930000000006 7.12837510000000041 5.42702479999999987"
+		
+		2 "|Cup2:CupMesh|Cup2:CupMeshShape" "pnts[84]" " -type \"float3\" 9.30023289999999925 7.12837510000000041 5.40363550000000004"
+		
+		2 "|Cup2:CupMesh|Cup2:CupMeshShape" "pnts[85]" " -type \"float3\" 9.44790650000000021 7.12837510000000041 5.42702479999999987"
+		
+		2 "|Cup2:CupMesh|Cup2:CupMeshShape" "pnts[86]" " -type \"float3\" 9.58112430000000082 7.12837510000000041 5.49490259999999964"
+		
+		2 "|Cup2:CupMesh|Cup2:CupMeshShape" "pnts[87]" " -type \"float3\" 9.68684670000000025 7.12837510000000041 5.600625"
+		
+		2 "|Cup2:CupMesh|Cup2:CupMeshShape" "pnts[88]" " -type \"float3\" 9.75472450000000002 7.12837510000000041 5.73384279999999968"
+		
+		2 "|Cup2:CupMesh|Cup2:CupMeshShape" "pnts[89]" " -type \"float3\" 9.77811340000000051 7.12837510000000041 5.881516"
+		
+		2 "|Cup2:CupMesh|Cup2:CupMeshShape" "pnts[90]" " -type \"float3\" 9.75472450000000002 7.12837510000000041 6.02918909999999997"
+		
+		2 "|Cup2:CupMesh|Cup2:CupMeshShape" "pnts[91]" " -type \"float3\" 9.68684670000000025 7.12837510000000041 6.16240689999999969"
+		
+		2 "|Cup2:CupMesh|Cup2:CupMeshShape" "pnts[92]" " -type \"float3\" 9.58112430000000082 7.12837510000000041 6.26812930000000001"
+		
+		2 "|Cup2:CupMesh|Cup2:CupMeshShape" "pnts[93]" " -type \"float3\" 9.44790650000000021 7.12837510000000041 6.33600760000000029"
+		
+		2 "|Cup2:CupMesh|Cup2:CupMeshShape" "pnts[94]" " -type \"float3\" 9.30023289999999925 7.12837510000000041 6.35939690000000013"
+		
+		2 "|Cup2:CupMesh|Cup2:CupMeshShape" "pnts[95]" " -type \"float3\" 9.15255930000000006 7.12837510000000041 6.33600760000000029"
+		
+		2 "|Cup2:CupMesh|Cup2:CupMeshShape" "pnts[96]" " -type \"float3\" 9.01934149999999946 7.12837510000000041 6.26812979999999964"
+		
+		2 "|Cup2:CupMesh|Cup2:CupMeshShape" "pnts[97]" " -type \"float3\" 8.913619 7.12837510000000041 6.1624074000000002"
+		
+		2 "|Cup2:CupMesh|Cup2:CupMeshShape" "pnts[98]" " -type \"float3\" 8.84574130000000025 7.12837510000000041 6.02918909999999997"
+		
+		2 "|Cup2:CupMesh|Cup2:CupMeshShape" "pnts[99]" " -type \"float3\" 8.913619 6.24891380000000041 5.600625"
+		
+		2 "|Cup2:CupMesh|Cup2:CupMeshShape" "pnts[100]" " -type \"float3\" 9.01934149999999946 6.24891380000000041 5.49490259999999964"
+		
+		2 "|Cup2:CupMesh|Cup2:CupMeshShape" "pnts[101]" " -type \"float3\" 9.15255930000000006 6.24891380000000041 5.42702479999999987"
+		
+		2 "|Cup2:CupMesh|Cup2:CupMeshShape" "pnts[102]" " -type \"float3\" 9.30023289999999925 6.24891380000000041 5.40363550000000004"
+		
+		2 "|Cup2:CupMesh|Cup2:CupMeshShape" "pnts[103]" " -type \"float3\" 9.44790650000000021 6.24891380000000041 5.42702439999999964"
+		
+		2 "|Cup2:CupMesh|Cup2:CupMeshShape" "pnts[104]" " -type \"float3\" 9.58112430000000082 6.24891380000000041 5.49490259999999964"
+		
+		2 "|Cup2:CupMesh|Cup2:CupMeshShape" "pnts[105]" " -type \"float3\" 9.68684670000000025 6.24891380000000041 5.600625"
+		
+		2 "|Cup2:CupMesh|Cup2:CupMeshShape" "pnts[106]" " -type \"float3\" 9.75472450000000002 6.24891380000000041 5.73384279999999968"
+		
+		2 "|Cup2:CupMesh|Cup2:CupMeshShape" "pnts[107]" " -type \"float3\" 9.77811340000000051 6.24891380000000041 5.881516"
+		
+		2 "|Cup2:CupMesh|Cup2:CupMeshShape" "pnts[108]" " -type \"float3\" 9.75472450000000002 6.24891380000000041 6.02918909999999997"
+		
+		2 "|Cup2:CupMesh|Cup2:CupMeshShape" "pnts[109]" " -type \"float3\" 9.68684670000000025 6.24891380000000041 6.16240689999999969"
+		
+		2 "|Cup2:CupMesh|Cup2:CupMeshShape" "pnts[110]" " -type \"float3\" 9.58112430000000082 6.24891380000000041 6.26812930000000001"
+		
+		2 "|Cup2:CupMesh|Cup2:CupMeshShape" "pnts[111]" " -type \"float3\" 9.44790650000000021 6.24891380000000041 6.33600760000000029"
+		
+		2 "|Cup2:CupMesh|Cup2:CupMeshShape" "pnts[112]" " -type \"float3\" 9.30023289999999925 6.24891380000000041 6.35939690000000013"
+		
+		2 "|Cup2:CupMesh|Cup2:CupMeshShape" "pnts[113]" " -type \"float3\" 9.15255930000000006 6.24891380000000041 6.33600760000000029"
+		
+		2 "|Cup2:CupMesh|Cup2:CupMeshShape" "pnts[114]" " -type \"float3\" 9.01934149999999946 6.24891380000000041 6.26812979999999964"
+		
+		2 "|Cup2:CupMesh|Cup2:CupMeshShape" "pnts[115]" " -type \"float3\" 8.913619 6.24891380000000041 6.1624074000000002"
+		
+		2 "|Cup2:CupMesh|Cup2:CupMeshShape" "pnts[116]" " -type \"float3\" 8.84574130000000025 6.24891380000000041 6.02918909999999997"
+		
+		2 "|Cup2:CupMesh|Cup2:CupMeshShape" "pnts[117]" " -type \"float3\" 8.9327412000000006 7.16602419999999984 6.00092119999999962"
+		
+		2 "|Cup2:CupMesh|Cup2:CupMeshShape" "pnts[118]" " -type \"float3\" 8.98762609999999995 7.16602419999999984 6.10863829999999997"
+		
+		2 "|Cup2:CupMesh|Cup2:CupMeshShape" "pnts[119]" " -type \"float3\" 9.30023289999999925 7.16602419999999984 5.881516"
+		
+		2 "|Cup2:CupMesh|Cup2:CupMeshShape" "pnts[120]" " -type \"float3\" 9.07311059999999969 7.16602419999999984 6.19412330000000022"
+		
+		2 "|Cup2:CupMesh|Cup2:CupMeshShape" "pnts[121]" " -type \"float3\" 9.18082710000000013 7.16602419999999984 6.24900769999999994"
+		
+		2 "|Cup2:CupMesh|Cup2:CupMeshShape" "pnts[122]" " -type \"float3\" 9.30023289999999925 7.16602419999999984 6.26791949999999964"
+		
+		2 "|Cup2:CupMesh|Cup2:CupMeshShape" "pnts[123]" " -type \"float3\" 9.41963860000000075 7.16602419999999984 6.24900769999999994"
+		
+		2 "|Cup2:CupMesh|Cup2:CupMeshShape" "pnts[124]" " -type \"float3\" 9.52735520000000058 7.16602419999999984 6.19412279999999971"
+		
+		2 "|Cup2:CupMesh|Cup2:CupMeshShape" "pnts[125]" " -type \"float3\" 9.61283970000000032 7.16602419999999984 6.10863780000000034"
+		
+		2 "|Cup2:CupMesh|Cup2:CupMeshShape" "pnts[126]" " -type \"float3\" 9.66772459999999967 7.16602419999999984 6.00092119999999962"
+		
+		2 "|Cup2:CupMesh|Cup2:CupMeshShape" "pnts[127]" " -type \"float3\" 9.686636 7.16602419999999984 5.881516"
+		
+		2 "|Cup2:CupMesh|Cup2:CupMeshShape" "pnts[128]" " -type \"float3\" 9.66772459999999967 7.16602419999999984 5.76211070000000003"
+		
+		2 "|Cup2:CupMesh|Cup2:CupMeshShape" "pnts[129]" " -type \"float3\" 9.61283970000000032 7.16602419999999984 5.6543941000000002"
+		
+		2 "|Cup2:CupMesh|Cup2:CupMeshShape" "pnts[130]" " -type \"float3\" 9.52735520000000058 7.16602419999999984 5.56890920000000023"
+		
+		2 "|Cup2:CupMesh|Cup2:CupMeshShape" "pnts[131]" " -type \"float3\" 9.41963860000000075 7.16602419999999984 5.51402429999999999"
+		
+		2 "|Cup2:CupMesh|Cup2:CupMeshShape" "pnts[132]" " -type \"float3\" 9.30023289999999925 7.16602419999999984 5.49511240000000001"
+		
+		2 "|Cup2:CupMesh|Cup2:CupMeshShape" "pnts[133]" " -type \"float3\" 9.18082710000000013 7.16602419999999984 5.51402429999999999"
+		
+		2 "|Cup2:CupMesh|Cup2:CupMeshShape" "pnts[134]" " -type \"float3\" 9.07311059999999969 7.16602419999999984 5.56890920000000023"
+		
+		2 "|Cup2:CupMesh|Cup2:CupMeshShape" "pnts[135]" " -type \"float3\" 8.98762609999999995 7.16602419999999984 5.6543941000000002"
+		
+		2 "|Cup2:CupMesh|Cup2:CupMeshShape" "pnts[136]" " -type \"float3\" 8.9327412000000006 7.16602419999999984 5.76211070000000003"
+		
+		2 "|Cup2:CupMesh|Cup2:CupMeshShape" "pnts[137]" " -type \"float3\" 8.91382980000000025 7.16602419999999984 5.881516"
+		
+		2 "|Cup2:CupMesh|Cup2:CupMeshShape" "pnts[138]" " -type \"float3\" 9.01934149999999946 6.37254949999999987 5.49490259999999964"
+		
+		2 "|Cup2:CupMesh|Cup2:CupMeshShape" "pnts[139]" " -type \"float3\" 9.15255930000000006 6.37254949999999987 5.42702479999999987"
+		
+		2 "|Cup2:CupMesh|Cup2:CupMeshShape" "pnts[140]" " -type \"float3\" 9.30023289999999925 6.37254949999999987 5.40363550000000004"
+		
+		2 "|Cup2:CupMesh|Cup2:CupMeshShape" "pnts[141]" " -type \"float3\" 9.44790650000000021 6.37254949999999987 5.42702439999999964"
+		
+		2 "|Cup2:CupMesh|Cup2:CupMeshShape" "pnts[142]" " -type \"float3\" 9.58112430000000082 6.37254949999999987 5.49490259999999964"
+		
+		2 "|Cup2:CupMesh|Cup2:CupMeshShape" "pnts[143]" " -type \"float3\" 9.68684670000000025 6.37254949999999987 5.600625"
+		
+		2 "|Cup2:CupMesh|Cup2:CupMeshShape" "pnts[144]" " -type \"float3\" 9.75472450000000002 6.37254949999999987 5.73384279999999968"
+		
+		2 "|Cup2:CupMesh|Cup2:CupMeshShape" "pnts[145]" " -type \"float3\" 9.77811340000000051 6.37254949999999987 5.881516"
+		
+		2 "|Cup2:CupMesh|Cup2:CupMeshShape" "pnts[146]" " -type \"float3\" 9.75472450000000002 6.37254949999999987 6.02918909999999997"
+		
+		2 "|Cup2:CupMesh|Cup2:CupMeshShape" "pnts[147]" " -type \"float3\" 9.68684670000000025 6.37254949999999987 6.16240689999999969"
+		
+		2 "|Cup2:CupMesh|Cup2:CupMeshShape" "pnts[148]" " -type \"float3\" 9.58112430000000082 6.37254949999999987 6.26812930000000001"
+		
+		2 "|Cup2:CupMesh|Cup2:CupMeshShape" "pnts[149]" " -type \"float3\" 9.44790650000000021 6.37254949999999987 6.33600760000000029"
+		
+		2 "|Cup2:CupMesh|Cup2:CupMeshShape" "pnts[150]" " -type \"float3\" 9.30023289999999925 6.37254949999999987 6.35939690000000013"
+		
+		2 "|Cup2:CupMesh|Cup2:CupMeshShape" "pnts[151]" " -type \"float3\" 9.15255930000000006 6.37254949999999987 6.33600760000000029"
+		
+		2 "|Cup2:CupMesh|Cup2:CupMeshShape" "pnts[152]" " -type \"float3\" 9.01934149999999946 6.37254949999999987 6.26812979999999964"
+		
+		2 "|Cup2:CupMesh|Cup2:CupMeshShape" "pnts[153]" " -type \"float3\" 8.913619 6.37254949999999987 6.1624074000000002"
+		
+		2 "|Cup2:CupMesh|Cup2:CupMeshShape" "pnts[154]" " -type \"float3\" 8.84574130000000025 6.37254949999999987 6.02918909999999997"
+		
+		2 "|Cup2:CupMesh|Cup2:CupMeshShape" "pnts[155]" " -type \"float3\" 8.82235239999999976 6.37254949999999987 5.881516"
+		
+		2 "|Cup2:CupMesh|Cup2:CupMeshShape" "pnts[156]" " -type \"float3\" 8.84574130000000025 6.37254949999999987 5.73384279999999968"
+		
+		2 "|Cup2:CupMesh|Cup2:CupMeshShape" "pnts[157]" " -type \"float3\" 8.913619 6.37254949999999987 5.600625"
+		
+		2 "|Cup2:CupMesh|Cup2:CupMeshShape" "pnts[158]" " -type \"float3\" 9.01934149999999946 6.98888059999999989 5.49490259999999964"
+		
+		2 "|Cup2:CupMesh|Cup2:CupMeshShape" "pnts[159]" " -type \"float3\" 9.15255930000000006 6.98888059999999989 5.42702479999999987"
+		
+		2 "|Cup2:CupMesh|Cup2:CupMeshShape" "pnts[160]" " -type \"float3\" 9.30023289999999925 6.98888059999999989 5.40363550000000004"
+		
+		2 "|Cup2:CupMesh|Cup2:CupMeshShape" "pnts[161]" " -type \"float3\" 9.44790650000000021 6.98888059999999989 5.42702479999999987"
+		
+		2 "|Cup2:CupMesh|Cup2:CupMeshShape" "pnts[162]" " -type \"float3\" 9.58112430000000082 6.98888059999999989 5.49490259999999964"
+		
+		2 "|Cup2:CupMesh|Cup2:CupMeshShape" "pnts[163]" " -type \"float3\" 9.68684670000000025 6.98888059999999989 5.600625"
+		
+		2 "|Cup2:CupMesh|Cup2:CupMeshShape" "pnts[164]" " -type \"float3\" 9.75472450000000002 6.98888059999999989 5.73384279999999968"
+		
+		2 "|Cup2:CupMesh|Cup2:CupMeshShape" "pnts[165]" " -type \"float3\" 9.77811340000000051 6.98888059999999989 5.881516"
+		
+		2 "|Cup2:CupMesh|Cup2:CupMeshShape" "pnts[166]" " -type \"float3\" 9.75472450000000002 6.98888059999999989 6.02918909999999997"
+		
+		2 "|Cup2:CupMesh|Cup2:CupMeshShape" "pnts[167]" " -type \"float3\" 9.68684670000000025 6.98888059999999989 6.16240689999999969"
+		
+		2 "|Cup2:CupMesh|Cup2:CupMeshShape" "pnts[168]" " -type \"float3\" 9.58112430000000082 6.98888059999999989 6.26812930000000001"
+		
+		2 "|Cup2:CupMesh|Cup2:CupMeshShape" "pnts[169]" " -type \"float3\" 9.44790650000000021 6.98888059999999989 6.33600760000000029"
+		
+		2 "|Cup2:CupMesh|Cup2:CupMeshShape" "pnts[170]" " -type \"float3\" 9.30023289999999925 6.98888059999999989 6.35939690000000013"
+		
+		2 "|Cup2:CupMesh|Cup2:CupMeshShape" "pnts[171]" " -type \"float3\" 9.15255930000000006 6.98888059999999989 6.33600760000000029"
+		
+		2 "|Cup2:CupMesh|Cup2:CupMeshShape" "pnts[172]" " -type \"float3\" 9.01934149999999946 6.98888059999999989 6.26812979999999964"
+		
+		2 "|Cup2:CupMesh|Cup2:CupMeshShape" "pnts[173]" " -type \"float3\" 8.913619 6.98888059999999989 6.1624074000000002"
+		
+		2 "|Cup2:CupMesh|Cup2:CupMeshShape" "pnts[174]" " -type \"float3\" 8.84574130000000025 6.98888059999999989 6.02918909999999997"
+		
+		2 "|Cup2:CupMesh|Cup2:CupMeshShape" "pnts[175]" " -type \"float3\" 8.82235239999999976 6.98888059999999989 5.881516"
+		
+		2 "|Cup2:CupMesh|Cup2:CupMeshShape" "pnts[176]" " -type \"float3\" 8.84574130000000025 6.98888059999999989 5.73384279999999968"
+		
+		2 "|Cup2:CupMesh|Cup2:CupMeshShape" "pnts[177]" " -type \"float3\" 8.913619 6.98888059999999989 5.600625"
+		
+		2 "|Cup2:CupMesh|Cup2:CupMeshShape" "pnts[178]" " -type \"float3\" 8.65444759999999924 6.98888059999999989 5.85492230000000013"
+		
+		2 "|Cup2:CupMesh|Cup2:CupMeshShape" "pnts[179]" " -type \"float3\" 8.67783739999999959 6.98888059999999989 5.70724919999999969"
+		
+		2 "|Cup2:CupMesh|Cup2:CupMeshShape" "pnts[180]" " -type \"float3\" 8.65444759999999924 6.37254949999999987 5.85492230000000013"
+		
+		2 "|Cup2:CupMesh|Cup2:CupMeshShape" "pnts[181]" " -type \"float3\" 8.67783739999999959 6.37254949999999987 5.70724919999999969"
+		
+		2 "|Cup2:CupMesh|Cup2:CupMeshShape" "pnts[182]" " -type \"float3\" 8.59449290000000055 6.99822520000000026 5.8454265999999997"
+		
+		2 "|Cup2:CupMesh|Cup2:CupMeshShape" "pnts[183]" " -type \"float3\" 8.61788179999999926 6.99822520000000026 5.69775339999999986"
+		
+		2 "|Cup2:CupMesh|Cup2:CupMeshShape" "pnts[184]" " -type \"float3\" 8.59057710000000085 6.36426729999999985 5.84480619999999984"
+		
+		2 "|Cup2:CupMesh|Cup2:CupMeshShape" "pnts[185]" " -type \"float3\" 8.613966 6.36426729999999985 5.69713310000000028"
+		
+		2 "|Cup2:CupMesh|Cup2:CupMeshShape" "pnts[186]" " -type \"float3\" 8.53960990000000031 6.979044 5.83673380000000019"
+		
+		2 "|Cup2:CupMesh|Cup2:CupMeshShape" "pnts[187]" " -type \"float3\" 8.5629988000000008 6.979044 5.68906069999999975"
+		
+		2 "|Cup2:CupMesh|Cup2:CupMeshShape" "pnts[188]" " -type \"float3\" 8.52957250000000045 6.39207839999999994 5.835144"
+		
+		2 "|Cup2:CupMesh|Cup2:CupMeshShape" "pnts[189]" " -type \"float3\" 8.55296230000000079 6.39207839999999994 5.68747090000000011"
+		
+		2 "|Cup2:CupMesh|Cup2:CupMeshShape" "pnts[190]" " -type \"float3\" 8.825635 7.12837510000000041 5.86079360000000005"
+		
+		2 "|Cup2:CupMesh|Cup2:CupMeshShape" "pnts[191]" " -type \"float3\" 8.83766269999999921 7.14029649999999982 5.881516"
+		
+		2 "|Cup2:CupMesh|Cup2:CupMeshShape" "pnts[192]" " -type \"float3\" 8.825388 7.12837510000000041 5.900681"
+		
+		2 "|Cup2:CupMesh|Cup2:CupMeshShape" "pnts[193]" " -type \"float3\" 8.82235239999999976 7.10739419999999988 5.881516"
+		
+		2 "|Cup2:CupMesh|Cup2:CupMeshShape" "pnts[194]" " -type \"float3\" 8.65773010000000021 7.12837510000000041 5.83419989999999977"
+		
+		2 "|Cup2:CupMesh|Cup2:CupMeshShape" "pnts[195]" " -type \"float3\" 8.65518860000000068 7.10739419999999988 5.85504010000000008"
+		
+		2 "|Cup2:CupMesh|Cup2:CupMeshShape" "pnts[196]" " -type \"float3\" 8.84574130000000025 7.10739419999999988 5.73384279999999968"
+		
+		2 "|Cup2:CupMesh|Cup2:CupMeshShape" "pnts[197]" " -type \"float3\" 8.85455130000000068 7.12837510000000041 5.7165537000000004"
+		
+		2 "|Cup2:CupMesh|Cup2:CupMeshShape" "pnts[198]" " -type \"float3\" 8.860302 7.14029649999999982 5.738574"
+		
+		2 "|Cup2:CupMesh|Cup2:CupMeshShape" "pnts[199]" " -type \"float3\" 8.84245969999999915 7.12837510000000041 5.75456520000000005"
+		
+		2 "|Cup2:CupMesh|Cup2:CupMeshShape" "pnts[200]" " -type \"float3\" 8.67857839999999925 7.10739419999999988 5.70736690000000024"
+		
+		2 "|Cup2:CupMesh|Cup2:CupMeshShape" "pnts[201]" " -type \"float3\" 8.67455479999999923 7.12837510000000041 5.727972"
+		
+		2 "|Cup2:CupMesh|Cup2:CupMeshShape" "pnts[202]" " -type \"float3\" 8.82235239999999976 6.26989459999999976 5.881516"
+		
+		2 "|Cup2:CupMesh|Cup2:CupMeshShape" "pnts[203]" " -type \"float3\" 8.82520009999999999 6.24891380000000041 5.899498"
+		
+		2 "|Cup2:CupMesh|Cup2:CupMeshShape" "pnts[204]" " -type \"float3\" 8.82863329999999991 6.23182539999999996 5.881516"
+		
+		2 "|Cup2:CupMesh|Cup2:CupMeshShape" "pnts[205]" " -type \"float3\" 8.825635 6.24891380000000041 5.86079360000000005"
+		
+		2 "|Cup2:CupMesh|Cup2:CupMeshShape" "pnts[206]" " -type \"float3\" 8.65512559999999986 6.26989459999999976 5.85503009999999957"
+		
+		2 "|Cup2:CupMesh|Cup2:CupMeshShape" "pnts[207]" " -type \"float3\" 8.65773010000000021 6.24891380000000041 5.83419989999999977"
+		
+		2 "|Cup2:CupMesh|Cup2:CupMeshShape" "pnts[208]" " -type \"float3\" 8.84245969999999915 6.24891380000000041 5.75456520000000005"
+		
+		2 "|Cup2:CupMesh|Cup2:CupMeshShape" "pnts[209]" " -type \"float3\" 8.85171509999999984 6.23182539999999996 5.73578360000000043"
+		
+		2 "|Cup2:CupMesh|Cup2:CupMeshShape" "pnts[210]" " -type \"float3\" 8.85400680000000051 6.24891380000000041 5.71762079999999973"
+		
+		2 "|Cup2:CupMesh|Cup2:CupMeshShape" "pnts[211]" " -type \"float3\" 8.84574130000000025 6.26989459999999976 5.73384279999999968"
+		
+		2 "|Cup2:CupMesh|Cup2:CupMeshShape" "pnts[212]" " -type \"float3\" 8.67455479999999923 6.24891380000000041 5.727972"
+		
+		2 "|Cup2:CupMesh|Cup2:CupMeshShape" "pnts[213]" " -type \"float3\" 8.67851450000000035 6.26989459999999976 5.70735650000000039"
+		
+		2 "|Cup2:CupMesh|Cup2:CupMeshShape" "pnts[214]" " -type \"float3\" 8.52888579999999941 7.119031 5.81379320000000011"
+		
+		2 "|Cup2:CupMesh|Cup2:CupMeshShape" "pnts[215]" " -type \"float3\" 8.53275679999999959 7.098515 5.83564849999999957"
+		
+		2 "|Cup2:CupMesh|Cup2:CupMeshShape" "pnts[216]" " -type \"float3\" 8.55614570000000008 7.098515 5.68797540000000001"
+		
+		2 "|Cup2:CupMesh|Cup2:CupMeshShape" "pnts[217]" " -type \"float3\" 8.54571149999999946 7.119031 5.7075648000000001"
+		
+		2 "|Cup2:CupMesh|Cup2:CupMeshShape" "pnts[218]" " -type \"float3\" 8.53629779999999982 6.27777190000000029 5.83620930000000016"
+		
+		2 "|Cup2:CupMesh|Cup2:CupMeshShape" "pnts[219]" " -type \"float3\" 8.53280160000000087 6.25719549999999991 5.81441349999999968"
+		
+		2 "|Cup2:CupMesh|Cup2:CupMeshShape" "pnts[220]" " -type \"float3\" 8.54962729999999915 6.25719549999999991 5.70818519999999996"
+		
+		2 "|Cup2:CupMesh|Cup2:CupMeshShape" "pnts[221]" " -type \"float3\" 8.55968760000000017 6.27777190000000029 5.68853619999999971"
+		
+		2 "|Cup2:CupMesh|Cup2:CupMeshShape" "pnts[222]" " -type \"float3\" 8.42026420000000009 7.04263539999999999 5.79658889999999971"
+		
+		2 "|Cup2:CupMesh|Cup2:CupMeshShape" "pnts[223]" " -type \"float3\" 8.43785860000000021 7.03177210000000041 5.82061820000000019"
+		
+		2 "|Cup2:CupMesh|Cup2:CupMeshShape" "pnts[224]" " -type \"float3\" 8.46124840000000056 7.03177210000000041 5.672945"
+		
+		2 "|Cup2:CupMesh|Cup2:CupMeshShape" "pnts[225]" " -type \"float3\" 8.437089 7.04263539999999999 5.690361"
+		
+		2 "|Cup2:CupMesh|Cup2:CupMeshShape" "pnts[226]" " -type \"float3\" 8.44758419999999965 6.33642289999999964 5.8221582999999999"
+		
+		2 "|Cup2:CupMesh|Cup2:CupMeshShape" "pnts[227]" " -type \"float3\" 8.43030169999999934 6.3249607000000001 5.79817870000000024"
+		
+		2 "|Cup2:CupMesh|Cup2:CupMeshShape" "pnts[228]" " -type \"float3\" 8.44712640000000015 6.3249607000000001 5.69195079999999987"
+		
+		2 "|Cup2:CupMesh|Cup2:CupMeshShape" "pnts[229]" " -type \"float3\" 8.470973 6.33642289999999964 5.67448520000000034";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
 createNode transformGeometry -n "transformGeometry1";
 	rename -uid "F934370F-48DC-3EA1-25B2-E8937F762417";
 	setAttr ".txf" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 7 0 -9.7586163241420181 1;
+createNode reference -n "PotionBottleRN";
+	rename -uid "A72C0709-48DF-1B64-3219-7C9CAFC3E8E5";
+	setAttr ".ed" -type "dataReferenceEdits" 
+		"PotionBottleRN"
+		"PotionBottleRN" 0
+		"PotionBottleRN" 450
+		2 "|PotionBottle:PotionBottleMesh" "translate" " -type \"double3\" 0 0 0"
+		
+		2 "|PotionBottle:PotionBottleMesh" "rotate" " -type \"double3\" 0 0 0"
+		2 "|PotionBottle:PotionBottleMesh" "scale" " -type \"double3\" 1 1 1"
+		2 "|PotionBottle:PotionBottleMesh" "rotatePivot" " -type \"double3\" 8.14842842767493281 6.14451694488525391 7.997969348624828"
+		
+		2 "|PotionBottle:PotionBottleMesh" "scalePivot" " -type \"double3\" 8.14842842767493281 6.14451694488525391 7.997969348624828"
+		
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:PotionBottleMeshShape" "pnts" 
+		" -s 304"
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:PotionBottleMeshShape" "pnts[0]" 
+		" -type \"float3\" 8.14607810000000043 5.90260169999999995 7.97811269999999961"
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:PotionBottleMeshShape" "pnts[1]" 
+		" -type \"float3\" 8.23636250000000025 -2.63405509999999987 8.7409353000000003"
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:PotionBottleMeshShape" "pnts[2]" 
+		" -type \"float3\" 8.36550049999999956 2.31709340000000008 9.83203409999999955"
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:PotionBottleMeshShape" "pnts[3]" 
+		" -type \"float3\" 7.931356 2.31709340000000008 6.16390469999999979"
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:PotionBottleMeshShape" "pnts[4]" 
+		" -type \"float3\" 8.15077879999999944 5.90260169999999995 8.01782610000000062"
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:PotionBottleMeshShape" "pnts[5]" 
+		" -type \"float3\" 8.49953559999999975 5.58373930000000041 10.964502"
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:PotionBottleMeshShape" "pnts[6]" 
+		" -type \"float3\" 7.79732130000000012 5.58373930000000041 5.03143639999999959"
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:PotionBottleMeshShape" "pnts[7]" 
+		" -type \"float3\" 5.18189529999999987 5.58373930000000041 8.34907630000000012"
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:PotionBottleMeshShape" "pnts[8]" 
+		" -type \"float3\" 8.16828540000000025 5.90260169999999995 7.99561930000000043"
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:PotionBottleMeshShape" "pnts[9]" 
+		" -type \"float3\" 6.29904270000000022 5.58373930000000041 10.343895"
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:PotionBottleMeshShape" "pnts[10]" 
+		" -type \"float3\" 8.16080760000000005 5.90260169999999995 7.98226689999999994"
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:PotionBottleMeshShape" "pnts[11]" 
+		" -type \"float3\" 8.33638949999999923 6.12503669999999989 9.58606619999999943"
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:PotionBottleMeshShape" "pnts[12]" 
+		" -type \"float3\" 7.15838239999999981 6.12503669999999989 9.25383189999999978"
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:PotionBottleMeshShape" "pnts[13]" 
+		" -type \"float3\" 7.71484279999999956 6.12503669999999989 9.53533649999999966"
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:PotionBottleMeshShape" "pnts[14]" 
+		" -type \"float3\" 8.15384959999999914 5.90260169999999995 7.97874689999999998"
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:PotionBottleMeshShape" "pnts[15]" 
+		" -type \"float3\" 8.24260229999999972 5.957304 8.79364969999999957"
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:PotionBottleMeshShape" "pnts[16]" 
+		" -type \"float3\" 7.93119 5.957304 8.76823330000000034"
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:PotionBottleMeshShape" "pnts[17]" 
+		" -type \"float3\" 7.65238809999999958 5.957304 8.62719150000000035"
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:PotionBottleMeshShape" "pnts[18]" 
+		" -type \"float3\" 7.33849950000000018 5.58373930000000041 10.86974"
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:PotionBottleMeshShape" "pnts[19]" 
+		" -type \"float3\" 8.43113040000000069 6.12352469999999993 10.386544"
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:PotionBottleMeshShape" "pnts[20]" 
+		" -type \"float3\" 7.496295 6.12352469999999993 10.310244"
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:PotionBottleMeshShape" "pnts[21]" 
+		" -type \"float3\" 6.6593517999999996 6.12352469999999993 9.88684750000000001"
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:PotionBottleMeshShape" "pnts[22]" 
+		" -type \"float3\" 6.56033129999999964 6.12503669999999989 8.18593030000000077"
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:PotionBottleMeshShape" "pnts[23]" 
+		" -type \"float3\" 8.16585450000000002 5.90260169999999995 7.98821069999999978"
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:PotionBottleMeshShape" "pnts[24]" 
+		" -type \"float3\" 6.75475449999999977 6.12503669999999989 8.77846150000000058"
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:PotionBottleMeshShape" "pnts[25]" 
+		" -type \"float3\" 7.45015909999999959 5.957304 8.38901710000000023"
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:PotionBottleMeshShape" "pnts[26]" 
+		" -type \"float3\" 7.35274789999999978 5.957304 8.09214309999999948"
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:PotionBottleMeshShape" "pnts[27]" 
+		" -type \"float3\" 5.54507349999999999 5.58373930000000041 9.45591160000000031"
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:PotionBottleMeshShape" "pnts[28]" 
+		" -type \"float3\" 6.05227520000000041 6.12352469999999993 9.17186640000000075"
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:PotionBottleMeshShape" "pnts[29]" 
+		" -type \"float3\" 5.75985380000000013 6.12352469999999993 8.28067109999999929"
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:PotionBottleMeshShape" "pnts[30]" 
+		" -type \"float3\" 5.8025026000000004 5.58373930000000041 6.14858390000000021"
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:PotionBottleMeshShape" "pnts[31]" 
+		" -type \"float3\" 8.16413119999999992 5.90260169999999995 8.01034830000000042"
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:PotionBottleMeshShape" "pnts[32]" 
+		" -type \"float3\" 6.89256569999999957 6.12503669999999989 7.00792359999999981"
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:PotionBottleMeshShape" "pnts[33]" 
+		" -type \"float3\" 8.16765119999999989 5.90260169999999995 8.00339029999999951"
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:PotionBottleMeshShape" "pnts[34]" 
+		" -type \"float3\" 6.61106109999999969 6.12503669999999989 7.564384"
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:PotionBottleMeshShape" "pnts[35]" 
+		" -type \"float3\" 7.37816480000000041 5.957304 7.78073119999999996"
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:PotionBottleMeshShape" "pnts[36]" 
+		" -type \"float3\" 7.51920650000000013 5.957304 7.50192879999999995"
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:PotionBottleMeshShape" "pnts[37]" 
+		" -type \"float3\" 5.27665760000000006 5.58373930000000041 7.18804070000000017"
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:PotionBottleMeshShape" "pnts[38]" 
+		" -type \"float3\" 5.836154 6.12352469999999993 7.34583619999999993"
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:PotionBottleMeshShape" "pnts[39]" 
+		" -type \"float3\" 6.25955059999999985 6.12352469999999993 6.50889249999999997"
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:PotionBottleMeshShape" "pnts[40]" 
+		" -type \"float3\" 7.96046779999999998 6.12503669999999989 6.40987210000000029"
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:PotionBottleMeshShape" "pnts[41]" 
+		" -type \"float3\" 8.15818690000000046 5.90260169999999995 8.01539520000000039"
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:PotionBottleMeshShape" "pnts[42]" 
+		" -type \"float3\" 7.36793660000000017 6.12503669999999989 6.60429530000000042"
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:PotionBottleMeshShape" "pnts[43]" 
+		" -type \"float3\" 7.75738050000000001 5.957304 7.29970029999999959"
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:PotionBottleMeshShape" "pnts[44]" 
+		" -type \"float3\" 8.05425450000000076 5.957304 7.20228860000000015"
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:PotionBottleMeshShape" "pnts[45]" 
+		" -type \"float3\" 6.690486 5.58373930000000041 5.39461469999999998"
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:PotionBottleMeshShape" "pnts[46]" 
+		" -type \"float3\" 6.97453120000000037 6.12352469999999993 5.90181640000000041"
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:PotionBottleMeshShape" "pnts[47]" 
+		" -type \"float3\" 7.86572650000000007 6.12352469999999993 5.6093945999999999"
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:PotionBottleMeshShape" "pnts[48]" 
+		" -type \"float3\" 6.314364 2.31709340000000008 8.21504209999999979"
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:PotionBottleMeshShape" "pnts[49]" 
+		" -type \"float3\" 8.53613089999999985 4.13046980000000019 11.273705"
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:PotionBottleMeshShape" "pnts[50]" 
+		" -type \"float3\" 4.87269259999999971 4.13046980000000019 8.38567259999999948"
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:PotionBottleMeshShape" "pnts[51]" 
+		" -type \"float3\" 6.1062808000000004 4.13046980000000019 10.588411"
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:PotionBottleMeshShape" "pnts[52]" 
+		" -type \"float3\" 7.25408030000000004 4.13046980000000019 11.169065"
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:PotionBottleMeshShape" "pnts[53]" 
+		" -type \"float3\" 8.53564639999999919 4.89449260000000042 11.269608"
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:PotionBottleMeshShape" "pnts[54]" 
+		" -type \"float3\" 7.25519940000000041 4.89449260000000042 11.165099"
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:PotionBottleMeshShape" "pnts[55]" 
+		" -type \"float3\" 6.10883519999999969 4.89449260000000042 10.585171"
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:PotionBottleMeshShape" "pnts[56]" 
+		" -type \"float3\" 5.273725 4.13046980000000019 9.60787389999999952"
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:PotionBottleMeshShape" "pnts[57]" 
+		" -type \"float3\" 5.27732129999999966 4.89449260000000042 9.60585979999999928"
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:PotionBottleMeshShape" "pnts[58]" 
+		" -type \"float3\" 4.87679050000000025 4.89449260000000042 8.38518709999999956"
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:PotionBottleMeshShape" "pnts[59]" 
+		" -type \"float3\" 7.00504260000000034 2.31709340000000008 9.44834230000000019"
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:PotionBottleMeshShape" "pnts[60]" 
+		" -type \"float3\" 8.49416259999999923 3.45449520000000021 10.919106"
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:PotionBottleMeshShape" "pnts[61]" 
+		" -type \"float3\" 6.32734349999999957 3.45449520000000021 10.307996"
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:PotionBottleMeshShape" "pnts[62]" 
+		" -type \"float3\" 7.35089349999999975 3.45449520000000021 10.825794"
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:PotionBottleMeshShape" "pnts[63]" 
+		" -type \"float3\" 7.64768839999999983 2.31709340000000008 9.773447"
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:PotionBottleMeshShape" "pnts[64]" 
+		" -type \"float3\" 8.42818360000000055 2.89608290000000013 10.361643"
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:PotionBottleMeshShape" "pnts[65]" 
+		" -type \"float3\" 7.50309369999999998 2.89608290000000013 10.286138"
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:PotionBottleMeshShape" "pnts[66]" 
+		" -type \"float3\" 6.6748757000000003 2.89608290000000013 9.86715509999999973"
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:PotionBottleMeshShape" "pnts[67]" 
+		" -type \"float3\" 5.22729110000000041 3.45449520000000021 8.3437032999999996"
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:PotionBottleMeshShape" "pnts[68]" 
+		" -type \"float3\" 5.58491180000000043 3.45449520000000021 9.43360140000000058"
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:PotionBottleMeshShape" "pnts[69]" 
+		" -type \"float3\" 6.53889940000000003 2.31709340000000008 8.89934539999999963"
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:PotionBottleMeshShape" "pnts[70]" 
+		" -type \"float3\" 6.07412859999999988 2.89608290000000013 9.15962790000000027"
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:PotionBottleMeshShape" "pnts[71]" 
+		" -type \"float3\" 5.78475520000000021 2.89608290000000013 8.27772429999999915"
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:PotionBottleMeshShape" "pnts[72]" 
+		" -type \"float3\" 7.76072550000000039 4.13046980000000019 4.72223330000000008"
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:PotionBottleMeshShape" "pnts[73]" 
+		" -type \"float3\" 5.5579862999999996 4.13046980000000019 5.95582149999999988"
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:PotionBottleMeshShape" "pnts[74]" 
+		" -type \"float3\" 4.9773316000000003 4.13046980000000019 7.10362150000000003"
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:PotionBottleMeshShape" "pnts[75]" 
+		" -type \"float3\" 4.98129889999999964 4.89449260000000042 7.10474009999999989"
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:PotionBottleMeshShape" "pnts[76]" 
+		" -type \"float3\" 5.56122680000000003 4.89449260000000042 5.95837639999999968"
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:PotionBottleMeshShape" "pnts[77]" 
+		" -type \"float3\" 6.53852420000000034 4.13046980000000019 5.12326570000000014"
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:PotionBottleMeshShape" "pnts[78]" 
+		" -type \"float3\" 6.54053780000000007 4.89449260000000042 5.12686249999999966"
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:PotionBottleMeshShape" "pnts[79]" 
+		" -type \"float3\" 7.7612104000000004 4.89449260000000042 4.72633119999999973"
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:PotionBottleMeshShape" "pnts[80]" 
+		" -type \"float3\" 6.69805570000000028 2.31709340000000008 6.85458329999999982"
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:PotionBottleMeshShape" "pnts[81]" 
+		" -type \"float3\" 5.83840179999999975 3.45449520000000021 6.17688419999999994"
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:PotionBottleMeshShape" "pnts[82]" 
+		" -type \"float3\" 5.32060340000000043 3.45449520000000021 7.20043469999999974"
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:PotionBottleMeshShape" "pnts[83]" 
+		" -type \"float3\" 6.372951 2.31709340000000008 7.49722959999999983"
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:PotionBottleMeshShape" "pnts[84]" 
+		" -type \"float3\" 5.86026 2.89608290000000013 7.35263440000000035"
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:PotionBottleMeshShape" "pnts[85]" 
+		" -type \"float3\" 6.27924249999999962 2.89608290000000013 6.52441639999999978"
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:PotionBottleMeshShape" "pnts[86]" 
+		" -type \"float3\" 7.80269429999999975 3.45449520000000021 5.07683179999999989"
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:PotionBottleMeshShape" "pnts[87]" 
+		" -type \"float3\" 6.71279619999999966 3.45449520000000021 5.434453"
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:PotionBottleMeshShape" "pnts[88]" 
+		" -type \"float3\" 7.24705270000000024 2.31709340000000008 6.38844060000000002"
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:PotionBottleMeshShape" "pnts[89]" 
+		" -type \"float3\" 6.98676969999999997 2.89608290000000013 5.92366930000000025"
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:PotionBottleMeshShape" "pnts[90]" 
+		" -type \"float3\" 7.86867379999999983 2.89608290000000013 5.6342964000000002"
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:PotionBottleMeshShape" "pnts[91]" 
+		" -type \"float3\" 8.12857149999999962 5.90260169999999995 8.00031949999999981"
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:PotionBottleMeshShape" "pnts[92]" 
+		" -type \"float3\" 11.114962 5.58373930000000041 7.64686250000000012"
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:PotionBottleMeshShape" "pnts[93]" 
+		" -type \"float3\" 8.13604929999999982 5.90260169999999995 8.01367190000000029"
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:PotionBottleMeshShape" "pnts[94]" 
+		" -type \"float3\" 9.99781420000000054 5.58373930000000041 5.6520438000000004"
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:PotionBottleMeshShape" "pnts[95]" 
+		" -type \"float3\" 9.13847449999999917 6.12503669999999989 6.74210689999999957"
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:PotionBottleMeshShape" "pnts[96]" 
+		" -type \"float3\" 8.14300730000000073 5.90260169999999995 8.01719190000000026"
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:PotionBottleMeshShape" "pnts[97]" 
+		" -type \"float3\" 8.58201410000000031 6.12503669999999989 6.46060229999999969"
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:PotionBottleMeshShape" "pnts[98]" 
+		" -type \"float3\" 8.36566640000000028 5.957304 7.227706"
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:PotionBottleMeshShape" "pnts[99]" 
+		" -type \"float3\" 8.6444693000000008 5.957304 7.36874719999999961"
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:PotionBottleMeshShape" "pnts[100]" 
+		" -type \"float3\" 8.95835690000000007 5.58373930000000041 5.12619830000000043"
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:PotionBottleMeshShape" "pnts[101]" 
+		" -type \"float3\" 8.80056189999999994 6.12352469999999993 5.68569469999999999"
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:PotionBottleMeshShape" "pnts[102]" 
+		" -type \"float3\" 9.63750549999999961 6.12352469999999993 6.10909130000000022"
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:PotionBottleMeshShape" "pnts[103]" 
+		" -type \"float3\" 9.73652550000000083 6.12503669999999989 7.81000850000000035"
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:PotionBottleMeshShape" "pnts[104]" 
+		" -type \"float3\" 8.13100239999999985 5.90260169999999995 8.00772860000000009"
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:PotionBottleMeshShape" "pnts[105]" 
+		" -type \"float3\" 9.54210280000000033 6.12503669999999989 7.21747780000000017"
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:PotionBottleMeshShape" "pnts[106]" 
+		" -type \"float3\" 8.84669779999999939 5.957304 7.60692120000000038"
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:PotionBottleMeshShape" "pnts[107]" 
+		" -type \"float3\" 8.944109 5.957304 7.90379569999999987"
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:PotionBottleMeshShape" "pnts[108]" 
+		" -type \"float3\" 10.751783 5.58373930000000041 6.5400267000000003"
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:PotionBottleMeshShape" "pnts[109]" 
+		" -type \"float3\" 10.244581 6.12352469999999993 6.82407240000000037"
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:PotionBottleMeshShape" "pnts[110]" 
+		" -type \"float3\" 10.537004 6.12352469999999993 7.71526720000000044"
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:PotionBottleMeshShape" "pnts[111]" 
+		" -type \"float3\" 8.13272569999999995 5.90260169999999995 7.98559049999999981"
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:PotionBottleMeshShape" "pnts[112]" 
+		" -type \"float3\" 10.494354 5.58373930000000041 9.84735489999999913"
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:PotionBottleMeshShape" "pnts[113]" 
+		" -type \"float3\" 9.40429119999999941 6.12503669999999989 8.98801519999999954"
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:PotionBottleMeshShape" "pnts[114]" 
+		" -type \"float3\" 8.12920569999999998 5.90260169999999995 7.992548"
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:PotionBottleMeshShape" "pnts[115]" 
+		" -type \"float3\" 9.68579579999999929 6.12503669999999989 8.43155480000000068"
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:PotionBottleMeshShape" "pnts[116]" 
+		" -type \"float3\" 8.91869160000000072 5.957304 8.2152080999999999"
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:PotionBottleMeshShape" "pnts[117]" 
+		" -type \"float3\" 8.77765079999999998 5.957304 8.49401"
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:PotionBottleMeshShape" "pnts[118]" 
+		" -type \"float3\" 11.020199 5.58373930000000041 8.8078985000000003"
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:PotionBottleMeshShape" "pnts[119]" 
+		" -type \"float3\" 10.460703 6.12352469999999993 8.65010260000000031"
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:PotionBottleMeshShape" "pnts[120]" 
+		" -type \"float3\" 10.037306 6.12352469999999993 9.48704619999999998"
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:PotionBottleMeshShape" "pnts[121]" 
+		" -type \"float3\" 8.13867 5.90260169999999995 7.98054359999999985"
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:PotionBottleMeshShape" "pnts[122]" 
+		" -type \"float3\" 8.92891979999999919 6.12503669999999989 9.3916435000000007"
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:PotionBottleMeshShape" "pnts[123]" 
+		" -type \"float3\" 8.53947639999999986 5.957304 8.69623849999999976"
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:PotionBottleMeshShape" "pnts[124]" 
+		" -type \"float3\" 9.60637089999999993 5.58373930000000041 10.601324"
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:PotionBottleMeshShape" "pnts[125]" 
+		" -type \"float3\" 9.32232570000000038 6.12352469999999993 10.094123"
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:PotionBottleMeshShape" "pnts[126]" 
+		" -type \"float3\" 9.98249339999999918 2.31709340000000008 7.78089670000000044"
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:PotionBottleMeshShape" "pnts[127]" 
+		" -type \"float3\" 11.424165 4.13046980000000019 7.61026670000000038"
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:PotionBottleMeshShape" "pnts[128]" 
+		" -type \"float3\" 10.190577 4.13046980000000019 5.407527"
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:PotionBottleMeshShape" "pnts[129]" 
+		" -type \"float3\" 9.04277609999999932 4.13046980000000019 4.8268728000000003"
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:PotionBottleMeshShape" "pnts[130]" 
+		" -type \"float3\" 9.04165740000000007 4.89449260000000042 4.83084009999999964"
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:PotionBottleMeshShape" "pnts[131]" 
+		" -type \"float3\" 10.188022 4.89449260000000042 5.41076759999999979"
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:PotionBottleMeshShape" "pnts[132]" 
+		" -type \"float3\" 11.023131 4.13046980000000019 6.38806489999999982"
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:PotionBottleMeshShape" "pnts[133]" 
+		" -type \"float3\" 11.019535 4.89449260000000042 6.390079"
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:PotionBottleMeshShape" "pnts[134]" 
+		" -type \"float3\" 11.420066 4.89449260000000042 7.61075160000000039"
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:PotionBottleMeshShape" "pnts[135]" 
+		" -type \"float3\" 9.29181479999999915 2.31709340000000008 6.54759650000000004"
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:PotionBottleMeshShape" "pnts[136]" 
+		" -type \"float3\" 9.96951390000000082 3.45449520000000021 5.68794250000000012"
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:PotionBottleMeshShape" "pnts[137]" 
+		" -type \"float3\" 8.94596289999999961 3.45449520000000021 5.17014409999999991"
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:PotionBottleMeshShape" "pnts[138]" 
+		" -type \"float3\" 8.649168 2.31709340000000008 6.22249169999999996"
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:PotionBottleMeshShape" "pnts[139]" 
+		" -type \"float3\" 8.79376320000000078 2.89608290000000013 5.70980069999999973"
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:PotionBottleMeshShape" "pnts[140]" 
+		" -type \"float3\" 9.6219815999999998 2.89608290000000013 6.12878369999999961"
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:PotionBottleMeshShape" "pnts[141]" 
+		" -type \"float3\" 11.069566 3.45449520000000021 7.65223549999999975"
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:PotionBottleMeshShape" "pnts[142]" 
+		" -type \"float3\" 10.711945 3.45449520000000021 6.56233739999999965"
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:PotionBottleMeshShape" "pnts[143]" 
+		" -type \"float3\" 9.75795749999999984 2.31709340000000008 7.09659390000000023"
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:PotionBottleMeshShape" "pnts[144]" 
+		" -type \"float3\" 10.222729 2.89608290000000013 6.83631040000000034"
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:PotionBottleMeshShape" "pnts[145]" 
+		" -type \"float3\" 10.512101 2.89608290000000013 7.7182145000000002"
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:PotionBottleMeshShape" "pnts[146]" 
+		" -type \"float3\" 10.738871 4.13046980000000019 10.040117"
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:PotionBottleMeshShape" "pnts[147]" 
+		" -type \"float3\" 11.319525 4.13046980000000019 8.89231679999999969"
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:PotionBottleMeshShape" "pnts[148]" 
+		" -type \"float3\" 11.315557 4.89449260000000042 8.89119819999999983"
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:PotionBottleMeshShape" "pnts[149]" 
+		" -type \"float3\" 10.73563 4.89449260000000042 10.037562"
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:PotionBottleMeshShape" "pnts[150]" 
+		" -type \"float3\" 9.75833319999999915 4.13046980000000019 10.872673"
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:PotionBottleMeshShape" "pnts[151]" 
+		" -type \"float3\" 9.756319 4.89449260000000042 10.869077"
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:PotionBottleMeshShape" "pnts[152]" 
+		" -type \"float3\" 9.59880159999999982 2.31709340000000008 9.14135549999999952"
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:PotionBottleMeshShape" "pnts[153]" 
+		" -type \"float3\" 10.458455 3.45449520000000021 9.81905459999999941"
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:PotionBottleMeshShape" "pnts[154]" 
+		" -type \"float3\" 10.976254 3.45449520000000021 8.79550359999999998"
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:PotionBottleMeshShape" "pnts[155]" 
+		" -type \"float3\" 9.92390630000000051 2.31709340000000008 8.49870969999999915"
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:PotionBottleMeshShape" "pnts[156]" 
+		" -type \"float3\" 10.436597 2.89608290000000013 8.64330389999999937"
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:PotionBottleMeshShape" "pnts[157]" 
+		" -type \"float3\" 10.017614 2.89608290000000013 9.47152230000000017"
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:PotionBottleMeshShape" "pnts[158]" 
+		" -type \"float3\" 9.58406070000000021 3.45449520000000021 10.561486"
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:PotionBottleMeshShape" "pnts[159]" 
+		" -type \"float3\" 9.04980370000000001 2.31709340000000008 9.60749820000000021"
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:PotionBottleMeshShape" "pnts[160]" 
+		" -type \"float3\" 9.3100871999999999 2.89608290000000013 10.072269"
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:PotionBottleMeshShape" "pnts[161]" 
+		" -type \"float3\" 8.06049439999999962 -2.63405509999999987 7.25500349999999994"
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:PotionBottleMeshShape" "pnts[162]" 
+		" -type \"float3\" 8.23310569999999942 -0.47115889 8.71341709999999914"
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:PotionBottleMeshShape" "pnts[163]" 
+		" -type \"float3\" 8.06375120000000045 -0.47115889 7.28252219999999983"
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:PotionBottleMeshShape" "pnts[164]" 
+		" -type \"float3\" 7.432981 -0.47115889 8.08264639999999979"
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:PotionBottleMeshShape" "pnts[165]" 
+		" -type \"float3\" 7.70240689999999972 -0.47115889 8.56374259999999943"
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:PotionBottleMeshShape" "pnts[166]" 
+		" -type \"float3\" 8.26184270000000076 1.03384279999999995 8.95622059999999998"
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:PotionBottleMeshShape" "pnts[167]" 
+		" -type \"float3\" 7.55103870000000033 1.03384279999999995 8.75575159999999997"
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:PotionBottleMeshShape" "pnts[168]" 
+		" -type \"float3\" 7.88680510000000012 1.03384279999999995 8.92561049999999945"
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:PotionBottleMeshShape" "pnts[169]" 
+		" -type \"float3\" 8.309865 1.69432720000000003 9.36196140000000021"
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:PotionBottleMeshShape" "pnts[170]" 
+		" -type \"float3\" 7.77602860000000007 1.69432720000000003 9.31838989999999967"
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:PotionBottleMeshShape" "pnts[171]" 
+		" -type \"float3\" 7.29809329999999967 1.69432720000000003 9.07660959999999939"
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:PotionBottleMeshShape" "pnts[172]" 
+		" -type \"float3\" 7.95309539999999959 -0.47115889 8.69056220000000046"
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:PotionBottleMeshShape" "pnts[173]" 
+		" -type \"float3\" 8.23768420000000035 0.29690032999999999 8.75209809999999955"
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:PotionBottleMeshShape" "pnts[174]" 
+		" -type \"float3\" 7.94253490000000006 0.29690032999999999 8.72800830000000083"
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:PotionBottleMeshShape" "pnts[175]" 
+		" -type \"float3\" 7.67829229999999985 0.29690032999999999 8.59433169999999969"
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:PotionBottleMeshShape" "pnts[176]" 
+		" -type \"float3\" 7.19017739999999961 1.03384279999999995 8.11138440000000038"
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:PotionBottleMeshShape" "pnts[177]" 
+		" -type \"float3\" 7.30749129999999969 1.03384279999999995 8.468915"
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:PotionBottleMeshShape" "pnts[178]" 
+		" -type \"float3\" 6.95142360000000004 1.69432720000000003 8.66832160000000052"
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:PotionBottleMeshShape" "pnts[179]" 
+		" -type \"float3\" 6.78443669999999965 1.69432720000000003 8.15940570000000065"
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:PotionBottleMeshShape" "pnts[180]" 
+		" -type \"float3\" 7.52056979999999964 -0.47115889 8.34958549999999988"
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:PotionBottleMeshShape" "pnts[181]" 
+		" -type \"float3\" 7.48662419999999962 0.29690032999999999 8.36859609999999954"
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:PotionBottleMeshShape" "pnts[182]" 
+		" -type \"float3\" 7.3943 0.29690032999999999 8.087225"
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:PotionBottleMeshShape" "pnts[183]" 
+		" -type \"float3\" 7.582655 -0.47115889 7.55194760000000009"
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:PotionBottleMeshShape" "pnts[184]" 
+		" -type \"float3\" 7.3906464999999999 1.03384279999999995 7.40057990000000032"
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:PotionBottleMeshShape" "pnts[185]" 
+		" -type \"float3\" 7.22078750000000014 1.03384279999999995 7.73634579999999961"
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:PotionBottleMeshShape" "pnts[186]" 
+		" -type \"float3\" 6.82800769999999968 1.69432720000000003 7.62556980000000006"
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:PotionBottleMeshShape" "pnts[187]" 
+		" -type \"float3\" 7.069788 1.69432720000000003 7.14763449999999967"
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:PotionBottleMeshShape" "pnts[188]" 
+		" -type \"float3\" 7.45583530000000039 -0.47115889 7.80263659999999959"
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:PotionBottleMeshShape" "pnts[189]" 
+		" -type \"float3\" 7.4183893000000003 0.29690032999999999 7.79207560000000043"
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:PotionBottleMeshShape" "pnts[190]" 
+		" -type \"float3\" 7.55206580000000027 0.29690032999999999 7.527833"
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:PotionBottleMeshShape" "pnts[191]" 
+		" -type \"float3\" 8.03501420000000088 1.03384279999999995 7.03971820000000026"
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:PotionBottleMeshShape" "pnts[192]" 
+		" -type \"float3\" 7.67748309999999989 1.03384279999999995 7.15703249999999969"
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:PotionBottleMeshShape" "pnts[193]" 
+		" -type \"float3\" 7.47807650000000024 1.69432720000000003 6.80096480000000003"
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:PotionBottleMeshShape" "pnts[194]" 
+		" -type \"float3\" 7.98699189999999959 1.69432720000000003 6.63397789999999965"
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:PotionBottleMeshShape" "pnts[195]" 
+		" -type \"float3\" 7.79681210000000036 -0.47115889 7.370111"
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:PotionBottleMeshShape" "pnts[196]" 
+		" -type \"float3\" 7.777802 0.29690032999999999 7.336165"
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:PotionBottleMeshShape" "pnts[197]" 
+		" -type \"float3\" 8.05917260000000013 0.29690032999999999 7.2438406999999998"
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:PotionBottleMeshShape" "pnts[198]" 
+		" -type \"float3\" 7.40546270000000018 -2.63405509999999987 8.08590410000000048"
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:PotionBottleMeshShape" "pnts[199]" 
+		" -type \"float3\" 8.23551559999999938 -1.99205520000000003 8.73377990000000004"
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:PotionBottleMeshShape" "pnts[200]" 
+		" -type \"float3\" 7.41261819999999982 -1.99205520000000003 8.08505730000000078"
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:PotionBottleMeshShape" "pnts[201]" 
+		" -type \"float3\" 7.689712 -1.99205520000000003 8.57984639999999921"
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:PotionBottleMeshShape" "pnts[202]" 
+		" -type \"float3\" 7.947536 -1.99205520000000003 8.71027469999999937"
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:PotionBottleMeshShape" "pnts[203]" 
+		" -type \"float3\" 8.23398210000000041 -1.2332704000000001 8.72081659999999914"
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:PotionBottleMeshShape" "pnts[204]" 
+		" -type \"float3\" 7.95107509999999973 -1.2332704000000001 8.69772619999999996"
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:PotionBottleMeshShape" "pnts[205]" 
+		" -type \"float3\" 7.6977935000000004 -1.2332704000000001 8.56959529999999958"
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:PotionBottleMeshShape" "pnts[206]" 
+		" -type \"float3\" 7.50269989999999964 -1.99205520000000003 8.35959339999999962"
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:PotionBottleMeshShape" "pnts[207]" 
+		" -type \"float3\" 7.51407530000000001 -1.2332704000000001 8.35322279999999928"
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:PotionBottleMeshShape" "pnts[208]" 
+		" -type \"float3\" 7.4255804999999997 -1.2332704000000001 8.08352280000000079"
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:PotionBottleMeshShape" "pnts[209]" 
+		" -type \"float3\" 7.68525119999999973 -2.63405509999999987 8.58550450000000076"
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:PotionBottleMeshShape" "pnts[210]" 
+		" -type \"float3\" 8.24534990000000079 -2.55605720000000014 8.81686969999999981"
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:PotionBottleMeshShape" "pnts[211]" 
+		" -type \"float3\" 7.63791279999999961 -2.55605720000000014 8.64555359999999951"
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:PotionBottleMeshShape" "pnts[212]" 
+		" -type \"float3\" 7.9248504999999998 -2.55605720000000014 8.79071040000000004"
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:PotionBottleMeshShape" "pnts[213]" 
+		" -type \"float3\" 7.94558240000000016 -2.63405509999999987 8.71720219999999912"
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:PotionBottleMeshShape" "pnts[214]" 
+		" -type \"float3\" 8.2726544999999998 -3.023747 9.04756450000000001"
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:PotionBottleMeshShape" "pnts[215]" 
+		" -type \"float3\" 7.861866 -3.023747 9.01403619999999961"
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:PotionBottleMeshShape" "pnts[216]" 
+		" -type \"float3\" 7.49409339999999968 -3.023747 8.8279867000000003"
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:PotionBottleMeshShape" "pnts[217]" 
+		" -type \"float3\" 7.32952829999999977 -2.55605720000000014 8.09489059999999938"
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:PotionBottleMeshShape" "pnts[218]" 
+		" -type \"float3\" 7.42978239999999968 -2.55605720000000014 8.40042880000000025"
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:PotionBottleMeshShape" "pnts[219]" 
+		" -type \"float3\" 7.49642039999999987 -2.63405509999999987 8.36310959999999959"
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:PotionBottleMeshShape" "pnts[220]" 
+		" -type \"float3\" 7.22733019999999993 -3.023747 8.51380729999999986"
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:PotionBottleMeshShape" "pnts[221]" 
+		" -type \"float3\" 7.09883310000000023 -3.023747 8.12219520000000017"
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:PotionBottleMeshShape" "pnts[222]" 
+		" -type \"float3\" 8.06134130000000049 -1.99205520000000003 7.26215890000000019"
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:PotionBottleMeshShape" "pnts[223]" 
+		" -type \"float3\" 7.56655169999999977 -1.99205520000000003 7.5392532000000001"
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:PotionBottleMeshShape" "pnts[224]" 
+		" -type \"float3\" 7.43612289999999998 -1.99205520000000003 7.79707720000000037"
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:PotionBottleMeshShape" "pnts[225]" 
+		" -type \"float3\" 7.4486713 -1.2332704000000001 7.8006158000000001"
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:PotionBottleMeshShape" "pnts[226]" 
+		" -type \"float3\" 7.5768027 -1.2332704000000001 7.54733419999999988"
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:PotionBottleMeshShape" "pnts[227]" 
+		" -type \"float3\" 7.78680470000000025 -1.99205520000000003 7.35224060000000001"
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:PotionBottleMeshShape" "pnts[228]" 
+		" -type \"float3\" 7.7931752000000003 -1.2332704000000001 7.36361650000000001"
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:PotionBottleMeshShape" "pnts[229]" 
+		" -type \"float3\" 8.06287479999999945 -1.2332704000000001 7.27512169999999969"
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:PotionBottleMeshShape" "pnts[230]" 
+		" -type \"float3\" 7.56089310000000037 -2.63405509999999987 7.53479239999999972"
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:PotionBottleMeshShape" "pnts[231]" 
+		" -type \"float3\" 7.50084450000000036 -2.55605720000000014 7.48745349999999998"
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:PotionBottleMeshShape" "pnts[232]" 
+		" -type \"float3\" 7.35568709999999992 -2.55605720000000014 7.77439169999999979"
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:PotionBottleMeshShape" "pnts[233]" 
+		" -type \"float3\" 7.42919589999999985 -2.63405509999999987 7.79512360000000015"
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:PotionBottleMeshShape" "pnts[234]" 
+		" -type \"float3\" 7.13236139999999974 -3.023747 7.71140670000000039"
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:PotionBottleMeshShape" "pnts[235]" 
+		" -type \"float3\" 7.31841139999999957 -3.023747 7.34363410000000005"
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:PotionBottleMeshShape" "pnts[236]" 
+		" -type \"float3\" 8.051507 -2.55605720000000014 7.179069"
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:PotionBottleMeshShape" "pnts[237]" 
+		" -type \"float3\" 7.74596879999999999 -2.55605720000000014 7.27932310000000005"
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:PotionBottleMeshShape" "pnts[238]" 
+		" -type \"float3\" 7.783288 -2.63405509999999987 7.34596110000000024"
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:PotionBottleMeshShape" "pnts[239]" 
+		" -type \"float3\" 7.63259080000000001 -3.023747 7.0768709000000003"
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:PotionBottleMeshShape" "pnts[240]" 
+		" -type \"float3\" 8.02420230000000068 -3.023747 6.94837430000000023"
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:PotionBottleMeshShape" "pnts[241]" 
+		" -type \"float3\" 8.86387539999999952 -0.47115889 7.91329189999999993"
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:PotionBottleMeshShape" "pnts[242]" 
+		" -type \"float3\" 8.59445 -0.47115889 7.43219570000000029"
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:PotionBottleMeshShape" "pnts[243]" 
+		" -type \"float3\" 8.74581809999999926 1.03384279999999995 7.24018720000000027"
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:PotionBottleMeshShape" "pnts[244]" 
+		" -type \"float3\" 8.41005230000000026 1.03384279999999995 7.07032819999999962"
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:PotionBottleMeshShape" "pnts[245]" 
+		" -type \"float3\" 8.52082820000000041 1.69432720000000003 6.67754889999999968"
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:PotionBottleMeshShape" "pnts[246]" 
+		" -type \"float3\" 8.99876309999999968 1.69432720000000003 6.91932870000000033"
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:PotionBottleMeshShape" "pnts[247]" 
+		" -type \"float3\" 8.34376139999999999 -0.47115889 7.30537610000000015"
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:PotionBottleMeshShape" "pnts[248]" 
+		" -type \"float3\" 8.35432239999999915 0.29690032999999999 7.26793050000000029"
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:PotionBottleMeshShape" "pnts[249]" 
+		" -type \"float3\" 8.61856459999999913 0.29690032999999999 7.40160660000000004"
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:PotionBottleMeshShape" "pnts[250]" 
+		" -type \"float3\" 9.10667989999999961 1.03384279999999995 7.88455439999999985"
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:PotionBottleMeshShape" "pnts[251]" 
+		" -type \"float3\" 8.98936559999999929 1.03384279999999995 7.52702380000000026"
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:PotionBottleMeshShape" "pnts[252]" 
+		" -type \"float3\" 9.34543320000000044 1.69432720000000003 7.32761719999999972"
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:PotionBottleMeshShape" "pnts[253]" 
+		" -type \"float3\" 9.51241970000000059 1.69432720000000003 7.83653259999999996"
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:PotionBottleMeshShape" "pnts[254]" 
+		" -type \"float3\" 8.77628709999999934 -0.47115889 7.64635320000000007"
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:PotionBottleMeshShape" "pnts[255]" 
+		" -type \"float3\" 8.8102330999999996 0.29690032999999999 7.62734269999999981"
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:PotionBottleMeshShape" "pnts[256]" 
+		" -type \"float3\" 8.90255739999999918 0.29690032999999999 7.90871380000000013"
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:PotionBottleMeshShape" "pnts[257]" 
+		" -type \"float3\" 8.71420190000000083 -0.47115889 8.44399070000000052"
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:PotionBottleMeshShape" "pnts[258]" 
+		" -type \"float3\" 8.9062108999999996 1.03384279999999995 8.59535879999999963"
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:PotionBottleMeshShape" "pnts[259]" 
+		" -type \"float3\" 9.07606889999999922 1.03384279999999995 8.259593"
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:PotionBottleMeshShape" "pnts[260]" 
+		" -type \"float3\" 9.4688491999999993 1.69432720000000003 8.370369"
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:PotionBottleMeshShape" "pnts[261]" 
+		" -type \"float3\" 9.2270689000000008 1.69432720000000003 8.84830380000000005"
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:PotionBottleMeshShape" "pnts[262]" 
+		" -type \"float3\" 8.84102150000000009 -0.47115889 8.19330219999999976"
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:PotionBottleMeshShape" "pnts[263]" 
+		" -type \"float3\" 8.87846760000000046 0.29690032999999999 8.20386309999999952"
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:PotionBottleMeshShape" "pnts[264]" 
+		" -type \"float3\" 8.744791 0.29690032999999999 8.4681052999999995"
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:PotionBottleMeshShape" "pnts[265]" 
+		" -type \"float3\" 8.61937329999999946 1.03384279999999995 8.83890629999999966"
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:PotionBottleMeshShape" "pnts[266]" 
+		" -type \"float3\" 8.81878090000000014 1.69432720000000003 9.19497390000000081"
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:PotionBottleMeshShape" "pnts[267]" 
+		" -type \"float3\" 8.50004479999999951 -0.47115889 8.62582779999999971"
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:PotionBottleMeshShape" "pnts[268]" 
+		" -type \"float3\" 8.51905539999999917 0.29690032999999999 8.65977379999999997"
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:PotionBottleMeshShape" "pnts[269]" 
+		" -type \"float3\" 8.89139459999999993 -2.63405509999999987 7.91003509999999999"
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:PotionBottleMeshShape" "pnts[270]" 
+		" -type \"float3\" 8.88423919999999967 -1.99205520000000003 7.910882"
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:PotionBottleMeshShape" "pnts[271]" 
+		" -type \"float3\" 8.60714439999999925 -1.99205520000000003 7.41609289999999977"
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:PotionBottleMeshShape" "pnts[272]" 
+		" -type \"float3\" 8.34932039999999986 -1.99205520000000003 7.28566360000000035"
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:PotionBottleMeshShape" "pnts[273]" 
+		" -type \"float3\" 8.34578130000000051 -1.2332704000000001 7.29821209999999976"
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:PotionBottleMeshShape" "pnts[274]" 
+		" -type \"float3\" 8.59906390000000087 -1.2332704000000001 7.42634340000000037"
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:PotionBottleMeshShape" "pnts[275]" 
+		" -type \"float3\" 8.794157 -1.99205520000000003 7.63634539999999973"
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:PotionBottleMeshShape" "pnts[276]" 
+		" -type \"float3\" 8.78278159999999986 -1.2332704000000001 7.64271589999999978"
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:PotionBottleMeshShape" "pnts[277]" 
+		" -type \"float3\" 8.87127590000000055 -1.2332704000000001 7.912416"
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:PotionBottleMeshShape" "pnts[278]" 
+		" -type \"float3\" 8.61160560000000075 -2.63405509999999987 7.41043420000000008"
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:PotionBottleMeshShape" "pnts[279]" 
+		" -type \"float3\" 8.65894409999999937 -2.55605720000000014 7.35038570000000036"
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:PotionBottleMeshShape" "pnts[280]" 
+		" -type \"float3\" 8.37200640000000007 -2.55605720000000014 7.20522789999999969"
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:PotionBottleMeshShape" "pnts[281]" 
+		" -type \"float3\" 8.3512745000000006 -2.63405509999999987 7.27873660000000022"
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:PotionBottleMeshShape" "pnts[282]" 
+		" -type \"float3\" 8.43499090000000074 -3.023747 6.98190210000000011"
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:PotionBottleMeshShape" "pnts[283]" 
+		" -type \"float3\" 8.802763 -3.023747 7.16795250000000017"
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:PotionBottleMeshShape" "pnts[284]" 
+		" -type \"float3\" 8.967329 -2.55605720000000014 7.90104770000000034"
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:PotionBottleMeshShape" "pnts[285]" 
+		" -type \"float3\" 8.867075 -2.55605720000000014 7.59551"
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:PotionBottleMeshShape" "pnts[286]" 
+		" -type \"float3\" 8.800436 -2.63405509999999987 7.63282870000000013"
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:PotionBottleMeshShape" "pnts[287]" 
+		" -type \"float3\" 9.06952670000000083 -3.023747 7.48213150000000038"
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:PotionBottleMeshShape" "pnts[288]" 
+		" -type \"float3\" 9.19802379999999964 -3.023747 7.87374349999999978"
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:PotionBottleMeshShape" "pnts[289]" 
+		" -type \"float3\" 8.73030469999999958 -1.99205520000000003 8.456686"
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:PotionBottleMeshShape" "pnts[290]" 
+		" -type \"float3\" 8.860734 -1.99205520000000003 8.19886209999999949"
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:PotionBottleMeshShape" "pnts[291]" 
+		" -type \"float3\" 8.84818549999999959 -1.2332704000000001 8.195323"
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:PotionBottleMeshShape" "pnts[292]" 
+		" -type \"float3\" 8.72005459999999921 -1.2332704000000001 8.44860459999999946"
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:PotionBottleMeshShape" "pnts[293]" 
+		" -type \"float3\" 8.51005269999999925 -1.99205520000000003 8.64369770000000059"
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:PotionBottleMeshShape" "pnts[294]" 
+		" -type \"float3\" 8.50368120000000083 -1.2332704000000001 8.63232230000000023"
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:PotionBottleMeshShape" "pnts[295]" 
+		" -type \"float3\" 8.73596380000000039 -2.63405509999999987 8.46114640000000051"
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:PotionBottleMeshShape" "pnts[296]" 
+		" -type \"float3\" 8.79601189999999988 -2.55605720000000014 8.50848479999999974"
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:PotionBottleMeshShape" "pnts[297]" 
+		" -type \"float3\" 8.94116969999999966 -2.55605720000000014 8.22154710000000044"
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:PotionBottleMeshShape" "pnts[298]" 
+		" -type \"float3\" 8.86766150000000053 -2.63405509999999987 8.20081519999999919"
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:PotionBottleMeshShape" "pnts[299]" 
+		" -type \"float3\" 9.16449549999999924 -3.023747 8.28453159999999933"
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:PotionBottleMeshShape" "pnts[300]" 
+		" -type \"float3\" 8.97844510000000007 -3.023747 8.65230460000000079"
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:PotionBottleMeshShape" "pnts[301]" 
+		" -type \"float3\" 8.55088809999999988 -2.55605720000000014 8.71661570000000019"
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:PotionBottleMeshShape" "pnts[302]" 
+		" -type \"float3\" 8.51356889999999922 -2.63405509999999987 8.64997770000000088"
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:PotionBottleMeshShape" "pnts[303]" 
+		" -type \"float3\" 8.66426659999999949 -3.023747 8.91906739999999942"
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:Liquid" "rotatePivot" " -type \"double3\" 8.14842842767493281 7.11086960110801325 7.997969348624828"
+		
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:Liquid" "scalePivot" " -type \"double3\" 8.14842842767493281 7.11086960110801325 7.997969348624828"
+		
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:Liquid|PotionBottle:LiquidShape" 
+		"pnts" " -s 41"
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:Liquid|PotionBottle:LiquidShape" 
+		"pnts[0]" " -type \"float3\" 7.45612429999999993 -2.613961 8.31712440000000086"
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:Liquid|PotionBottle:LiquidShape" 
+		"pnts[1]" " -type \"float3\" 7.58863209999999988 -2.613961 8.51543709999999976"
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:Liquid|PotionBottle:LiquidShape" 
+		"pnts[2]" " -type \"float3\" 7.77593710000000016 -2.613961 8.66309739999999984"
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:Liquid|PotionBottle:LiquidShape" 
+		"pnts[3]" " -type \"float3\" 7.99970439999999972 -2.613961 8.74564930000000018"
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:Liquid|PotionBottle:LiquidShape" 
+		"pnts[4]" " -type \"float3\" 8.23802949999999967 -2.613961 8.75501440000000031"
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:Liquid|PotionBottle:LiquidShape" 
+		"pnts[5]" " -type \"float3\" 8.46758370000000049 -2.613961 8.69027329999999942"
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:Liquid|PotionBottle:LiquidShape" 
+		"pnts[6]" " -type \"float3\" 8.66589639999999939 -2.613961 8.557765"
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:Liquid|PotionBottle:LiquidShape" 
+		"pnts[7]" " -type \"float3\" 8.81355669999999947 -2.613961 8.37046050000000008"
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:Liquid|PotionBottle:LiquidShape" 
+		"pnts[8]" " -type \"float3\" 8.89610859999999981 -2.613961 8.14669319999999963"
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:Liquid|PotionBottle:LiquidShape" 
+		"pnts[9]" " -type \"float3\" 8.90547280000000008 -2.613961 7.90836860000000019"
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:Liquid|PotionBottle:LiquidShape" 
+		"pnts[10]" " -type \"float3\" 8.84073260000000083 -2.613961 7.67881440000000026"
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:Liquid|PotionBottle:LiquidShape" 
+		"pnts[11]" " -type \"float3\" 8.70822429999999947 -2.613961 7.48050119999999996"
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:Liquid|PotionBottle:LiquidShape" 
+		"pnts[12]" " -type \"float3\" 8.52091979999999971 -2.613961 7.3328414000000004"
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:Liquid|PotionBottle:LiquidShape" 
+		"pnts[13]" " -type \"float3\" 8.29715249999999926 -2.613961 7.25028939999999977"
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:Liquid|PotionBottle:LiquidShape" 
+		"pnts[14]" " -type \"float3\" 8.0588274000000002 -2.613961 7.24092480000000016"
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:Liquid|PotionBottle:LiquidShape" 
+		"pnts[15]" " -type \"float3\" 7.82927369999999989 -2.613961 7.30566549999999992"
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:Liquid|PotionBottle:LiquidShape" 
+		"pnts[16]" " -type \"float3\" 7.63096049999999959 -2.613961 7.43817380000000039"
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:Liquid|PotionBottle:LiquidShape" 
+		"pnts[17]" " -type \"float3\" 7.48330070000000003 -2.613961 7.62547830000000015"
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:Liquid|PotionBottle:LiquidShape" 
+		"pnts[18]" " -type \"float3\" 7.40074830000000006 -2.613961 7.84924510000000009"
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:Liquid|PotionBottle:LiquidShape" 
+		"pnts[19]" " -type \"float3\" 7.39138409999999979 -2.613961 8.08757020000000004"
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:Liquid|PotionBottle:LiquidShape" 
+		"pnts[20]" " -type \"float3\" 7.79796170000000011 -2.697571 8.15953640000000036"
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:Liquid|PotionBottle:LiquidShape" 
+		"pnts[21]" " -type \"float3\" 7.86504129999999968 -2.697571 8.25992869999999968"
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:Liquid|PotionBottle:LiquidShape" 
+		"pnts[22]" " -type \"float3\" 7.95986130000000003 -2.697571 8.33467860000000016"
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:Liquid|PotionBottle:LiquidShape" 
+		"pnts[23]" " -type \"float3\" 8.07313919999999996 -2.697571 8.37646960000000007"
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:Liquid|PotionBottle:LiquidShape" 
+		"pnts[24]" " -type \"float3\" 8.19378760000000028 -2.697571 8.38121029999999934"
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:Liquid|PotionBottle:LiquidShape" 
+		"pnts[25]" " -type \"float3\" 8.30999470000000073 -2.697571 8.34843640000000065"
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:Liquid|PotionBottle:LiquidShape" 
+		"pnts[26]" " -type \"float3\" 8.410388 -2.697571 8.28135589999999944"
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:Liquid|PotionBottle:LiquidShape" 
+		"pnts[27]" " -type \"float3\" 8.48513789999999979 -2.697571 8.18653680000000072"
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:Liquid|PotionBottle:LiquidShape" 
+		"pnts[28]" " -type \"float3\" 8.5269288999999997 -2.697571 8.07325840000000028"
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:Liquid|PotionBottle:LiquidShape" 
+		"pnts[29]" " -type \"float3\" 8.53166870000000088 -2.697571 7.95261049999999958"
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:Liquid|PotionBottle:LiquidShape" 
+		"pnts[30]" " -type \"float3\" 8.49889560000000088 -2.697571 7.83640290000000039"
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:Liquid|PotionBottle:LiquidShape" 
+		"pnts[31]" " -type \"float3\" 8.43181509999999967 -2.697571 7.73601009999999967"
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:Liquid|PotionBottle:LiquidShape" 
+		"pnts[32]" " -type \"float3\" 8.33699509999999933 -2.697571 7.6612600999999998"
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:Liquid|PotionBottle:LiquidShape" 
+		"pnts[33]" " -type \"float3\" 8.22371769999999991 -2.697571 7.61946920000000016"
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:Liquid|PotionBottle:LiquidShape" 
+		"pnts[34]" " -type \"float3\" 8.10306929999999959 -2.697571 7.61472890000000024"
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:Liquid|PotionBottle:LiquidShape" 
+		"pnts[35]" " -type \"float3\" 7.9868617000000004 -2.697571 7.64750239999999959"
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:Liquid|PotionBottle:LiquidShape" 
+		"pnts[36]" " -type \"float3\" 7.88646940000000019 -2.697571 7.71458240000000028"
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:Liquid|PotionBottle:LiquidShape" 
+		"pnts[37]" " -type \"float3\" 7.8117188999999998 -2.697571 7.80940250000000002"
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:Liquid|PotionBottle:LiquidShape" 
+		"pnts[38]" " -type \"float3\" 7.76992849999999979 -2.697571 7.92268039999999996"
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:Liquid|PotionBottle:LiquidShape" 
+		"pnts[39]" " -type \"float3\" 7.76518770000000025 -2.697571 8.04332830000000065"
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:Liquid|PotionBottle:LiquidShape" 
+		"pnts[40]" " -type \"float3\" 8.148428 -2.7256718000000002 7.9979692"
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:Liquid|PotionBottle:Leaf1" 
+		"rotatePivot" " -type \"double3\" 8.14842842767493281 6.14451694488525391 7.997969348624828"
+		
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:Liquid|PotionBottle:Leaf1" 
+		"scalePivot" " -type \"double3\" 8.14842842767493281 6.14451694488525391 7.997969348624828"
+		
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:Liquid|PotionBottle:Leaf1|PotionBottle:LeafShape1" 
+		"pnts" " -s 21"
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:Liquid|PotionBottle:Leaf1|PotionBottle:LeafShape1" 
+		"pnts[0]" " -type \"float3\" 7.87953089999999978 -4.73211569999999959 7.00914479999999962"
+		
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:Liquid|PotionBottle:Leaf1|PotionBottle:LeafShape1" 
+		"pnts[1]" " -type \"float3\" 7.70359130000000025 -2.4369364 7.711648"
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:Liquid|PotionBottle:Leaf1|PotionBottle:LeafShape1" 
+		"pnts[2]" " -type \"float3\" 7.73096560000000022 -2.48704890000000001 7.9429388000000003"
+		
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:Liquid|PotionBottle:Leaf1|PotionBottle:LeafShape1" 
+		"pnts[3]" " -type \"float3\" 7.87780669999999983 -4.73211569999999959 7.04205509999999979"
+		
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:Liquid|PotionBottle:Leaf1|PotionBottle:LeafShape1" 
+		"pnts[4]" " -type \"float3\" 7.486341 -3.53526210000000018 7.04362340000000042"
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:Liquid|PotionBottle:Leaf1|PotionBottle:LeafShape1" 
+		"pnts[5]" " -type \"float3\" 7.593267 -3.80852250000000003 8.05399129999999985"
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:Liquid|PotionBottle:Leaf1|PotionBottle:LeafShape1" 
+		"pnts[6]" " -type \"float3\" 7.62594270000000041 -4.35673949999999977 7.00676580000000016"
+		
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:Liquid|PotionBottle:Leaf1|PotionBottle:LeafShape1" 
+		"pnts[7]" " -type \"float3\" 7.74652389999999968 -4.4886746000000004 7.41928389999999993"
+		
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:Liquid|PotionBottle:Leaf1|PotionBottle:LeafShape1" 
+		"pnts[8]" " -type \"float3\" 7.68511059999999979 -4.43456359999999972 7.23827789999999993"
+		
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:Liquid|PotionBottle:Leaf1|PotionBottle:LeafShape1" 
+		"pnts[9]" " -type \"float3\" 7.8871355000000003 -4.74213839999999998 7.0211414999999997"
+		
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:Liquid|PotionBottle:Leaf1|PotionBottle:LeafShape1" 
+		"pnts[10]" " -type \"float3\" 7.44718739999999979 -3.71478840000000021 7.56429620000000025"
+		
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:Liquid|PotionBottle:Leaf1|PotionBottle:LeafShape1" 
+		"pnts[11]" " -type \"float3\" 7.50335260000000037 -3.95174979999999998 7.00164030000000004"
+		
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:Liquid|PotionBottle:Leaf1|PotionBottle:LeafShape1" 
+		"pnts[12]" " -type \"float3\" 7.51598979999999983 -4.08819339999999976 7.42142579999999974"
+		
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:Liquid|PotionBottle:Leaf1|PotionBottle:LeafShape1" 
+		"pnts[13]" " -type \"float3\" 7.63876009999999983 -4.18072610000000022 7.79463479999999986"
+		
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:Liquid|PotionBottle:Leaf1|PotionBottle:LeafShape1" 
+		"pnts[14]" " -type \"float3\" 7.54537730000000018 -3.12683650000000002 7.1737150999999999"
+		
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:Liquid|PotionBottle:Leaf1|PotionBottle:LeafShape1" 
+		"pnts[15]" " -type \"float3\" 7.63075969999999959 -3.37891440000000021 8.1183481000000004"
+		
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:Liquid|PotionBottle:Leaf1|PotionBottle:LeafShape1" 
+		"pnts[16]" " -type \"float3\" 7.51642130000000019 -3.32563379999999986 7.66504910000000006"
+		
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:Liquid|PotionBottle:Leaf1|PotionBottle:LeafShape1" 
+		"pnts[17]" " -type \"float3\" 7.7150502000000003 -2.53716229999999987 7.80846739999999961"
+		
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:Liquid|PotionBottle:Leaf1|PotionBottle:LeafShape1" 
+		"pnts[18]" " -type \"float3\" 7.6344890999999997 -2.75180390000000008 7.39748479999999997"
+		
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:Liquid|PotionBottle:Leaf1|PotionBottle:LeafShape1" 
+		"pnts[19]" " -type \"float3\" 7.64262819999999987 -2.93012020000000017 7.73963830000000019"
+		
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:Liquid|PotionBottle:Leaf1|PotionBottle:LeafShape1" 
+		"pnts[20]" " -type \"float3\" 7.6998129000000004 -2.9251434999999999 8.0491457000000004"
+		
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:Liquid|PotionBottle:Leaf3" 
+		"rotatePivot" " -type \"double3\" 8.14842842767493281 6.14451694488525391 7.997969348624828"
+		
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:Liquid|PotionBottle:Leaf3" 
+		"scalePivot" " -type \"double3\" 8.14842842767493281 6.14451694488525391 7.997969348624828"
+		
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:Liquid|PotionBottle:Leaf3|PotionBottle:LeafShape3" 
+		"pnts" " -s 39"
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:Liquid|PotionBottle:Leaf3|PotionBottle:LeafShape3" 
+		"pnts[0]" " -type \"float3\" 8.023222 -5.57560919999999971 7.73426719999999968"
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:Liquid|PotionBottle:Leaf3|PotionBottle:LeafShape3" 
+		"pnts[1]" " -type \"float3\" 8.64242080000000001 -2.4370276999999998 7.85485550000000021"
+		
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:Liquid|PotionBottle:Leaf3|PotionBottle:LeafShape3" 
+		"pnts[2]" " -type \"float3\" 8.64575390000000077 -2.46074560000000009 8.13840770000000013"
+		
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:Liquid|PotionBottle:Leaf3|PotionBottle:LeafShape3" 
+		"pnts[3]" " -type \"float3\" 8.02172279999999915 -5.59178110000000039 7.74439619999999973"
+		
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:Liquid|PotionBottle:Leaf3|PotionBottle:LeafShape3" 
+		"pnts[4]" " -type \"float3\" 8.5137634000000002 -4.03179170000000031 7.30854650000000028"
+		
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:Liquid|PotionBottle:Leaf3|PotionBottle:LeafShape3" 
+		"pnts[5]" " -type \"float3\" 8.70989890000000067 -4.16507960000000033 8.53772350000000024"
+		
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:Liquid|PotionBottle:Leaf3|PotionBottle:LeafShape3" 
+		"pnts[6]" " -type \"float3\" 8.37108989999999942 -4.85398629999999986 7.42767670000000013"
+		
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:Liquid|PotionBottle:Leaf3|PotionBottle:LeafShape3" 
+		"pnts[7]" " -type \"float3\" 8.511488 -4.96557280000000034 8.19831089999999918"
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:Liquid|PotionBottle:Leaf3|PotionBottle:LeafShape3" 
+		"pnts[8]" " -type \"float3\" 8.16914270000000009 -5.35102990000000034 7.62311120000000031"
+		
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:Liquid|PotionBottle:Leaf3|PotionBottle:LeafShape3" 
+		"pnts[9]" " -type \"float3\" 8.22092439999999947 -5.40217729999999996 7.88819930000000014"
+		
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:Liquid|PotionBottle:Leaf3|PotionBottle:LeafShape3" 
+		"pnts[10]" " -type \"float3\" 8.17608929999999923 -5.34225990000000017 7.77984909999999985"
+		
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:Liquid|PotionBottle:Leaf3|PotionBottle:LeafShape3" 
+		"pnts[11]" " -type \"float3\" 8.02366729999999961 -5.56770320000000041 7.747395"
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:Liquid|PotionBottle:Leaf3|PotionBottle:LeafShape3" 
+		"pnts[12]" " -type \"float3\" 8.42839150000000004 -4.86727139999999991 7.85151619999999983"
+		
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:Liquid|PotionBottle:Leaf3|PotionBottle:LeafShape3" 
+		"pnts[13]" " -type \"float3\" 8.28366570000000024 -5.10977649999999972 7.51859430000000017"
+		
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:Liquid|PotionBottle:Leaf3|PotionBottle:LeafShape3" 
+		"pnts[14]" " -type \"float3\" 8.31197449999999982 -5.109211 7.81498"
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:Liquid|PotionBottle:Leaf3|PotionBottle:LeafShape3" 
+		"pnts[15]" " -type \"float3\" 8.38284110000000027 -5.19409939999999981 8.04292869999999915"
+		
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:Liquid|PotionBottle:Leaf3|PotionBottle:LeafShape3" 
+		"pnts[16]" " -type \"float3\" 8.43571659999999923 -4.58620550000000016 7.35740850000000002"
+		
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:Liquid|PotionBottle:Leaf3|PotionBottle:LeafShape3" 
+		"pnts[17]" " -type \"float3\" 8.60984129999999936 -4.7156425000000004 8.34303569999999972"
+		
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:Liquid|PotionBottle:Leaf3|PotionBottle:LeafShape3" 
+		"pnts[18]" " -type \"float3\" 8.52201840000000033 -4.61585140000000038 7.88809540000000009"
+		
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:Liquid|PotionBottle:Leaf3|PotionBottle:LeafShape3" 
+		"pnts[19]" " -type \"float3\" 8.62095640000000074 -4.0939994000000004 7.95442909999999959"
+		
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:Liquid|PotionBottle:Leaf3|PotionBottle:LeafShape3" 
+		"pnts[20]" " -type \"float3\" 8.481842 -4.31061219999999956 7.31519890000000039"
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:Liquid|PotionBottle:Leaf3|PotionBottle:LeafShape3" 
+		"pnts[21]" " -type \"float3\" 8.58796689999999963 -4.35713430000000024 7.92300179999999976"
+		
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:Liquid|PotionBottle:Leaf3|PotionBottle:LeafShape3" 
+		"pnts[22]" " -type \"float3\" 8.67671969999999959 -4.44743059999999968 8.46166520000000055"
+		
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:Liquid|PotionBottle:Leaf3|PotionBottle:LeafShape3" 
+		"pnts[23]" " -type \"float3\" 8.56616969999999966 -3.21088670000000009 7.50239369999999983"
+		
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:Liquid|PotionBottle:Leaf3|PotionBottle:LeafShape3" 
+		"pnts[24]" " -type \"float3\" 8.65649130000000078 -3.287667 8.46876430000000013"
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:Liquid|PotionBottle:Leaf3|PotionBottle:LeafShape3" 
+		"pnts[25]" " -type \"float3\" 8.53573609999999938 -3.75392629999999983 7.34219030000000039"
+		
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:Liquid|PotionBottle:Leaf3|PotionBottle:LeafShape3" 
+		"pnts[26]" " -type \"float3\" 8.70980450000000062 -3.87321710000000019 8.55929369999999956"
+		
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:Liquid|PotionBottle:Leaf3|PotionBottle:LeafShape3" 
+		"pnts[27]" " -type \"float3\" 8.61932469999999995 -3.82892039999999989 7.98082020000000014"
+		
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:Liquid|PotionBottle:Leaf3|PotionBottle:LeafShape3" 
+		"pnts[28]" " -type \"float3\" 8.56705760000000005 -3.29599880000000001 8.01647950000000087"
+		
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:Liquid|PotionBottle:Leaf3|PotionBottle:LeafShape3" 
+		"pnts[29]" " -type \"float3\" 8.5518540999999999 -3.47957369999999999 7.40982719999999961"
+		
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:Liquid|PotionBottle:Leaf3|PotionBottle:LeafShape3" 
+		"pnts[30]" " -type \"float3\" 8.5958824000000007 -3.56276560000000009 8.00160980000000066"
+		
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:Liquid|PotionBottle:Leaf3|PotionBottle:LeafShape3" 
+		"pnts[31]" " -type \"float3\" 8.6874494999999996 -3.5783993999999999 8.53268530000000069"
+		
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:Liquid|PotionBottle:Leaf3|PotionBottle:LeafShape3" 
+		"pnts[32]" " -type \"float3\" 8.58286760000000015 -2.94915390000000022 7.61141250000000014"
+		
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:Liquid|PotionBottle:Leaf3|PotionBottle:LeafShape3" 
+		"pnts[33]" " -type \"float3\" 8.63048460000000084 -3.00622029999999985 8.377532"
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:Liquid|PotionBottle:Leaf3|PotionBottle:LeafShape3" 
+		"pnts[34]" " -type \"float3\" 8.54923439999999957 -3.02921869999999993 8.02509880000000031"
+		
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:Liquid|PotionBottle:Leaf3|PotionBottle:LeafShape3" 
+		"pnts[35]" " -type \"float3\" 8.61140439999999963 -2.50027419999999978 8.02201080000000033"
+		
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:Liquid|PotionBottle:Leaf3|PotionBottle:LeafShape3" 
+		"pnts[36]" " -type \"float3\" 8.60666750000000036 -2.69221090000000007 7.73074909999999971"
+		
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:Liquid|PotionBottle:Leaf3|PotionBottle:LeafShape3" 
+		"pnts[37]" " -type \"float3\" 8.55862710000000071 -2.76355549999999983 8.02707769999999954"
+		
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:Liquid|PotionBottle:Leaf3|PotionBottle:LeafShape3" 
+		"pnts[38]" " -type \"float3\" 8.62256239999999963 -2.73190929999999987 8.265523"
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:Liquid|PotionBottle:Leaf2" 
+		"rotatePivot" " -type \"double3\" 8.14842842767493281 6.14451694488525391 7.997969348624828"
+		
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:Liquid|PotionBottle:Leaf2" 
+		"scalePivot" " -type \"double3\" 8.14842842767493281 6.14451694488525391 7.997969348624828"
+		
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:Liquid|PotionBottle:Leaf2|PotionBottle:LeafShape2" 
+		"pnts" " -s 27"
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:Liquid|PotionBottle:Leaf2|PotionBottle:LeafShape2" 
+		"pnts[0]" " -type \"float3\" 8.76325609999999955 -5.07416680000000042 8.83874890000000057"
+		
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:Liquid|PotionBottle:Leaf2|PotionBottle:LeafShape2" 
+		"pnts[1]" " -type \"float3\" 8.24971870000000074 -2.5301547000000002 8.28453449999999947"
+		
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:Liquid|PotionBottle:Leaf2|PotionBottle:LeafShape2" 
+		"pnts[2]" " -type \"float3\" 8.18206690000000059 -2.55381349999999996 8.74434190000000022"
+		
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:Liquid|PotionBottle:Leaf2|PotionBottle:LeafShape2" 
+		"pnts[3]" " -type \"float3\" 8.76871009999999984 -5.07832910000000037 8.84062669999999962"
+		
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:Liquid|PotionBottle:Leaf2|PotionBottle:LeafShape2" 
+		"pnts[4]" " -type \"float3\" 8.16965290000000088 -3.96764209999999995 8.11127379999999931"
+		
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:Liquid|PotionBottle:Leaf2|PotionBottle:LeafShape2" 
+		"pnts[5]" " -type \"float3\" 8.06967739999999978 -3.91529060000000007 9.12298580000000037"
+		
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:Liquid|PotionBottle:Leaf2|PotionBottle:LeafShape2" 
+		"pnts[6]" " -type \"float3\" 8.38724329999999973 -4.58483980000000013 8.44984909999999978"
+		
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:Liquid|PotionBottle:Leaf2|PotionBottle:LeafShape2" 
+		"pnts[7]" " -type \"float3\" 8.35999110000000023 -4.53771449999999987 9.01115509999999986"
+		
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:Liquid|PotionBottle:Leaf2|PotionBottle:LeafShape2" 
+		"pnts[8]" " -type \"float3\" 8.28972910000000063 -4.5242047000000003 8.73212050000000062"
+		
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:Liquid|PotionBottle:Leaf2|PotionBottle:LeafShape2" 
+		"pnts[9]" " -type \"float3\" 8.73037339999999951 -5.06204180000000026 8.84062770000000064"
+		
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:Liquid|PotionBottle:Leaf2|PotionBottle:LeafShape2" 
+		"pnts[10]" " -type \"float3\" 8.56192489999999928 -4.8556594999999998 8.64178369999999951"
+		
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:Liquid|PotionBottle:Leaf2|PotionBottle:LeafShape2" 
+		"pnts[11]" " -type \"float3\" 8.50025270000000077 -4.81613250000000015 8.78644850000000055"
+		
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:Liquid|PotionBottle:Leaf2|PotionBottle:LeafShape2" 
+		"pnts[12]" " -type \"float3\" 8.55856610000000018 -4.83065180000000005 8.9286203000000004"
+		
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:Liquid|PotionBottle:Leaf2|PotionBottle:LeafShape2" 
+		"pnts[13]" " -type \"float3\" 8.08943750000000072 -3.87630579999999991 8.61294359999999948"
+		
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:Liquid|PotionBottle:Leaf2|PotionBottle:LeafShape2" 
+		"pnts[14]" " -type \"float3\" 8.25074290000000055 -4.28675029999999957 8.266223"
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:Liquid|PotionBottle:Leaf2|PotionBottle:LeafShape2" 
+		"pnts[15]" " -type \"float3\" 8.138793 -4.20661349999999956 8.67259789999999953"
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:Liquid|PotionBottle:Leaf2|PotionBottle:LeafShape2" 
+		"pnts[16]" " -type \"float3\" 8.18499659999999984 -4.234993 9.07400130000000082"
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:Liquid|PotionBottle:Leaf2|PotionBottle:LeafShape2" 
+		"pnts[17]" " -type \"float3\" 8.179493 -3.26051519999999995 8.00701620000000069"
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:Liquid|PotionBottle:Leaf2|PotionBottle:LeafShape2" 
+		"pnts[18]" " -type \"float3\" 8.07219219999999993 -3.22043109999999988 9.112586"
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:Liquid|PotionBottle:Leaf2|PotionBottle:LeafShape2" 
+		"pnts[19]" " -type \"float3\" 8.23181720000000006 -3.19226959999999993 8.525589"
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:Liquid|PotionBottle:Leaf2|PotionBottle:LeafShape2" 
+		"pnts[20]" " -type \"float3\" 8.15402319999999925 -3.62755889999999992 8.01227470000000075"
+		
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:Liquid|PotionBottle:Leaf2|PotionBottle:LeafShape2" 
+		"pnts[21]" " -type \"float3\" 8.15495010000000065 -3.54067040000000022 8.56099219999999939"
+		
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:Liquid|PotionBottle:Leaf2|PotionBottle:LeafShape2" 
+		"pnts[22]" " -type \"float3\" 8.04185580000000044 -3.56911040000000002 9.1551828000000004"
+		
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:Liquid|PotionBottle:Leaf2|PotionBottle:LeafShape2" 
+		"pnts[23]" " -type \"float3\" 8.22816560000000052 -2.4762862000000001 8.49710269999999923"
+		
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:Liquid|PotionBottle:Leaf2|PotionBottle:LeafShape2" 
+		"pnts[24]" " -type \"float3\" 8.21658129999999964 -2.87334079999999981 8.116559"
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:Liquid|PotionBottle:Leaf2|PotionBottle:LeafShape2" 
+		"pnts[25]" " -type \"float3\" 8.22974870000000003 -2.82791969999999981 8.51036359999999981"
+		
+		2 "|PotionBottle:PotionBottleMesh|PotionBottle:Liquid|PotionBottle:Leaf2|PotionBottle:LeafShape2" 
+		"pnts[26]" " -type \"float3\" 8.123209 -2.89020820000000001 8.95197390000000048";
+	setAttr ".ptag" -type "string" "";
+lockNode -l 1 ;
 select -ne :time1;
 	setAttr ".o" 1;
 	setAttr ".unw" 1;
@@ -2076,7 +3524,7 @@ select -ne :postProcessList1;
 select -ne :defaultRenderUtilityList1;
 	setAttr -s 2 ".u";
 select -ne :defaultRenderingList1;
-	setAttr -s 3 ".r";
+	setAttr -s 4 ".r";
 select -ne :defaultTextureList1;
 	setAttr -s 2 ".tx";
 select -ne :standardSurface1;
@@ -2085,7 +3533,7 @@ select -ne :openPBR_shader1;
 	setAttr ".bc" -type "float3" 0.77380955 0.77380955 0.77380955 ;
 	setAttr ".sr" 0.5;
 select -ne :initialShadingGroup;
-	setAttr -s 29 ".dsm";
+	setAttr -s 34 ".dsm";
 	setAttr ".ro" yes;
 	setAttr -s 8 ".gn";
 select -ne :initialParticleSE;
