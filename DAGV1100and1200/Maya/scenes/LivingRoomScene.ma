@@ -1,6 +1,6 @@
 //Maya ASCII 2027 scene
 //Name: LivingRoomScene.ma
-//Last modified: Tue, Sep 29, 2026 09:05:24 PM
+//Last modified: Tue, Sep 29, 2026 09:11:59 PM
 //Codeset: 1252
 requires maya "2027";
 requires "mtoa" "5.6.2";
@@ -11,12 +11,12 @@ fileInfo "product" "Maya 2027";
 fileInfo "version" "2027";
 fileInfo "cutIdentifier" "202607171511-52c21617ee";
 fileInfo "osv" "Windows 11 Home v2009 (Build: 26200)";
-fileInfo "UUID" "542C038F-4F2D-A3E9-3A10-D8872D4C2E01";
+fileInfo "UUID" "BD37460D-46AE-F4DA-24A1-2082A4A83CF6";
 createNode transform -s -n "persp";
 	rename -uid "32588889-42E7-3017-4C9D-289D7588FF9C";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 47.344551937459521 36.973180035206639 45.631957186598427 ;
-	setAttr ".r" -type "double3" -25.538352730250143 46.999999999996405 0 ;
+	setAttr ".t" -type "double3" 50.717362415709893 26.112462265432331 47.665840949381604 ;
+	setAttr ".r" -type "double3" -15.938352730250195 47.399999999996368 1.174718421069976e-15 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "048359A0-403D-E058-1C7F-A292D0D27656";
 	setAttr -k off ".v" no;
