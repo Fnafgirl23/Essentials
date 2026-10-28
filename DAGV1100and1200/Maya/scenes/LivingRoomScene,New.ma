@@ -1,6 +1,6 @@
 //Maya ASCII 2027 scene
 //Name: LivingRoomScene,New.ma
-//Last modified: Wed, Oct 28, 2026 04:05:41 PM
+//Last modified: Wed, Oct 28, 2026 04:08:07 PM
 //Codeset: 1252
 requires maya "2027";
 requires -nodeType "materialxStack" -nodeType "MaterialXSurfaceShader" -dataType "MxDocumentStackData"
@@ -14,12 +14,12 @@ fileInfo "product" "Maya 2027";
 fileInfo "version" "2027";
 fileInfo "cutIdentifier" "202604221258-70da84b25e";
 fileInfo "osv" "Windows 11 Enterprise v2009 (Build: 26200)";
-fileInfo "UUID" "4CFFCBB3-475E-D4D8-6B43-1686943B0B04";
+fileInfo "UUID" "DF5D1CDF-4E40-D8FB-25E9-468E5B31D985";
 fileInfo "license" "education";
 createNode transform -s -n "persp";
 	rename -uid "32588889-42E7-3017-4C9D-289D7588FF9C";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 22.898971623417005 20.11602535416808 23.238339877044879 ;
+	setAttr ".t" -type "double3" 22.898971623416468 20.116025354167782 23.238339877044346 ;
 	setAttr ".r" -type "double3" -21.600000000000684 45.600000000001224 2.2729179144429023e-15 ;
 	setAttr ".rpt" -type "double3" -3.9292878113521263e-16 -1.0802469629458037e-16 5.5252530944559337e-16 ;
 createNode camera -s -n "perspShape" -p "persp";
@@ -27,7 +27,7 @@ createNode camera -s -n "perspShape" -p "persp";
 	setAttr -k off ".v" no;
 	setAttr ".pze" yes;
 	setAttr ".fl" 34.999999999999979;
-	setAttr ".coi" 38.126683932133346;
+	setAttr ".coi" 38.126683932132536;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -13423,7 +13423,6 @@ createNode lambert -n "Wood_MAT1";
 createNode shadingEngine -n "file2SG";
 	rename -uid "A4926661-45F5-5778-87F2-C9844A9E1600";
 	setAttr ".ihi" 0;
-	setAttr -s 2 ".dsm";
 	setAttr ".ro" yes;
 createNode materialInfo -n "materialInfo2";
 	rename -uid "FE2BBD9E-47C7-13DD-393E-3BBFFAFFE808";
@@ -17139,7 +17138,7 @@ createNode polyTweakUV -n "polyTweakUV287";
 		 0.47499692 0.023341529 0.41932291 0.17997698 0.5815056 0.12912339 0.63237739 -0.027492106
 		 0.58154273;
 createNode nodeGraphEditorInfo -n "hyperShadePrimaryNodeEditorSavedTabsInfo";
-	rename -uid "68B68396-4047-DD7C-C2B9-E6963B0815A4";
+	rename -uid "2FDFB1D1-4E91-0CB8-028C-7A80AB1588D4";
 	setAttr ".tgi[0].tn" -type "string" "Untitled_1";
 	setAttr ".tgi[0].vl" -type "double2" -860.15287101937247 -2288.5090833747458 ;
 	setAttr ".tgi[0].vh" -type "double2" 644.60897394866868 -711.9604347935508 ;
